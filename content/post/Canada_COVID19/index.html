@@ -1,24 +1,281 @@
 ---
-title: Canada COVID19 Post
+title: Canada COVID19 Post 🇨🇦
 author: Yawen Zhang
 date: '2020-08-28'
 slug: canada-covid19-post
-categories:
-  - demo
+categories: []
 tags: []
 subtitle: ''
 summary: ''
-authors: []
-lastmod: '2020-08-28T15:55:37+08:00'
+authors: [Yawen Zhang]
+lastmod: '2020-08-27T15:55:37+08:00'
 featured: no
 image:
   caption: ''
   focal_point: ''
   preview_only: no
 projects: []
+bibliography: references.bib
 ---
 
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 
 
-<p>d
-lll</p>
+<div id="data-source-and-description" class="section level2">
+<h2>Data source and description 🎯</h2>
+<p>The dataset used in this post is from Isha Berry personal <a href="https://github.com/ishaberry/Covid19Canada">GitHub</a><span class="citation">(Berry I 2020)</span> and the data source is <strong>Canadian Medical Association Journal (CMAJ)</strong>. The situation around the world still serious, and Canada is one of them.</p>
+<p>The COVID-19 data regarding Canada was collected by COVID-19 Canada Open Data Working Group on confirmed and positive cases. Each line in the dataset represents a unique cases. The original dataset also include information such as age, sex, history travel. The cases, death, recovered dataset were created since the first relevant event occurred. The raw data was stored in seven CSV files separately. The data collection date for this blog unit August 27, 2020. The following tables and plots present each of variables in the data set and its description.</p>
+</div>
+<div id="about-canada" class="section level2">
+<h2>About Canada 🇨🇦</h2>
+<p>Coronavirus disease 2019 (<strong>COVID‑19</strong>) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The situation around the world still serious, and Canada is one of them. The virus was confirmed to spread Canada on January 25, 2020, after a citizen who had traveled ✈️ from Wuhan, Hubei to Toronto, tested positive. With government policies, such as restricting people’s travel and maintaining social distancing, the cases have declined significantly.</p>
+</div>
+<div id="each-province-covid-19-details" class="section level2">
+<h2>Each Province COVID-19 details 🔍</h2>
+<p>This interactive datatable concentrate on number of cumulative confirmed cases, daily new cases, cumulative deaths, daily new deaths and the number of recovered in each province and the whole Canada.</p>
+<div id="htmlwidget-1" style="width:95%;height:524.08px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/Canada_COVID19/index_files/figure-html//widgets/widget_DT-table.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="numercial-summary-statistics" class="section level2">
+<h2>Numercial Summary Statistics 📄</h2>
+<p>Table <a href="#tab:whole-Canada">1</a> shows that numerical summary statistics of four variables: daily new cases, cumulative cases, daily new deaths and cumulative deaths. In the Max column, the max of daily new cases and daily new deaths represent the maximum value in one day since the COVID-19 spread to Canada, while the max of cumulative cases and cumulative deaths shows the latest results.At the end of the table, cases and deaths in Canada were declined significantly 📉.</p>
+<table class="table table-striped table-hover" style="font-size: 12px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:whole-Canada">Table 1: </span>Numerical Summary Statistics in Canada
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:right;">
+Mean
+</th>
+<th style="text-align:right;">
+Min
+</th>
+<th style="text-align:right;">
+Q1
+</th>
+<th style="text-align:right;">
+Q2
+</th>
+<th style="text-align:right;">
+Q3
+</th>
+<th style="text-align:right;">
+Max
+</th>
+<th style="text-align:left;">
+Hist
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+cases
+</td>
+<td style="text-align:right;">
+773.80723
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:right;">
+343.75
+</td>
+<td style="text-align:right;">
+617.5
+</td>
+<td style="text-align:right;">
+1196.75
+</td>
+<td style="text-align:right;">
+2560
+</td>
+<td style="text-align:left;">
+▇▃▃▂▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cumulative_cases
+</td>
+<td style="text-align:right;">
+79281.09036
+</td>
+<td style="text-align:right;">
+341
+</td>
+<td style="text-align:right;">
+46659.75
+</td>
+<td style="text-align:right;">
+96145.5
+</td>
+<td style="text-align:right;">
+111333.00
+</td>
+<td style="text-align:right;">
+128709
+</td>
+<td style="text-align:left;">
+▃▂▂▅▇
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+deaths
+</td>
+<td style="text-align:right;">
+52.82081
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+22.0
+</td>
+<td style="text-align:right;">
+96.00
+</td>
+<td style="text-align:right;">
+229
+</td>
+<td style="text-align:left;">
+▇▂▂▂▁
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+cumulative_deaths
+</td>
+<td style="text-align:right;">
+5661.34104
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1757.00
+</td>
+<td style="text-align:right;">
+7456.0
+</td>
+<td style="text-align:right;">
+8848.00
+</td>
+<td style="text-align:right;">
+9138
+</td>
+<td style="text-align:left;">
+▃▁▁▂▇
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="relationship-between-testing-and-cases" class="section level2">
+<h2>Relationship between testing and cases 📈</h2>
+<p>Only for personal interest 🤨, I want to explore the relationship between cases and testing. Since the first cases arrived in Canada in January 25, 2020, the government started to test from March 8, 2020. Therefore, I combine the testing data and cases data together and select all data from March 8, 2020. In my original idea, with the development of testing, there will more confirmed cases. In other words, they have positive relationship. However, from the plot, it could not find the relationship between cases and testing in Fig<a href="#fig:line">1</a>. In addition, R-squared is extremely lower (0.188) to fit the line Table <a href="#tab:summary">2</a>. The potential reason COVID19 has initially controlled in Canada.</p>
+<div class="figure"><span id="fig:line"></span>
+<img src="/post/Canada_COVID19/index_files/figure-html/line-1.png" alt="Relationship between testing and cases" width="672" />
+<p class="caption">
+Figure 1: Relationship between testing and cases
+</p>
+</div>
+<table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:summary">Table 2: </span>Summary of the relationship between testing and cases
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+r.squared
+</th>
+<th style="text-align:right;">
+adj.r.squared
+</th>
+<th style="text-align:right;">
+statistic
+</th>
+<th style="text-align:right;">
+p.value
+</th>
+<th style="text-align:right;">
+AIC
+</th>
+<th style="text-align:right;">
+BIC
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0.1887101
+</td>
+<td style="text-align:right;">
+0.1837632
+</td>
+<td style="text-align:right;">
+38.14722
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2520.831
+</td>
+<td style="text-align:right;">
+2530.167
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="acknowledgements" class="section level2">
+<h2>Acknowledgements</h2>
+<p>The packages used for producing this post are:</p>
+<p>tidyverse <span class="citation">(Wickham et al. 2019)</span>, broom <span class="citation">(Robinson, Hayes, and Couch 2020)</span>, skimr <span class="citation">(Waring et al. 2020)</span>, DT <span class="citation">(Xie, Cheng, and Tan 2020)</span>, knitr <span class="citation">(Xie 2014)</span>, kableExtra <span class="citation">(Zhu 2019)</span>, dplyr <span class="citation">(Wickham et al. 2020)</span>, lubridate<span class="citation">(Grolemund and Wickham 2011)</span></p>
+<p>The raw data comes from Canada<span class="citation">(Berry I 2020)</span></p>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>References</h2>
+<div id="refs" class="references">
+<div id="ref-Canada">
+<p>Berry I, Tuite A, Soucy J-PR. 2020. “Covid19Canada.” <em>GitHub Repository</em>. <a href="https://github.com/ishaberry/Covid19Canada">https://github.com/ishaberry/Covid19Canada</a>; GitHub.</p>
+</div>
+<div id="ref-lubridate">
+<p>Grolemund, Garrett, and Hadley Wickham. 2011. “Dates and Times Made Easy with lubridate.” <em>Journal of Statistical Software</em> 40 (3): 1–25. <a href="http://www.jstatsoft.org/v40/i03/">http://www.jstatsoft.org/v40/i03/</a>.</p>
+</div>
+<div id="ref-broom">
+<p>Robinson, David, Alex Hayes, and Simon Couch. 2020. <em>Broom: Convert Statistical Objects into Tidy Tibbles</em>. <a href="https://CRAN.R-project.org/package=broom">https://CRAN.R-project.org/package=broom</a>.</p>
+</div>
+<div id="ref-skimr">
+<p>Waring, Elin, Michael Quinn, Amelia McNamara, Eduardo Arino de la Rubia, Hao Zhu, and Shannon Ellis. 2020. <em>Skimr: Compact and Flexible Summaries of Data</em>. <a href="https://CRAN.R-project.org/package=skimr">https://CRAN.R-project.org/package=skimr</a>.</p>
+</div>
+<div id="ref-tidyverse">
+<p>Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.</p>
+</div>
+<div id="ref-dplyr">
+<p>Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2020. <em>Dplyr: A Grammar of Data Manipulation</em>. <a href="https://CRAN.R-project.org/package=dplyr">https://CRAN.R-project.org/package=dplyr</a>.</p>
+</div>
+<div id="ref-knitr">
+<p>Xie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research in R.” In <em>Implementing Reproducible Computational Research</em>, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC. <a href="http://www.crcpress.com/product/isbn/9781466561595">http://www.crcpress.com/product/isbn/9781466561595</a>.</p>
+</div>
+<div id="ref-DT">
+<p>Xie, Yihui, Joe Cheng, and Xianying Tan. 2020. <em>DT: A Wrapper of the Javascript Library ’Datatables’</em>. <a href="https://CRAN.R-project.org/package=DT">https://CRAN.R-project.org/package=DT</a>.</p>
+</div>
+<div id="ref-kableExtra">
+<p>Zhu, Hao. 2019. <em>KableExtra: Construct Complex Table with ’Kable’ and Pipe Syntax</em>. <a href="https://CRAN.R-project.org/package=kableExtra">https://CRAN.R-project.org/package=kableExtra</a>.</p>
+</div>
+</div>
+</div>

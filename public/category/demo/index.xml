@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>demo | Academic</title>
+    <title>demo | Canada COVID 19</title>
     <link>/category/demo/</link>
       <atom:link href="/category/demo/index.xml" rel="self" type="application/rss+xml" />
     <description>demo</description>
@@ -18,10 +18,15 @@
       <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
       <guid>/post/canada-covid19-post/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;d
-lll&lt;/p&gt;
+&lt;p&gt;Data description
+To clean the &lt;code&gt;individuals&lt;/code&gt; data, firstly &lt;code&gt;clean_names()&lt;/code&gt; function from the &lt;em&gt;janitor&lt;/em&gt; package is used to return the data.frame with clean names. What this function does is changing the variable names into a tidier form. As mentioned before, using dash in variable names is not appropriate in R. Notice that the raw dataset has names like “deploy-off-latitude” which is changed into “deploy_off_latitude”. Next is to assigned the result to &lt;code&gt;transmute()&lt;/code&gt;, which will compute new columns but will drop existing columns. This is done to make the variable names in a tidier way. The whitespace in the life stage is gotten rid to address inconsistent spacing by using &lt;code&gt;str_remove_all()&lt;/code&gt; function. After tidying the variable names with transmuting, the “reproductive_condition” variable is separated into “pregnant” and “with_calf” by using the &lt;code&gt;separate()&lt;/code&gt; function as this variable actually contains two dimensions, and then assigning those variables into new columns by using the &lt;code&gt;mutate()&lt;/code&gt; function which consists of either TRUE or FALSE value.&lt;/p&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/Canada_COVID19/index_files/figure-html//widgets/widget_DT-table.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 </description>
     </item>
     

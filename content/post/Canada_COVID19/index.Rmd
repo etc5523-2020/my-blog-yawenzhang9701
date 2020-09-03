@@ -1,22 +1,266 @@
 ---
-title: Canada COVID19 Post
+title: Canada COVID19 Post `r emo::ji("canada")`
 author: Yawen Zhang
 date: '2020-08-28'
 slug: canada-covid19-post
-categories:
-  - demo
+categories: []
 tags: []
 subtitle: ''
 summary: ''
-authors: []
-lastmod: '2020-08-28T15:55:37+08:00'
+authors: [Yawen Zhang]
+lastmod: '2020-08-27T15:55:37+08:00'
 featured: no
 image:
   caption: ''
   focal_point: ''
   preview_only: no
 projects: []
+bibliography: references.bib
 ---
 
-d
-lll
+## Data source and description `r emo::ji("dart")`
+
+The dataset used in this post is from Isha Berry personal [GitHub](https://github.com/ishaberry/Covid19Canada)[@Canada] and the data source is **Canadian Medical Association Journal (CMAJ)**. The situation around the world still serious, and Canada is one of them. 
+
+The COVID-19 data regarding Canada was collected by COVID-19 Canada Open Data Working Group on confirmed and positive cases. Each line in the dataset represents a unique cases. The original dataset also include information such as age, sex, history travel. The cases, death, recovered dataset were created since the first relevant event occurred. The raw data was stored in seven CSV files separately. The data collection date for this blog unit August 27, 2020. The following tables and plots present each of variables in the data set and its description. 
+
+## About Canada `r emo::ji("canada")`
+Coronavirus disease 2019 (**COVID‑19**) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The situation around the world still serious, and Canada is one of them. The virus was confirmed to spread Canada on January 25, 2020, after a citizen who had traveled `r emo::ji("airplane")` from Wuhan, Hubei to Toronto, tested positive. With government policies, such as restricting people’s travel and maintaining social distancing, the cases have declined significantly. 
+
+
+## Each Province COVID-19 details `r emo::ji("mag")`
+
+This interactive datatable concentrate on number of cumulative confirmed cases, daily new cases, cumulative deaths, daily new deaths and the number of recovered in each province and the whole Canada. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(lubridate)
+library(dplyr)
+library(DT)
+library(broom)
+library(kableExtra)
+library(skimr)
+library(knitr)
+```
+
+
+```{r data-generate}
+cases <- read.csv("data/cases.csv")
+deaths <- read.csv("data/mortality.csv")
+recovered_cum <- read.csv("data/recovered_cumulative.csv")
+testing_cum <- read.csv("data/testing_cumulative.csv")
+Canada_cases <- read.csv("data/cases_timeseries_canada.csv")
+Canada_testing <- read.csv("data/testing_timeseries_canada.csv")
+Canada_deaths <- read.csv("data/mortality_timeseries_canada.csv")
+```
+
+```{r define-province}
+# provinces_repatriated <- c("Alberta", "BC", "Manitoba", "New Brunswick", "NL", "Nova Scotia", "Nunavut", "NWT", "Ontario", "PEI", "Repatriated", "Quebec", "Saskatchewan", "Yukon")
+provinces <- c("Alberta", "BC", "Manitoba", "New Brunswick", "NL", "Nova Scotia", "Nunavut", "NWT", "Ontario", "PEI", "Quebec", "Saskatchewan", "Yukon")
+```
+
+
+```{r}
+## convert cases to standard date format for data manipulation
+cases <- cases %>%
+  mutate(date_report = as.Date(date_report, "%d-%m-%Y"))
+```
+
+```{r}
+## define min and max dates
+min_date_cases <- min(cases$date_report, na.rm = TRUE)
+max_date_cases <- max(cases$date_report, na.rm = TRUE)
+```
+
+```{r}
+# from minimum date to maximum date in cases
+unified_date_case <- data.frame(
+  "province" = rep(provinces, each = as.integer(max_date_cases - min_date_cases) + 1),
+  "date_report" = seq.Date(from = min_date_cases, to = max_date_cases, by = "day"),
+  stringsAsFactors = FALSE
+  )
+```
+
+```{r}
+cases_province <- cases %>%
+  group_by(province, date_report) %>%
+  summarise(cases = n(), .groups = "drop_last")
+
+total_cases <- cases_province %>%
+  right_join(unified_date_case, by = c("date_report", "province")) %>%
+  arrange(province, date_report) %>%
+  replace_na(list(cases = 0)) %>%
+  group_by(province) %>%
+  summarise(sum(cases)) %>%
+  rename("Cumulative Cases" = `sum(cases)`) %>%
+  ungroup()
+
+new_cases <- cases_province %>%
+  right_join(unified_date_case, by = c("date_report", "province")) %>%
+  arrange(province, date_report) %>%
+  replace_na(list(cases = 0)) %>%
+  group_by(province) %>%
+  filter(date_report == max(date_report)) %>%
+  rename("New Cases" = "cases") %>%
+  ungroup()
+```
+
+```{r}
+deaths <- deaths %>%
+  mutate(date_death_report = as.Date(date_death_report, "%d-%m-%Y"))
+```
+
+```{r}
+## define min and max dates
+min_date_deaths <- min(deaths$date_death_report, na.rm = TRUE)
+max_date_deaths <- max(deaths$date_death_report, na.rm = TRUE)
+```
+
+```{r}
+# from minimum date to maximum date in deaths
+unified_date_deaths <- data.frame(
+  "province" = rep(provinces, each = as.integer(max_date_deaths - min_date_deaths) + 1),
+  "date_death_report" = seq.Date(from = min_date_deaths, to = max_date_deaths, by = "day"),
+  stringsAsFactors = FALSE
+  )
+```
+
+```{r}
+deaths_province <- deaths %>%
+  group_by(province, date_death_report) %>%
+  summarise(deaths = n(), .groups = "drop_last")
+
+total_deaths <- deaths_province %>%
+  right_join(unified_date_deaths, by = c("date_death_report", "province")) %>%
+  arrange(province, date_death_report) %>%
+  replace_na(list(deaths = 0)) %>%
+  group_by(province) %>%
+  summarise(sum(deaths)) %>%
+  ungroup() %>%
+  rename("Cumulative Deaths" = `sum(deaths)`)
+
+new_deaths <- deaths_province %>%
+  right_join(unified_date_deaths, by = c("date_death_report", "province")) %>%
+  arrange(province, date_death_report) %>%
+  replace_na(list(deaths = 0)) %>%
+  group_by(province) %>%
+  filter(date_death_report == max(date_death_report)) %>%
+  ungroup() %>%
+  rename("New Deaths" = deaths)
+```
+
+```{r}
+recovered <- recovered_cum %>%
+  mutate(date_recovered = as.Date(date_recovered, "%d-%m-%Y"))
+```
+
+```{r}
+total_recovered <-  recovered %>%
+  group_by(province) %>%
+  filter(date_recovered == max(date_recovered)) %>%
+  rename("Cumulative Recovered" = "cumulative_recovered")
+```
+
+```{r}
+join <- total_cases %>%
+  inner_join(new_cases, by = "province") %>%
+  inner_join(total_deaths, by = "province") %>%
+  inner_join(new_deaths, by = "province") %>%
+  inner_join(total_recovered, by = "province") %>%
+  rename(Province = province)
+Canada_data <- join %>%
+  select(Province, "Cumulative Cases", "New Cases", "Cumulative Deaths", "New Deaths", "Cumulative Recovered") %>%
+  pivot_longer(cols = (-"Province"), names_to = "W", values_to = "Cases")
+Canada_data$Cases <- Canada_data$Cases %>%
+  replace_na(0)
+Canada_data <- Canada_data %>% 
+  pivot_wider(names_from = "Province", values_from = "Cases")
+Canada_data$Canada <- apply(Canada_data[,2:13], 1, sum) 
+Canada_data1 <- Canada_data %>%
+  pivot_longer(cols = (-"W"), names_to = "Province", values_to = "Cases") %>%
+  pivot_wider(names_from = "W", values_from = "Cases") 
+Canada <- Canada_data1 %>%
+  arrange(desc(`Cumulative Cases`))
+```
+
+```{r DT-table, echo=FALSE, message = FALSE, warning = FALSE}
+# DTtable <- DT::datatable(Canada, options = list(pageLenth = 4), height = 524.08) %>%
+#   DT::formatStyle(columns = colnames(.), fontSize = '50%')
+DTtable <- DT::datatable(Canada, options = list(initComplete = JS(
+    "function(settings, json) {",
+    "$(this.api().table().header()).css({'background-color': '#000', 'color': '#fff'});",
+    "}")), height = 524.08) %>%
+  DT::formatStyle(columns = colnames(.), fontSize = '50%')
+# htmlwidgets::saveWidget(DTtable, file = "DTtable.html", selfcontained = TRUE)
+widgetframe::frameWidget(DTtable, height = 524.08, width = '95%')
+```
+
+
+## Numercial Summary Statistics `r emo::ji("page_facing_up")`
+
+Table \@ref(tab:whole-Canada) shows that numerical summary statistics of four variables: daily new cases, cumulative cases, daily new deaths and cumulative deaths. In the Max column, the max of daily new cases and daily new deaths represent the maximum value in one day since the COVID-19 spread to Canada, while the max of cumulative cases and cumulative deaths shows the latest results.At the end of the table, cases and deaths in Canada were declined significantly `r emo::ji("chart_with_downwards_trend")`.
+
+```{r whole-Canada, fig.cap="Details in cases and deaths"}
+new_cases <- Canada_cases %>%
+  skim(cases) %>%
+  yank("numeric") %>%
+  select(-complete_rate, -n_missing, -sd) 
+cumu_cases <- Canada_cases %>%
+  skim(cumulative_cases) %>%
+  yank("numeric") %>%
+  select(-complete_rate, -n_missing, -sd)
+new_deaths <- Canada_deaths %>%
+  skim(deaths) %>%
+  yank("numeric") %>%
+  select(-complete_rate, -n_missing, -sd)
+cumu_deaths <- Canada_deaths %>%
+  skim(cumulative_deaths) %>%
+  yank("numeric") %>%
+  select(-complete_rate, -n_missing, -sd)
+Canada_variable <- rbind(new_cases, cumu_cases, new_deaths, cumu_deaths)%>%
+  kable("html", col.names = c("Variable", "Mean", "Min", "Q1", "Q2", "Q3", "Max", "Hist"), caption = "Numerical Summary Statistics in Canada") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = 240, font_size = 12)
+Canada_variable
+# ggplot(testing_cases, aes(x = testing, y = cases))+
+#   geom_point() +
+#   geom_smooth(method = "lm", se = FALSE)
+```
+
+## Relationship between testing and cases `r emo::ji("chart_with_upwards_trend")`
+
+Only for personal interest `r emo::ji("raised_eyebrow")`, I want to explore the relationship between cases and testing. Since the first cases arrived in Canada in January 25, 2020, the government started to test from March 8, 2020.  Therefore, I combine the testing data and cases data together and select all data from March 8, 2020. In my original idea, with the development of testing, there will more confirmed cases. In other words, they have positive relationship. However, from the plot, it could not find the relationship between cases and testing in Fig\@ref(fig:line). In addition, R-squared is extremely lower (0.188) to fit the line Table \@ref(tab:summary). The potential reason COVID19 has initially controlled in Canada. 
+
+```{r line, fig.cap= "Relationship between testing and cases"}
+Canada_cases1 <- Canada_cases %>%
+  rename(date = "date_report")
+
+Canada_testing1 <- Canada_testing %>%
+  rename(date = "date_testing")
+
+testing_cases <- Canada_cases1 %>%
+  full_join(Canada_testing1, by = "date") %>%
+  select(date, cases, testing) %>%
+  mutate(date = as.Date(date, "%d-%m-%Y"))
+
+ggplot(testing_cases, aes(x = testing, y = cases)) +
+  geom_point()+
+  geom_smooth()
+```
+
+```{r summary}
+simple.fit = lm(cases~testing, testing_cases)
+glance(simple.fit) %>%
+  select(r.squared, adj.r.squared, statistic, p.value, AIC, BIC) %>%
+  kable("html", caption = "Summary of the relationship between testing and cases") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = 240)
+```
+
+## Acknowledgements
+The packages used for producing this post are: 
+
+tidyverse [@tidyverse], broom [@broom], skimr [@skimr], DT [@DT], knitr [@knitr], kableExtra [@kableExtra], dplyr [@dplyr], lubridate[@lubridate]
+
+The raw data comes from Canada[@Canada] 
+
+## References
