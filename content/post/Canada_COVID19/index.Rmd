@@ -200,6 +200,9 @@ widgetframe::frameWidget(DTtable, height = 524.08, width = '95%')
 ## Numercial Summary Statistics `r emo::ji("page_facing_up")`
 
 Table \@ref(tab:whole-Canada) shows that numerical summary statistics of four variables: daily new cases, cumulative cases, daily new deaths and cumulative deaths. In the Max column, the max of daily new cases and daily new deaths represent the maximum value in one day since the COVID-19 spread to Canada, while the max of cumulative cases and cumulative deaths shows the latest results.At the end of the table, cases and deaths in Canada were declined significantly `r emo::ji("chart_with_downwards_trend")`.
+  
+### Stories behind the Data:
+Although cases and deaths in Canada was declined obviously, the authenticity of the data is not accurate. Indigenous Canadians as the indigenous people within the boundaries of the Canada. Indigenous people in Canada take 4.9% of the whole national population. Regarding the CBC news, Indigenous Services Canada releases cumulative number of positive cases, but no data on deaths, recoveries [CBC](https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676)[@cbc]. As a result, the histogram at the end of the Table \@ref(tab:whole-Canada) does not present a full picture of the indigenous communities. Besides, indigenous communities received Inequitable measures from federal government. As of June 25, Canada’s specific measures to limit the spread of COVID-19 in First Nations communities in Canada represent less than one per cent of the federal government’s funding to mitigate the impact of COVID-19 [conversation](https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027)[@conversation]. 
 
 ```{r whole-Canada, fig.cap="Details in cases and deaths"}
 new_cases <- Canada_cases %>%
@@ -244,8 +247,13 @@ testing_cases <- Canada_cases1 %>%
   mutate(date = as.Date(date, "%d-%m-%Y"))
 
 ggplot(testing_cases, aes(x = testing, y = cases)) +
-  geom_point()+
-  geom_smooth()
+  geom_point(color = 2)+
+  geom_smooth(method="loess",se=FALSE, color = 1) +
+  theme(panel.background = element_blank()) +
+  theme(panel.background = element_rect(fill = "white", colour = "black", size = 2)) +
+  xlab("New Testing") +
+  ylab("New Cases")+
+  ggtitle("the Relationship between Testing and Cases")
 ```
 
 ```{r summary}
@@ -259,7 +267,7 @@ glance(simple.fit) %>%
 ## Acknowledgements
 The packages used for producing this post are: 
 
-tidyverse [@tidyverse], broom [@broom], skimr [@skimr], DT [@DT], knitr [@knitr], kableExtra [@kableExtra], dplyr [@dplyr], lubridate[@lubridate]
+tidyverse [@tidyverse], broom [@broom], skimr [@skimr], DT [@DT], knitr [@knitr], kableExtra [@kableExtra], dplyr [@dplyr], lubridate[@lubridate], CBC[@cbc], conversation[@conversation]
 
 The raw data comes from Canada[@Canada] 
 
