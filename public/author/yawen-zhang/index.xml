@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Yawen Zhang | Canada COVID 19</title>
+    <title>Yawen Zhang</title>
     <link>/author/yawen-zhang/</link>
       <atom:link href="/author/yawen-zhang/index.xml" rel="self" type="application/rss+xml" />
     <description>Yawen Zhang</description>
@@ -24,27 +24,27 @@
 &lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;div id=&#34;data-source-and-description&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data source and description 🎯&lt;/h2&gt;
-&lt;p&gt;The dataset used in this post is from Isha Berry personal &lt;a href=&#34;https://github.com/ishaberry/Covid19Canada&#34;&gt;GitHub&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Berry I 2020)&lt;/span&gt; and the data source is &lt;strong&gt;Canadian Medical Association Journal (CMAJ)&lt;/strong&gt;. The situation around the world still serious, and Canada is one of them.&lt;/p&gt;
-&lt;p&gt;The COVID-19 data regarding Canada was collected by COVID-19 Canada Open Data Working Group on confirmed and positive cases. Each line in the dataset represents a unique cases. The original dataset also include information such as age, sex, history travel. The cases, death, recovered dataset were created since the first relevant event occurred. The raw data was stored in seven CSV files separately. The data collection date for this blog unit August 27, 2020. The following tables and plots present each of variables in the data set and its description.&lt;/p&gt;
-&lt;/div&gt;
 &lt;div id=&#34;about-canada&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;About Canada 🇨🇦&lt;/h2&gt;
 &lt;p&gt;Coronavirus disease 2019 (&lt;strong&gt;COVID‑19&lt;/strong&gt;) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The situation around the world still serious, and Canada is one of them. The virus was confirmed to spread Canada on January 25, 2020, after a citizen who had traveled ✈️ from Wuhan, Hubei to Toronto, tested positive. With government policies, such as restricting people’s travel and maintaining social distancing, the cases have declined significantly.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div id=&#34;data-source-and-description&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Source and Description 🎯&lt;/h2&gt;
+&lt;p&gt;The dataset used in this post is from Isha Berry personal &lt;a href=&#34;https://github.com/ishaberry/Covid19Canada&#34;&gt;GitHub&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Berry I 2020)&lt;/span&gt; and the data source is &lt;strong&gt;Canadian Medical Association Journal (CMAJ)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The COVID-19 data regarding Canada was collected by COVID-19 Canada Open Data Working Group on confirmed and positive cases. Each line in the dataset represents a unique cases. The original dataset also include information such as age, sex, history travel. The cases, death, recovered dataset were created since the first relevant event occurred. The raw data was stored in seven CSV files separately. The data collection date for this blog until August 27, 2020. The following tables and plots present these variables in the data set and also contain descriptions.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;each-province-covid-19-details&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Each Province COVID-19 details 🔍&lt;/h2&gt;
+&lt;h2&gt;Each Province COVID-19 Details 🔍&lt;/h2&gt;
 &lt;p&gt;This interactive datatable concentrate on number of cumulative confirmed cases, daily new cases, cumulative deaths, daily new deaths and the number of recovered in each province and the whole Canada.&lt;/p&gt;
 &lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:95%;height:524.08px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/Canada_COVID19/index_files/figure-html//widgets/widget_DT-table.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
 &lt;div id=&#34;numercial-summary-statistics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Numercial Summary Statistics 📄&lt;/h2&gt;
-&lt;p&gt;Table &lt;a href=&#34;#tab:whole-Canada&#34;&gt;1&lt;/a&gt; shows that numerical summary statistics of four variables: daily new cases, cumulative cases, daily new deaths and cumulative deaths. In the Max column, the max of daily new cases and daily new deaths represent the maximum value in one day since the COVID-19 spread to Canada, while the max of cumulative cases and cumulative deaths shows the latest results.At the end of the table, cases and deaths in Canada were declined significantly 📉.&lt;/p&gt;
+&lt;p&gt;Table &lt;a href=&#34;#tab:whole-Canada&#34;&gt;1&lt;/a&gt; shows that numerical summary statistics of four variables: daily new cases, cumulative cases, daily new deaths and cumulative deaths. In the Max column, the max of daily new cases and daily new deaths represent the maximum value in a day since the COVID-19 spread to Canada, while the max of cumulative cases and cumulative deaths shows the latest results. At the end of the table, cases and deaths in Canada were declined significantly 📉.&lt;/p&gt;
 &lt;div id=&#34;stories-behind-the-data&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Stories behind the Data:&lt;/h3&gt;
-&lt;p&gt;Although cases and deaths in Canada was declined obviously, the authenticity of the data is not accurate. Indigenous Canadians as the indigenous people within the boundaries of the Canada. Indigenous people in Canada take 4.9% of the whole national population. Regarding the CBC news, Indigenous Services Canada releases cumulative number of positive cases, but no data on deaths, recoveries &lt;a href=&#34;https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676&#34;&gt;CBC&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(cbc 2020)&lt;/span&gt;. As a result, the histogram at the end of the Table &lt;a href=&#34;#tab:whole-Canada&#34;&gt;1&lt;/a&gt; does not present a full picture of the indigenous communities. Besides, indigenous communities received Inequitable measures from federal government. As of June 25, Canada’s specific measures to limit the spread of COVID-19 in First Nations communities in Canada represent less than one per cent of the federal government’s funding to mitigate the impact of COVID-19 &lt;a href=&#34;https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027&#34;&gt;conversation&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(conversation 2020)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Although cases and deaths in Canada was declined obviously, the authenticity of the data is not accurate. Indigenous Canadians as the indigenous people within the boundaries of the Canada. Indigenous people in Canada take 4.9% of the whole national population. Regarding the CBC news, Indigenous Services Canada releases cumulative number of positive cases, but no data on deaths, recoveries regarding the news from &lt;a href=&#34;https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676&#34;&gt;CBC&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(CBC 2020)&lt;/span&gt;. As a result, the histogram at the end of the Table &lt;a href=&#34;#tab:whole-Canada&#34;&gt;1&lt;/a&gt; does not present a full picture of the indigenous communities. Besides, indigenous communities received inequitable measures from federal government. As of June 25, Canada’s specific measures to limit the spread of COVID-19 in First Nations communities in Canada represent less than one per cent of the federal government’s funding to mitigate the impact of COVID-19 &lt;a href=&#34;https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027&#34;&gt;The Conversation&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Conversation 2020)&lt;/span&gt;.&lt;/p&gt;
 &lt;table class=&#34;table table-striped table-hover&#34; style=&#34;font-size: 12px; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;caption style=&#34;font-size: initial !important;&#34;&gt;
 &lt;span id=&#34;tab:whole-Canada&#34;&gt;Table 1: &lt;/span&gt;Numerical Summary Statistics in Canada
@@ -186,9 +186,9 @@ cumulative_deaths
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;relationship-between-testing-and-cases&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Relationship between testing and cases 📈&lt;/h2&gt;
-&lt;p&gt;Only for personal interest 🤨, I want to explore the relationship between cases and testing. Since the first cases arrived in Canada in January 25, 2020, the government started to test from March 8, 2020. Therefore, I combine the testing data and cases data together and select all data from March 8, 2020. In my original idea, with the development of testing, there will more confirmed cases. In other words, they have positive relationship. However, from the plot, it could not find the relationship between cases and testing in Fig&lt;a href=&#34;#fig:line&#34;&gt;1&lt;/a&gt;. In addition, R-squared is extremely lower (0.188) to fit the line Table &lt;a href=&#34;#tab:summary&#34;&gt;2&lt;/a&gt;. The potential reason COVID19 has initially controlled in Canada.&lt;/p&gt;
+&lt;div id=&#34;explore-the-relationship-between-testing-and-cases&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Explore the Relationship between Testing and Cases 📈&lt;/h2&gt;
+&lt;p&gt;Only for personal interest 🤨, I want to explore the relationship between cases and testing. Since the first cases arrived in Canada in January 25, 2020, the government started to test from March 8, 2020. Therefore, I combine the testing data and cases data together and select all data from March 8 until now. In my personal prediction, with the development of testing, there will be more confirmed cases. In other words, these two variables have the positive relationship. However, from this combination graph, it could not find the relationship between cases and testing in Fig&lt;a href=&#34;#fig:line&#34;&gt;1&lt;/a&gt;. In addition, R-squared is 0.188 which is close to 0. Also represents if the cases and testing is linear regression, all the real data is far away from the line. The results regarding R-squared is show in Table &lt;a href=&#34;#tab:summary&#34;&gt;2&lt;/a&gt;. The reason they are not related may be that Canada has almost controlled the worsening of the COVID-19 in this period.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:line&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;/post/Canada_COVID19/index_files/figure-html/line-1.png&#34; alt=&#34;Relationship between testing and cases&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
@@ -248,7 +248,9 @@ BIC
 &lt;div id=&#34;acknowledgements&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Acknowledgements&lt;/h2&gt;
 &lt;p&gt;The packages used for producing this post are:&lt;/p&gt;
-&lt;p&gt;tidyverse &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2019)&lt;/span&gt;, broom &lt;span class=&#34;citation&#34;&gt;(Robinson, Hayes, and Couch 2020)&lt;/span&gt;, skimr &lt;span class=&#34;citation&#34;&gt;(Waring et al. 2020)&lt;/span&gt;, DT &lt;span class=&#34;citation&#34;&gt;(Xie, Cheng, and Tan 2020)&lt;/span&gt;, knitr &lt;span class=&#34;citation&#34;&gt;(Xie 2014)&lt;/span&gt;, kableExtra &lt;span class=&#34;citation&#34;&gt;(Zhu 2019)&lt;/span&gt;, dplyr &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2020)&lt;/span&gt;, lubridate&lt;span class=&#34;citation&#34;&gt;(Grolemund and Wickham 2011)&lt;/span&gt;, CBC&lt;span class=&#34;citation&#34;&gt;(cbc 2020)&lt;/span&gt;, conversation&lt;span class=&#34;citation&#34;&gt;(conversation 2020)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;tidyverse &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2019)&lt;/span&gt;, broom &lt;span class=&#34;citation&#34;&gt;(Robinson, Hayes, and Couch 2020)&lt;/span&gt;, skimr &lt;span class=&#34;citation&#34;&gt;(Waring et al. 2020)&lt;/span&gt;, DT &lt;span class=&#34;citation&#34;&gt;(Xie, Cheng, and Tan 2020)&lt;/span&gt;, knitr &lt;span class=&#34;citation&#34;&gt;(Xie 2014)&lt;/span&gt;, kableExtra &lt;span class=&#34;citation&#34;&gt;(Zhu 2019)&lt;/span&gt;, dplyr &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2020)&lt;/span&gt;, lubridate&lt;span class=&#34;citation&#34;&gt;(Grolemund and Wickham 2011)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Two news comes from:
+CBC&lt;span class=&#34;citation&#34;&gt;(CBC 2020)&lt;/span&gt;, The Conversation&lt;span class=&#34;citation&#34;&gt;(Conversation 2020)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;The raw data comes from Canada&lt;span class=&#34;citation&#34;&gt;(Berry I 2020)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
@@ -258,10 +260,10 @@ BIC
 &lt;p&gt;Berry I, Tuite A, Soucy J-PR. 2020. “Covid19Canada.” &lt;em&gt;GitHub Repository&lt;/em&gt;. &lt;a href=&#34;https://github.com/ishaberry/Covid19Canada&#34;&gt;https://github.com/ishaberry/Covid19Canada&lt;/a&gt;; GitHub.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-cbc&#34;&gt;
-&lt;p&gt;cbc. 2020. “Data Gaps Exist on Covid-19 Cases in Indigenous Communities, Says Research Fellow.” &lt;a href=&#34;https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676&#34;&gt;https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;CBC. 2020. “Data Gaps Exist on Covid-19 Cases in Indigenous Communities, Says Research Fellow.” &lt;a href=&#34;https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676&#34;&gt;https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-conversation&#34;&gt;
-&lt;p&gt;conversation, The. 2020. “Indigenous Communities at Increased Risk During the Coronavirus Pandemic.” &lt;a href=&#34;https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027&#34;&gt;https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Conversation, The. 2020. “Indigenous Communities at Increased Risk During the Coronavirus Pandemic.” &lt;a href=&#34;https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027&#34;&gt;https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-lubridate&#34;&gt;
 &lt;p&gt;Grolemund, Garrett, and Hadley Wickham. 2011. “Dates and Times Made Easy with lubridate.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 40 (3): 1–25. &lt;a href=&#34;http://www.jstatsoft.org/v40/i03/&#34;&gt;http://www.jstatsoft.org/v40/i03/&lt;/a&gt;.&lt;/p&gt;

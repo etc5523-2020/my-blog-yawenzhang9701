@@ -18,17 +18,19 @@ projects: []
 bibliography: references.bib
 ---
 
-## Data source and description `r emo::ji("dart")`
-
-The dataset used in this post is from Isha Berry personal [GitHub](https://github.com/ishaberry/Covid19Canada)[@Canada] and the data source is **Canadian Medical Association Journal (CMAJ)**. The situation around the world still serious, and Canada is one of them. 
-
-The COVID-19 data regarding Canada was collected by COVID-19 Canada Open Data Working Group on confirmed and positive cases. Each line in the dataset represents a unique cases. The original dataset also include information such as age, sex, history travel. The cases, death, recovered dataset were created since the first relevant event occurred. The raw data was stored in seven CSV files separately. The data collection date for this blog unit August 27, 2020. The following tables and plots present each of variables in the data set and its description. 
-
 ## About Canada `r emo::ji("canada")`
-Coronavirus disease 2019 (**COVID‑19**) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The situation around the world still serious, and Canada is one of them. The virus was confirmed to spread Canada on January 25, 2020, after a citizen who had traveled `r emo::ji("airplane")` from Wuhan, Hubei to Toronto, tested positive. With government policies, such as restricting people’s travel and maintaining social distancing, the cases have declined significantly. 
+Coronavirus disease 2019 (**COVID‑19**) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The situation around the world still serious, and Canada is one of them. The virus was confirmed to spread Canada on January 25, 2020, after a citizen who had traveled `r emo::ji("airplane")` from Wuhan, Hubei to Toronto, tested positive. With government policies, such as restricting people’s travel and maintaining social distancing, the cases have declined significantly.
+
+## Data Source and Description `r emo::ji("dart")`
+
+The dataset used in this post is from Isha Berry personal [GitHub](https://github.com/ishaberry/Covid19Canada)[@Canada] and the data source is **Canadian Medical Association Journal (CMAJ)**. 
+
+The COVID-19 data regarding Canada was collected by COVID-19 Canada Open Data Working Group on confirmed and positive cases. Each line in the dataset represents a unique cases. The original dataset also include information such as age, sex, history travel. The cases, death, recovered dataset were created since the first relevant event occurred. The raw data was stored in seven CSV files separately. The data collection date for this blog until August 27, 2020. The following tables and plots present these variables in the data set and also contain descriptions. 
 
 
-## Each Province COVID-19 details `r emo::ji("mag")`
+
+
+## Each Province COVID-19 Details `r emo::ji("mag")`
 
 This interactive datatable concentrate on number of cumulative confirmed cases, daily new cases, cumulative deaths, daily new deaths and the number of recovered in each province and the whole Canada. 
 
@@ -106,18 +108,18 @@ new_cases <- cases_province %>%
   ungroup()
 ```
 
-```{r}
+```{r deaths-edit}
 deaths <- deaths %>%
   mutate(date_death_report = as.Date(date_death_report, "%d-%m-%Y"))
 ```
 
-```{r}
+```{r min-max}
 ## define min and max dates
 min_date_deaths <- min(deaths$date_death_report, na.rm = TRUE)
 max_date_deaths <- max(deaths$date_death_report, na.rm = TRUE)
 ```
 
-```{r}
+```{r minimum-maximum}
 # from minimum date to maximum date in deaths
 unified_date_deaths <- data.frame(
   "province" = rep(provinces, each = as.integer(max_date_deaths - min_date_deaths) + 1),
@@ -126,7 +128,7 @@ unified_date_deaths <- data.frame(
   )
 ```
 
-```{r}
+```{r death}
 deaths_province <- deaths %>%
   group_by(province, date_death_report) %>%
   summarise(deaths = n(), .groups = "drop_last")
@@ -150,19 +152,19 @@ new_deaths <- deaths_province %>%
   rename("New Deaths" = deaths)
 ```
 
-```{r}
+```{r edit}
 recovered <- recovered_cum %>%
   mutate(date_recovered = as.Date(date_recovered, "%d-%m-%Y"))
 ```
 
-```{r}
+```{r recovered}
 total_recovered <-  recovered %>%
   group_by(province) %>%
   filter(date_recovered == max(date_recovered)) %>%
   rename("Cumulative Recovered" = "cumulative_recovered")
 ```
 
-```{r}
+```{r join-table}
 join <- total_cases %>%
   inner_join(new_cases, by = "province") %>%
   inner_join(total_deaths, by = "province") %>%
@@ -199,10 +201,10 @@ widgetframe::frameWidget(DTtable, height = 524.08, width = '95%')
 
 ## Numercial Summary Statistics `r emo::ji("page_facing_up")`
 
-Table \@ref(tab:whole-Canada) shows that numerical summary statistics of four variables: daily new cases, cumulative cases, daily new deaths and cumulative deaths. In the Max column, the max of daily new cases and daily new deaths represent the maximum value in one day since the COVID-19 spread to Canada, while the max of cumulative cases and cumulative deaths shows the latest results.At the end of the table, cases and deaths in Canada were declined significantly `r emo::ji("chart_with_downwards_trend")`.
+Table \@ref(tab:whole-Canada) shows that numerical summary statistics of four variables: daily new cases, cumulative cases, daily new deaths and cumulative deaths. In the Max column, the max of daily new cases and daily new deaths represent the maximum value in a day since the COVID-19 spread to Canada, while the max of cumulative cases and cumulative deaths shows the latest results. At the end of the table, cases and deaths in Canada were declined significantly `r emo::ji("chart_with_downwards_trend")`.
   
 ### Stories behind the Data:
-Although cases and deaths in Canada was declined obviously, the authenticity of the data is not accurate. Indigenous Canadians as the indigenous people within the boundaries of the Canada. Indigenous people in Canada take 4.9% of the whole national population. Regarding the CBC news, Indigenous Services Canada releases cumulative number of positive cases, but no data on deaths, recoveries [CBC](https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676)[@cbc]. As a result, the histogram at the end of the Table \@ref(tab:whole-Canada) does not present a full picture of the indigenous communities. Besides, indigenous communities received Inequitable measures from federal government. As of June 25, Canada’s specific measures to limit the spread of COVID-19 in First Nations communities in Canada represent less than one per cent of the federal government’s funding to mitigate the impact of COVID-19 [conversation](https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027)[@conversation]. 
+Although cases and deaths in Canada was declined obviously, the authenticity of the data is not accurate. Indigenous Canadians as the indigenous people within the boundaries of the Canada. Indigenous people in Canada take 4.9% of the whole national population. Regarding the CBC news, Indigenous Services Canada releases cumulative number of positive cases, but no data on deaths, recoveries regarding the news from [CBC](https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676)[@cbc]. As a result, the histogram at the end of the Table \@ref(tab:whole-Canada) does not present a full picture of the indigenous communities. Besides, indigenous communities received inequitable measures from federal government. As of June 25, Canada’s specific measures to limit the spread of COVID-19 in First Nations communities in Canada represent less than one per cent of the federal government’s funding to mitigate the impact of COVID-19 [The Conversation](https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027)[@conversation]. 
 
 ```{r whole-Canada, fig.cap="Details in cases and deaths"}
 new_cases <- Canada_cases %>%
@@ -230,9 +232,9 @@ Canada_variable
 #   geom_smooth(method = "lm", se = FALSE)
 ```
 
-## Relationship between testing and cases `r emo::ji("chart_with_upwards_trend")`
+## Explore the Relationship between Testing and Cases `r emo::ji("chart_with_upwards_trend")`
 
-Only for personal interest `r emo::ji("raised_eyebrow")`, I want to explore the relationship between cases and testing. Since the first cases arrived in Canada in January 25, 2020, the government started to test from March 8, 2020.  Therefore, I combine the testing data and cases data together and select all data from March 8, 2020. In my original idea, with the development of testing, there will more confirmed cases. In other words, they have positive relationship. However, from the plot, it could not find the relationship between cases and testing in Fig\@ref(fig:line). In addition, R-squared is extremely lower (0.188) to fit the line Table \@ref(tab:summary). The potential reason COVID19 has initially controlled in Canada. 
+Only for personal interest `r emo::ji("raised_eyebrow")`, I want to explore the relationship between cases and testing. Since the first cases arrived in Canada in January 25, 2020, the government started to test from March 8, 2020.  Therefore, I combine the testing data and cases data together and select all data from March 8 until now. In my personal prediction, with the development of testing, there will be more confirmed cases. In other words, these two variables have the positive relationship. However, from this combination graph, it could not find the relationship between cases and testing in Fig\@ref(fig:line). In addition, R-squared is 0.188 which is close to 0. Also represents if the cases and testing is linear regression, all the real data is far away from the line. The results regarding R-squared is show in Table \@ref(tab:summary). The reason they are not related may be that Canada has almost controlled the worsening of the COVID-19 in this period.
 
 ```{r line, fig.cap= "Relationship between testing and cases"}
 Canada_cases1 <- Canada_cases %>%
@@ -265,9 +267,12 @@ glance(simple.fit) %>%
 ```
 
 ## Acknowledgements
-The packages used for producing this post are: 
+The packages used for producing this post are:
 
-tidyverse [@tidyverse], broom [@broom], skimr [@skimr], DT [@DT], knitr [@knitr], kableExtra [@kableExtra], dplyr [@dplyr], lubridate[@lubridate], CBC[@cbc], conversation[@conversation]
+tidyverse [@tidyverse], broom [@broom], skimr [@skimr], DT [@DT], knitr [@knitr], kableExtra [@kableExtra], dplyr [@dplyr], lubridate[@lubridate]. 
+
+Two news comes from:
+CBC[@cbc], The Conversation[@conversation]
 
 The raw data comes from Canada[@Canada] 
 
