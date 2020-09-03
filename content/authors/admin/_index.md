@@ -10,10 +10,10 @@ organizations:
 - name: Monash University
   url: https://www.monash.edu/
 role: Postgraduate student in Business Analytics
-social:
 superuser: true
 title: Yawen Zhang
 user_groups:
 - Principal Investigators
 ---
 
+Hi, this is Yawen blog :thought_balloon:

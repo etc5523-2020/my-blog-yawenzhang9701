@@ -5,7 +5,7 @@
     <link>/author/yawen-zhang/</link>
       <atom:link href="/author/yawen-zhang/index.xml" rel="self" type="application/rss+xml" />
     <description>Yawen Zhang</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 28 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Yawen Zhang</title>
@@ -13,272 +13,57 @@
     </image>
     
     <item>
-      <title>Canada COVID19 Post 🇨🇦</title>
-      <link>/post/canada-covid19-post/</link>
-      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>/post/canada-covid19-post/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;data-source-and-description&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data source and description 🎯&lt;/h2&gt;
-&lt;p&gt;The dataset used in this post is from Isha Berry personal &lt;a href=&#34;https://github.com/ishaberry/Covid19Canada&#34;&gt;GitHub&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Berry I 2020)&lt;/span&gt; and the data source is &lt;strong&gt;Canadian Medical Association Journal (CMAJ)&lt;/strong&gt;. The situation around the world still serious, and Canada is one of them.&lt;/p&gt;
-&lt;p&gt;The COVID-19 data regarding Canada was collected by COVID-19 Canada Open Data Working Group on confirmed and positive cases. Each line in the dataset represents a unique cases. The original dataset also include information such as age, sex, history travel. The cases, death, recovered dataset were created since the first relevant event occurred. The raw data was stored in seven CSV files separately. The data collection date for this blog unit August 27, 2020. The following tables and plots present each of variables in the data set and its description.&lt;/p&gt;
+      <title>An example preprint / working paper</title>
+      <link>/publication/preprint/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/preprint/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;about-canada&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;About Canada 🇨🇦&lt;/h2&gt;
-&lt;p&gt;Coronavirus disease 2019 (&lt;strong&gt;COVID‑19&lt;/strong&gt;) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The situation around the world still serious, and Canada is one of them. The virus was confirmed to spread Canada on January 25, 2020, after a citizen who had traveled ✈️ from Wuhan, Hubei to Toronto, tested positive. With government policies, such as restricting people’s travel and maintaining social distancing, the cases have declined significantly.&lt;/p&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example journal article</title>
+      <link>/publication/journal-article/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/publication/journal-article/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;each-province-covid-19-details&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Each Province COVID-19 details 🔍&lt;/h2&gt;
-&lt;p&gt;This interactive datatable concentrate on number of cumulative confirmed cases, daily new cases, cumulative deaths, daily new deaths and the number of recovered in each province and the whole Canada.&lt;/p&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:95%;height:524.08px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/Canada_COVID19/index_files/figure-html//widgets/widget_DT-table.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;numercial-summary-statistics&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Numercial Summary Statistics 📄&lt;/h2&gt;
-&lt;p&gt;Table &lt;a href=&#34;#tab:whole-Canada&#34;&gt;1&lt;/a&gt; shows that numerical summary statistics of four variables: daily new cases, cumulative cases, daily new deaths and cumulative deaths. In the Max column, the max of daily new cases and daily new deaths represent the maximum value in one day since the COVID-19 spread to Canada, while the max of cumulative cases and cumulative deaths shows the latest results.At the end of the table, cases and deaths in Canada were declined significantly 📉.&lt;/p&gt;
-&lt;table class=&#34;table table-striped table-hover&#34; style=&#34;font-size: 12px; margin-left: auto; margin-right: auto;&#34;&gt;
-&lt;caption style=&#34;font-size: initial !important;&#34;&gt;
-&lt;span id=&#34;tab:whole-Canada&#34;&gt;Table 1: &lt;/span&gt;Numerical Summary Statistics in Canada
-&lt;/caption&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left;&#34;&gt;
-Variable
-&lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-Mean
-&lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-Min
-&lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-Q1
-&lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-Q2
-&lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-Q3
-&lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-Max
-&lt;/th&gt;
-&lt;th style=&#34;text-align:left;&#34;&gt;
-Hist
-&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left;&#34;&gt;
-cases
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-773.80723
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-84
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-343.75
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-617.5
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-1196.75
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-2560
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;&#34;&gt;
-▇▃▃▂▁
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left;&#34;&gt;
-cumulative_cases
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-79281.09036
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-341
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-46659.75
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-96145.5
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-111333.00
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-128709
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;&#34;&gt;
-▃▂▂▅▇
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left;&#34;&gt;
-deaths
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-52.82081
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-0
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-6.00
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-22.0
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-96.00
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-229
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;&#34;&gt;
-▇▂▂▂▁
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left;&#34;&gt;
-cumulative_deaths
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-5661.34104
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-1
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-1757.00
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-7456.0
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-8848.00
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-9138
-&lt;/td&gt;
-&lt;td style=&#34;text-align:left;&#34;&gt;
-▃▁▁▂▇
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example conference paper</title>
+      <link>/publication/conference-paper/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>/publication/conference-paper/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;relationship-between-testing-and-cases&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Relationship between testing and cases 📈&lt;/h2&gt;
-&lt;p&gt;Only for personal interest 🤨, I want to explore the relationship between cases and testing. Since the first cases arrived in Canada in January 25, 2020, the government started to test from March 8, 2020. Therefore, I combine the testing data and cases data together and select all data from March 8, 2020. In my original idea, with the development of testing, there will more confirmed cases. In other words, they have positive relationship. However, from the plot, it could not find the relationship between cases and testing in Fig&lt;a href=&#34;#fig:line&#34;&gt;1&lt;/a&gt;. In addition, R-squared is extremely lower (0.188) to fit the line Table &lt;a href=&#34;#tab:summary&#34;&gt;2&lt;/a&gt;. The potential reason COVID19 has initially controlled in Canada.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:line&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/Canada_COVID19/index_files/figure-html/line-1.png&#34; alt=&#34;Relationship between testing and cases&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: Relationship between testing and cases
-&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
 &lt;/div&gt;
-&lt;table class=&#34;table table-striped table-hover&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
-&lt;caption&gt;
-&lt;span id=&#34;tab:summary&#34;&gt;Table 2: &lt;/span&gt;Summary of the relationship between testing and cases
-&lt;/caption&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-r.squared
-&lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-adj.r.squared
-&lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-statistic
-&lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-p.value
-&lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-AIC
-&lt;/th&gt;
-&lt;th style=&#34;text-align:right;&#34;&gt;
-BIC
-&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-0.1887101
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-0.1837632
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-38.14722
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-0
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-2520.831
-&lt;/td&gt;
-&lt;td style=&#34;text-align:right;&#34;&gt;
-2530.167
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;acknowledgements&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Acknowledgements&lt;/h2&gt;
-&lt;p&gt;The packages used for producing this post are:&lt;/p&gt;
-&lt;p&gt;tidyverse &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2019)&lt;/span&gt;, broom &lt;span class=&#34;citation&#34;&gt;(Robinson, Hayes, and Couch 2020)&lt;/span&gt;, skimr &lt;span class=&#34;citation&#34;&gt;(Waring et al. 2020)&lt;/span&gt;, DT &lt;span class=&#34;citation&#34;&gt;(Xie, Cheng, and Tan 2020)&lt;/span&gt;, knitr &lt;span class=&#34;citation&#34;&gt;(Xie 2014)&lt;/span&gt;, kableExtra &lt;span class=&#34;citation&#34;&gt;(Zhu 2019)&lt;/span&gt;, dplyr &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2020)&lt;/span&gt;, lubridate&lt;span class=&#34;citation&#34;&gt;(Grolemund and Wickham 2011)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The raw data comes from Canada&lt;span class=&#34;citation&#34;&gt;(Berry I 2020)&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
-&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
-&lt;div id=&#34;ref-Canada&#34;&gt;
-&lt;p&gt;Berry I, Tuite A, Soucy J-PR. 2020. “Covid19Canada.” &lt;em&gt;GitHub Repository&lt;/em&gt;. &lt;a href=&#34;https://github.com/ishaberry/Covid19Canada&#34;&gt;https://github.com/ishaberry/Covid19Canada&lt;/a&gt;; GitHub.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-lubridate&#34;&gt;
-&lt;p&gt;Grolemund, Garrett, and Hadley Wickham. 2011. “Dates and Times Made Easy with lubridate.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 40 (3): 1–25. &lt;a href=&#34;http://www.jstatsoft.org/v40/i03/&#34;&gt;http://www.jstatsoft.org/v40/i03/&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-broom&#34;&gt;
-&lt;p&gt;Robinson, David, Alex Hayes, and Simon Couch. 2020. &lt;em&gt;Broom: Convert Statistical Objects into Tidy Tibbles&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=broom&#34;&gt;https://CRAN.R-project.org/package=broom&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-skimr&#34;&gt;
-&lt;p&gt;Waring, Elin, Michael Quinn, Amelia McNamara, Eduardo Arino de la Rubia, Hao Zhu, and Shannon Ellis. 2020. &lt;em&gt;Skimr: Compact and Flexible Summaries of Data&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=skimr&#34;&gt;https://CRAN.R-project.org/package=skimr&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-tidyverse&#34;&gt;
-&lt;p&gt;Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” &lt;em&gt;Journal of Open Source Software&lt;/em&gt; 4 (43): 1686. &lt;a href=&#34;https://doi.org/10.21105/joss.01686&#34;&gt;https://doi.org/10.21105/joss.01686&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-dplyr&#34;&gt;
-&lt;p&gt;Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2020. &lt;em&gt;Dplyr: A Grammar of Data Manipulation&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=dplyr&#34;&gt;https://CRAN.R-project.org/package=dplyr&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-knitr&#34;&gt;
-&lt;p&gt;Xie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research in R.” In &lt;em&gt;Implementing Reproducible Computational Research&lt;/em&gt;, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC. &lt;a href=&#34;http://www.crcpress.com/product/isbn/9781466561595&#34;&gt;http://www.crcpress.com/product/isbn/9781466561595&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-DT&#34;&gt;
-&lt;p&gt;Xie, Yihui, Joe Cheng, and Xianying Tan. 2020. &lt;em&gt;DT: A Wrapper of the Javascript Library ’Datatables’&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=DT&#34;&gt;https://CRAN.R-project.org/package=DT&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ref-kableExtra&#34;&gt;
-&lt;p&gt;Zhu, Hao. 2019. &lt;em&gt;KableExtra: Construct Complex Table with ’Kable’ and Pipe Syntax&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=kableExtra&#34;&gt;https://CRAN.R-project.org/package=kableExtra&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
