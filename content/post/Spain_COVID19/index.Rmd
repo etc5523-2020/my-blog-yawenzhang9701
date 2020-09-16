@@ -1,0 +1,168 @@
+---
+title: COVID-19 in Spain
+author: Yawen Zhang
+date: '2020-09-14'
+slug: covid-19-in-spain
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-09-14T08:22:49+08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+# devtools::install_github("joachim-gassen/tidycovid19")
+library(tidyverse)
+library(dplyr)
+library(tidycovid19)
+library(zoo)
+library(shiny)
+library(ggplot2)
+library(plotly)
+library(scales)
+```
+
+
+```{r}
+read <- read.csv("data/WHO-COVID-19-global-data.csv")
+```
+
+
+```{r}
+# df <- download_merged_data(cached = TRUE, silent = TRUE)
+# write_csv(df, path = "/Users/yawenzhang/Documents/5523 Communicating with data/my-blog-yawenzhang9701/content/post/Spain_COVID19/data/df.csv")
+df <- read_csv("data/df.csv") #Save data
+```
+
+```{r}
+data_wrangled <- df %>%
+  filter(country == "Spain") %>%
+  mutate(confirmed_lag = lag(confirmed),
+         daily_confirmed = confirmed - confirmed_lag,
+         death_lag = lag(deaths),
+         daily_death = deaths - death_lag,
+         recovered_lag = lag(recovered),
+         daily_recovered = recovered - recovered_lag) %>%
+  rename(residential = "gcmr_residential", workplaces = "gcmr_workplaces", retail_recreation = "gcmr_retail_recreation", grocery_pharmacy = "gcmr_grocery_pharmacy", park = "gcmr_parks", public_station = "gcmr_transit_stations")
+# data_activity <- data_wrangled %>%
+#   select(date, gcmr_retail_recreation, gcmr_grocery_pharmacy, gcmr_parks, gcmr_transit_stations, gcmr_workplaces, gcmr_residential) %>% 
+#   pivot_longer(cols = starts_with("gcmr"), names_to = "Activity", values_to = "gcmr")
+```
+
+```{r}
+# data_activity %>%
+#   ggplot() +
+#   geom_smooth(aes(x = date, y = gcmr, color = Activity))
+```
+
+
+```{r}
+lockdown_date <- data.frame(Start = c("2020-03-13", "2020-03-16", "2020-03-28", "2020-04-04", "2020-04-13", "2020-04-18", "2020-05-01", "2020-05-02", "2020-05-11"), 
+                            end = c("2020-03-15", "2020-03-27", "2020-04-03", "2020-04-12", "2020-04-17", "2020-04-30", "2020-05-01", "2020-05-10", "now"), 
+                            lockdown_level = c("1", "2", "3", "4", "3", "4", "3", "2", "1" ))
+```
+
+```{r}
+Activity <- data_wrangled %>%
+  select(date, residential, workplaces) %>%
+  pivot_longer(cols = c(residential, workplaces), names_to = "Daily_Activity", values_to = "gcmr") %>%
+  ggplot() +
+  geom_smooth(aes(x = date, y = gcmr, colour = Daily_Activity), 
+              se = FALSE, 
+              method = 'loess') +
+  geom_rect(data = lockdown_date %>% 
+              filter(lockdown_level == "4"), 
+            aes(xmin = as.Date(Start), xmax = as.Date(end), ymin = -Inf, ymax = Inf), 
+            alpha = 0.25, 
+            fill = "#BA5370")+
+  theme_light() +
+  scale_x_date(breaks=date_breaks("1 month"),
+               labels=date_format('%b')) +
+  annotate(geom = "text", 
+           x=as.Date('2020-03-20'), 
+           y=0, 
+           label="First Stage 4", 
+           size = 4, 
+           color = "red") +
+  annotate(geom = "text", 
+           x=as.Date('2020-05-10'), 
+           y=-30, 
+           label="Second Stage 4", 
+           size = 4, 
+           color = "red")
+Activity
+  # geom_rect(data = lockdown_date %>% filter(lockdown_level == "3"), aes(xmin = as.Date(Start), xmax = as.Date(end), ymin = -Inf, ymax = Inf),alpha = 0.25, fill = "#BA5370")
+```
+
+
+```{r}
+Daily <- data_wrangled %>%
+  select(date, retail_recreation, grocery_pharmacy, park) %>%
+  pivot_longer(cols = c(retail_recreation, grocery_pharmacy, park), names_to = "Activity", values_to = "gcmr") %>%
+  ggplot() +
+  geom_smooth(aes(x = date, y = gcmr, colour = Activity), se = FALSE, method = 'loess') +
+  geom_rect(data = lockdown_date %>% filter(lockdown_level == "4"), aes(xmin = as.Date(Start), xmax = as.Date(end), ymin = -Inf, ymax = Inf),alpha = 0.25, fill = "#BA5370") +
+  theme_light() +
+  scale_x_date(breaks=date_breaks("1 month"),
+               labels=date_format('%b')) +
+  annotate(geom = "text", 
+           x=as.Date('2020-03-20'), 
+           y=50, 
+           label="First Stage 4", 
+           size = 4, 
+           color = "red") +
+  annotate(geom = "text", 
+           x=as.Date('2020-05-15'), 
+           y=40, 
+           label="Second Stage 4", 
+           size = 4, 
+           color = "red")
+Daily
+```
+
+```{r}
+# gridExtra::grid.arrange(Activity, Daily, nrow= 2) 
+```
+
+
+
+
+
+
+```{r}
+# # Define UI for application that draws a histogram
+# ui <- fluidPage(
+#     shiny::checkboxGroupInput("activity", "Please tick the Activity", choices = c("gcmr_grocery_pharmacy",
+#                                                                                   "gcmr_parks",
+#                                                                                   "gcmr_transit_stations",
+#                                                                                   "gcmr_workplaces",
+#                                                                                   "gcmr_residentia"), selected = "gcmr_grocery_pharmacy"),
+#     plotOutput("plot_line")
+# )
+# 
+# # Define server logic required to draw a histogram
+# server <- function(input, output) {
+#     output$plot_line <- renderPlot({
+#         data_activity %>%
+#             filter(Activity %in% input$activity) %>%
+#             ggplot() +
+#             geom_line(aes(x = date, y = gcmr, color = Activity))
+#     })
+# 
+# }
+# 
+# # Run the application
+# shinyApp(ui = ui, server = server)
+
+```
+
+
+
