@@ -5,7 +5,7 @@
     <link>/author/yawen-zhang/</link>
       <atom:link href="/author/yawen-zhang/index.xml" rel="self" type="application/rss+xml" />
     <description>Yawen Zhang</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 28 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Yawen Zhang</title>
@@ -13,29 +13,63 @@
     </image>
     
     <item>
-      <title>Canada COVID19 Post 🇨🇦</title>
-      <link>/post/canada-covid19-post/</link>
-      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>/post/canada-covid19-post/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;about-canada&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;About Canada 🇨🇦&lt;/h2&gt;
-&lt;p&gt;Coronavirus disease 2019 (&lt;strong&gt;COVID‑19&lt;/strong&gt;) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The situation around the world still serious, and Canada is one of them. The virus was confirmed to spread Canada on January 25, 2020, after a citizen who had traveled ✈️ from Wuhan, Hubei to Toronto, tested positive. With government policies, such as restricting people’s travel and maintaining social distancing, the cases have declined significantly.&lt;/p&gt;
+      <title>An example preprint / working paper</title>
+      <link>/publication/preprint/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/preprint/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;data-source-and-description&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data Source and Description 🎯&lt;/h2&gt;
-&lt;p&gt;The dataset used in this post is from Isha Berry personal &lt;a href=&#34;https://github.com/ishaberry/Covid19Canada&#34;&gt;GitHub&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Berry I 2020)&lt;/span&gt; and the data source is &lt;strong&gt;Canadian Medical Association Journal (CMAJ)&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;The COVID-19 data regarding Canada was collected by COVID-19 Canada Open Data Working Group on confirmed and positive cases. Each line in the dataset represents a unique cases. The original dataset also include information such as age, sex, history travel. The cases, death, recovered dataset were created since the first relevant event occurred. The raw data was stored in seven CSV files separately. The data collection date for this blog until August 27, 2020. The following tables and plots present these variables in the data set and also contain descriptions.&lt;/p&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example journal article</title>
+      <link>/publication/journal-article/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/publication/journal-article/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;each-province-covid-19-details&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Each Province COVID-19 Details 🔍&lt;/h2&gt;
-&lt;p&gt;This interactive datatable concentrate on number of cumulative confirmed cases, daily new cases, cumulative deaths, daily new deaths and the number of recovered in each province and the whole Canada.&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example conference paper</title>
+      <link>/publication/conference-paper/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>/publication/conference-paper/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
+number of recovered in each province and the whole Canada.&lt;/p&gt;
 &lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:95%;height:524.08px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/Canada_COVID19/index_files/figure-html//widgets/widget_DT-table.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
