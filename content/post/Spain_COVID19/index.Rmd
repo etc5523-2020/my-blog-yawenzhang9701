@@ -47,7 +47,7 @@ read <- read.csv("data/WHO-COVID-19-global-data.csv")
 df <- read_csv("data/df.csv") #Save data
 ```
 
-## Spain Confirmed Cases Outlier and Analysis
+## Spain Confirmed Cases and Analysis
 
 
 ```{r}
@@ -65,7 +65,7 @@ Coronavirus crisis is one of the darkest and dramatic moments in recent Spanish 
 
 post <- leaflet() %>%
             #use setView() to choose the  map center and zoom level
-            setView(lat = 37.45824, lng = -4.56819,  zoom = 5) %>%
+            setView(lat = 37.45824, lng = -4.56819,  zoom = 6) %>%
             addTiles() %>%
             addCircleMarkers(
                 data = our,
@@ -175,7 +175,7 @@ The following Figure \@ref(fig:work) presents the changes of different activitie
 
 
 
-```{r work, fig.cap= "The frequency that people visit workplaces and residential relative to the baseline period Jan 3 - Feb 6, 2020. Since the outbreak of COVID-19, frequency that people visit residentials was increase dramatically and decreased when the fourth stage lockdown restriction finished. In contrast, the frequency that people visit workplaces decrease significantly until the fourth stage lockdown restriction finished."}
+```{r work, fig.cap= "The frequency that people visit workplaces and residential relative to the baseline period Jan 3 - Feb 6, 2020."}
 Activity <- data_wrangled %>%
   dplyr::select(date, residential, workplaces) %>%
   pivot_longer(cols = c(residential, workplaces), names_to = "Daily_Activity", values_to = "Changes") %>%
@@ -202,7 +202,8 @@ Activity <- data_wrangled %>%
            y=-30, 
            label="Second Stage 4", 
            size = 4, 
-           color = "red")
+           color = "red") +
+  ggtitle("The frequency that people visit workplaces and residentia")
 Activity
   # geom_rect(data = lockdown_date %>% filter(lockdown_level == "3"), aes(xmin = as.Date(Start), xmax = as.Date(end), ymin = -Inf, ymax = Inf),alpha = 0.25, fill = "#BA5370")
 ```
@@ -237,7 +238,8 @@ Daily <- data_wrangled %>%
            y=40, 
            label="Second Stage 4", 
            size = 4, 
-           color = "red")
+           color = "red") +
+  ggtitle("The frequency changes that people visit pharmacy, parks, retail and recreation")
 Daily
 ```
 
