@@ -60,22 +60,22 @@ our <- read.csv("data/Bing-COVID19-Data.csv") %>%
 
 ```{r}
 
-post <- leaflet() %>%
-            #use setView() to choose the  map center and zoom level
-            setView(lat = 37.45824, lng = -4.56819,  zoom = 5) %>%
-            addTiles() %>%
-            addCircleMarkers(
-                data = our,
-                # set layer-Id to get id in click event
-                layerId = ~AdminRegion1, 
-                lng = ~Longitude,
-                lat = ~Latitude,
-                radius = ~(Confirmed/3000), # to scale down
-                label = ~paste("Region",AdminRegion1,",Case Number",Confirmed), #  show label name when mouse hovers
-                weight = 2,
-                color = "#BA5370"
-            )
-widgetframe::frameWidget(post, width = "100%")
+# post <- leaflet() %>%
+#             #use setView() to choose the  map center and zoom level
+#             setView(lat = 37.45824, lng = -4.56819,  zoom = 5) %>%
+#             addTiles() %>%
+#             addCircleMarkers(
+#                 data = our,
+#                 # set layer-Id to get id in click event
+#                 layerId = ~AdminRegion1, 
+#                 lng = ~Longitude,
+#                 lat = ~Latitude,
+#                 radius = ~(Confirmed/3000), # to scale down
+#                 label = ~paste("Region",AdminRegion1,",Case Number",Confirmed), #  show label name when mouse hovers
+#                 weight = 2,
+#                 color = "#BA5370"
+#             )
+# widgetframe::frameWidget(post, width = "100%")
 ```
 
 ```{r}
