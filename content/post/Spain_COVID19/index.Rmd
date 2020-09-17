@@ -85,7 +85,7 @@ post <- leaflet() %>%
                 radius = ~(Confirmed/3000), # to scale down
                 label = ~paste("Region",AdminRegion1,",Case Number",Confirmed), #  show label name when mouse hovers
                 weight = 2,
-                color = "#BA5370"
+                color = "red"
             )
 widgetframe::frameWidget(post, width = "160%")
 ```
