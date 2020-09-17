@@ -77,7 +77,7 @@
     </item>
     
     <item>
-      <title>COVID-19 in Spain</title>
+      <title>COVID-19 in Spain 🇪🇸</title>
       <link>/post/covid-19-in-spain/</link>
       <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       <guid>/post/covid-19-in-spain/</guid>
@@ -87,11 +87,19 @@
 &lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
+&lt;div id=&#34;about-spain&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;About Spain 🇪🇸&lt;/h2&gt;
+&lt;p&gt;The COVID-19 pandemic in Spain is part of the pandemic of Coronavirus Disease 2019 (&lt;strong&gt;COVID‑19&lt;/strong&gt;). Spain has the second highest total confirmed cases in Europe after Russia. The first confirmed cases come from Germany and spread to Spain on 31 Jan 2019. Up to 15 March 2020, all 50 provinces have confirmed cases of the country. Spain became one of the most draconian countries in the world and a lockdown restriction imposed on 14 March 2020. Until 13 Sep, there are about 566,326 confirmed cases and 29,747 deaths.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-source-and-descrptions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Source and Descrptions 🎯&lt;/h2&gt;
+&lt;p&gt;The data is taken from the &lt;a href=&#34;https://github.com/joachim-gassen/tidycovid19&#34;&gt;tidycovid19&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Gassen 2020a)&lt;/span&gt; package created by Joachim Gassen. The &lt;code&gt;tidycovid19&lt;/code&gt; package was created to provide transparent access to various data sources. Then, used &lt;code&gt;download_merged_data&lt;/code&gt; to merge the dataset. This merge dataset contains data of coronavirus confirmed, recovered, death original collected from &lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34;&gt;Johns Hopkins University&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(University 2020)&lt;/span&gt;.Some other variables contains the frequency places are visited comes from &lt;a href=&#34;https://www.google.com/covid19/mobility/&#34;&gt;Google Commmunity Mobility Reports&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Google 2020)&lt;/span&gt;. The raw data was stored in two CSV files separately. The data collection date for this blog until September 13, 2020. The following map and plots present these variables in the data set and also contain descriptions.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;spain-confirmed-cases-and-analysis&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Spain Confirmed Cases and Analysis&lt;/h2&gt;
+&lt;h2&gt;Spain Confirmed Cases and Analysis 🗺&lt;/h2&gt;
 &lt;p&gt;Coronavirus crisis is one of the darkest and dramatic moments in recent Spanish history which the virus is spreading faster than in any neighboring nation. From the Map &lt;a href=&#34;#fig:map&#34;&gt;1&lt;/a&gt; below, Madrid, the Spanish region with the highest number of cases, had the confirmed case of 81047 in total. After that, Catalonia became the second highest number of cases until Sep 13th.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:map&#34;&gt;&lt;/span&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:160%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
 &lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/Spain_COVID19/index_files/figure-html//widgets/widget_map.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Total Confirmed Cases in Each Region
@@ -113,9 +121,9 @@ Other reason was the government reacted late and clumsily and since the financia
 &lt;p&gt;Due to coronavirus continued deterioration, the lockdown that began on 14 March enforced with police and popular pressure &lt;a href=&#34;https://www.theguardian.com/world/2020/mar/26/spain-coronavirus-response-analysis&#34;&gt;Guardian&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Guardian 2020)&lt;/span&gt;. The next following section will explore lockdown restriction to citizen daily activity frequency changes.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lockdown-restriction-to-citizen-daily-activity-frequency-changes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Lockdown Restriction to Citizen Daily Activity Frequency Changes&lt;/h2&gt;
+&lt;h2&gt;Lockdown Restriction to Citizen Daily Activity Frequency Changes 👣&lt;/h2&gt;
 &lt;p&gt;Countries around the world are in uncharted territory. The emergence and spread of COVID-19 has touched every facet of society. The Spain nationwide lockdown began at March 15, as a result, daily life comes to a halt. To be specific, public gathering party are canceled, employees were sent back to home. All sizes of business are facing many uncertainties about their prospects.&lt;/p&gt;
-&lt;p&gt;The following Figure &lt;a href=&#34;#fig:work&#34;&gt;3&lt;/a&gt; presents the changes of different activities regarding the lockdown restrictions. Up to now, stage four restrictions happened twice since the beginning of lockdown at March 13. Stage four was an advanced phase, in which the restriction was limited. More than 23,000 people have died in Spain after contracting coronavirus, making the country one of the worst affected in the world by the illness. At this period, thousands of employee were forced to work at home during nearly three month coronavirus lockdown. Therefore, frequency that people visited workplaces has dropped about 50% compare with before. After the fourth stage lockdown restriction ended, employees allowed to work in the physical workplace and frequency that people visit workplaces increased, still lower than the average rate. Remote working caused by coronavirus has made many people aware of the convenience. Besides, Spain government are protecting the rights of remote workers, such as distance working must be a voluntary choice or employees have the right to apply compensation for any direct or indirect costs related to remote work &lt;a href=&#34;https://english.elpais.com/economy_and_business/2020-06-26/flexible-schedules-and-covered-expenses-spain-drafts-bill-protecting-the-rights-of-remote-workers.htmla&#34;&gt;ELPAIS&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(ELPAIS 2020)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The following Figure &lt;a href=&#34;#fig:work&#34;&gt;3&lt;/a&gt; presents the changes of different activities regarding the lockdown restrictions🔒. Up to now, stage four restrictions happened twice since the beginning of lockdown at March 13. Stage four was an advanced phase, in which the restriction was limited. More than 23,000 people have died in Spain after contracting coronavirus, making the country one of the worst affected in the world by the illness. At this period, thousands of employee were forced to work at home during nearly three month coronavirus lockdown. Therefore, frequency that people visited workplaces has dropped about 50% compare with before. After the fourth stage lockdown restriction ended, employees allowed to work in the physical workplace and frequency that people visit workplaces increased, still lower than the average rate. Remote working caused by coronavirus has made many people aware of the convenience. Besides, Spain government are protecting the rights of remote workers, such as distance working must be a voluntary choice or employees have the right to apply compensation for any direct or indirect costs related to remote work &lt;a href=&#34;https://english.elpais.com/economy_and_business/2020-06-26/flexible-schedules-and-covered-expenses-spain-drafts-bill-protecting-the-rights-of-remote-workers.htmla&#34;&gt;ELPAIS&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(ELPAIS 2020)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:work&#34;&gt;&lt;/span&gt;
 &lt;img src=&#34;/post/Spain_COVID19/index_files/figure-html/work-1.png&#34; alt=&#34;The frequency that people visit workplaces and residential relative to the baseline period Jan 3 - Feb 6, 2020.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
@@ -130,9 +138,18 @@ Figure 4: The frequency changes that people visit pharmacy, parks, retail and re
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
-&lt;h1&gt;References&lt;/h1&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;The packages used for producing this post are:&lt;/p&gt;
+&lt;p&gt;tidyverse &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2019)&lt;/span&gt;, knitr &lt;span class=&#34;citation&#34;&gt;(Xie 2014)&lt;/span&gt;, kableExtra &lt;span class=&#34;citation&#34;&gt;(Zhu 2019)&lt;/span&gt;, dplyr &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2020)&lt;/span&gt;, tidycovid19&lt;span class=&#34;citation&#34;&gt;(Gassen 2020b)&lt;/span&gt;,zoo&lt;span class=&#34;citation&#34;&gt;(Zeileis and Grothendieck 2005)&lt;/span&gt;, ggplot&lt;span class=&#34;citation&#34;&gt;(Wickham 2016)&lt;/span&gt;,scales&lt;span class=&#34;citation&#34;&gt;(Wickham and Seidel 2020)&lt;/span&gt;, highcharter&lt;span class=&#34;citation&#34;&gt;(Kunst 2020)&lt;/span&gt;, leaflet&lt;span class=&#34;citation&#34;&gt;(Cheng, Karambelkar, and Xie 2019)&lt;/span&gt;, lubridate&lt;span class=&#34;citation&#34;&gt;(Grolemund and Wickham 2011)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The raw data comes from tidycovid19&lt;span class=&#34;citation&#34;&gt;(Gassen 2020a)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-leaflet&#34;&gt;
+&lt;p&gt;Cheng, Joe, Bhaskar Karambelkar, and Yihui Xie. 2019. &lt;em&gt;Leaflet: Create Interactive Web Maps with the Javascript ’Leaflet’ Library&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=leaflet&#34;&gt;https://CRAN.R-project.org/package=leaflet&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;ref-ELPAIS_economics&#34;&gt;
 &lt;p&gt;ELPAIS. 2020. “Flexible Schedules and Covered Expenses: Spain Drafts Bill Protecting the Rights of Remote Workers.” &lt;a href=&#34;https://english.elpais.com/economy_and_business/2020-06-26/flexible-schedules-and-covered-expenses-spain-drafts-bill-protecting-the-rights-of-remote-workers.html&#34;&gt;https://english.elpais.com/economy_and_business/2020-06-26/flexible-schedules-and-covered-expenses-spain-drafts-bill-protecting-the-rights-of-remote-workers.html&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
@@ -142,14 +159,53 @@ Figure 4: The frequency changes that people visit pharmacy, parks, retail and re
 &lt;div id=&#34;ref-euronews&#34;&gt;
 &lt;p&gt;euronews. 2020. “Coronavirus: Spain Reveals Four-Stage Plan to de-Escalate from Covid-19 Lockdown.” &lt;a href=&#34;https://www.euronews.com/2020/04/29/coronavirus-spain-reveals-four-stage-plan-to-de-escalate-from-covid-19-lockdown&#34;&gt;https://www.euronews.com/2020/04/29/coronavirus-spain-reveals-four-stage-plan-to-de-escalate-from-covid-19-lockdown&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div id=&#34;ref-Spain&#34;&gt;
+&lt;p&gt;Gassen, Joachim. 2020a. “Download, Tidy and Visualize Covid-19 Related Data.” &lt;em&gt;GitHub Repository&lt;/em&gt;. https://github.com/joachim-gassen/tidycovid19; GitHub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-tidycovid19&#34;&gt;
+&lt;p&gt;———. 2020b. &lt;em&gt;Tidycovid19: Download, Tidy and Visualize Covid-19 Related Data&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;ref-CNN&#34;&gt;
 &lt;p&gt;Goodman, Al. 2020. “After 7 Weeks of Lockdown, Spaniards Can Finally Exercise Outdoors – as Death Toll Passes 25,000.” &lt;a href=&#34;https://www.cnn.com/2020/05/02/europe/spain-lockdown-coronavirus-exercise-intl/index.html&#34;&gt;https://www.cnn.com/2020/05/02/europe/spain-lockdown-coronavirus-exercise-intl/index.html&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Google&#34;&gt;
+&lt;p&gt;Google. 2020. “See How Your Community Is Moving Around Differently Due to Covid-19.” &lt;em&gt;Google Community&lt;/em&gt;. https://www.google.com/covid19/mobility/; Google.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-lubridate&#34;&gt;
+&lt;p&gt;Grolemund, Garrett, and Hadley Wickham. 2011. “Dates and Times Made Easy with lubridate.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 40 (3): 1–25. &lt;a href=&#34;http://www.jstatsoft.org/v40/i03/&#34;&gt;http://www.jstatsoft.org/v40/i03/&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Guardian&#34;&gt;
 &lt;p&gt;Guardian. 2020. “How Did Spain Get Its Coronavirus Response so Wrong?” &lt;a href=&#34;https://www.theguardian.com/world/2020/mar/26/spain-coronavirus-response-analysisl&#34;&gt;https://www.theguardian.com/world/2020/mar/26/spain-coronavirus-response-analysisl&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div id=&#34;ref-highcharter&#34;&gt;
+&lt;p&gt;Kunst, Joshua. 2020. &lt;em&gt;Highcharter: A Wrapper for the ’Highcharts’ Library&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=highcharter&#34;&gt;https://CRAN.R-project.org/package=highcharter&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Johns_Hopkins&#34;&gt;
+&lt;p&gt;University, Johns Hopkins. 2020. “COVID-19 Data Repository by the Center for Systems Science and Engineering (Csse) at Johns Hopkins University.” &lt;em&gt;GitHub Repository&lt;/em&gt;. https://github.com/CSSEGISandData/COVID-19; GitHub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-ggplot&#34;&gt;
+&lt;p&gt;Wickham, Hadley. 2016. &lt;em&gt;Ggplot2: Elegant Graphics for Data Analysis&lt;/em&gt;. Springer-Verlag New York. &lt;a href=&#34;https://ggplot2.tidyverse.org&#34;&gt;https://ggplot2.tidyverse.org&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-tidyverse&#34;&gt;
+&lt;p&gt;Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” &lt;em&gt;Journal of Open Source Software&lt;/em&gt; 4 (43): 1686. &lt;a href=&#34;https://doi.org/10.21105/joss.01686&#34;&gt;https://doi.org/10.21105/joss.01686&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-dplyr&#34;&gt;
+&lt;p&gt;Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2020. &lt;em&gt;Dplyr: A Grammar of Data Manipulation&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=dplyr&#34;&gt;https://CRAN.R-project.org/package=dplyr&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-scales&#34;&gt;
+&lt;p&gt;Wickham, Hadley, and Dana Seidel. 2020. &lt;em&gt;Scales: Scale Functions for Visualization&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=scales&#34;&gt;https://CRAN.R-project.org/package=scales&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-knitr&#34;&gt;
+&lt;p&gt;Xie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research in R.” In &lt;em&gt;Implementing Reproducible Computational Research&lt;/em&gt;, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC. &lt;a href=&#34;http://www.crcpress.com/product/isbn/9781466561595&#34;&gt;http://www.crcpress.com/product/isbn/9781466561595&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;ref-Xinhua&#34;&gt;
 &lt;p&gt;Xinhua. 2020. “China to Continue Helping Spain Fight Covid-19 Epidemic: FM ?” &lt;a href=&#34;http://www.xinhuanet.com/english/2020-05/13/c_139051653.htm&#34;&gt;http://www.xinhuanet.com/english/2020-05/13/c_139051653.htm&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-zoo&#34;&gt;
+&lt;p&gt;Zeileis, Achim, and Gabor Grothendieck. 2005. “Zoo: S3 Infrastructure for Regular and Irregular Time Series.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 14 (6): 1–27. &lt;a href=&#34;https://doi.org/10.18637/jss.v014.i06&#34;&gt;https://doi.org/10.18637/jss.v014.i06&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-kableExtra&#34;&gt;
+&lt;p&gt;Zhu, Hao. 2019. &lt;em&gt;KableExtra: Construct Complex Table with ’Kable’ and Pipe Syntax&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=kableExtra&#34;&gt;https://CRAN.R-project.org/package=kableExtra&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
