@@ -29,6 +29,10 @@ library(shiny)
 library(ggplot2)
 library(plotly)
 library(scales)
+library(lubridate)
+library(highcharter)
+library(leaflet)
+library(kableExtra)
 ```
 
 
@@ -42,6 +46,76 @@ read <- read.csv("data/WHO-COVID-19-global-data.csv")
 # write_csv(df, path = "/Users/yawenzhang/Documents/5523 Communicating with data/my-blog-yawenzhang9701/content/post/Spain_COVID19/data/df.csv")
 df <- read_csv("data/df.csv") #Save data
 ```
+
+
+
+
+```{r}
+our <- read.csv("data/Bing-COVID19-Data.csv") %>%
+  filter(Country_Region == "Spain") %>%
+  filter(AdminRegion1 %in% c("Madrid", "Catalonia", "Andalusia", "Aragon", "Basque Country", "Valencia", "Castilla Leon", "Castile-La Mancha" ,"Balearic Islands" ,"Murcia", "Galicia", "Canary Islands", "Navarre", "Extremadura", "Cantabria", "La Rioja", "Asturias", "Melilla", "Ceuta"))
+```
+
+
+
+```{r}
+
+post <- leaflet() %>%
+            #use setView() to choose the  map center and zoom level
+            setView(lat = 37.45824, lng = -4.56819,  zoom = 5) %>%
+            addTiles() %>%
+            addCircleMarkers(
+                data = our,
+                # set layer-Id to get id in click event
+                layerId = ~AdminRegion1, 
+                lng = ~Longitude,
+                lat = ~Latitude,
+                radius = ~(Confirmed/3000), # to scale down
+                label = ~paste("Region",AdminRegion1,",Case Number",Confirmed), #  show label name when mouse hovers
+                weight = 2,
+                color = "#BA5370"
+            )
+widgetframe::frameWidget(post, width = "100%")
+```
+
+```{r}
+# our %>%
+#   dplyr::select(Updated, Confirmed,AdminRegion1)%>%
+#   filter(Updated == "09/13/2020") %>%
+#   arrange(desc(Confirmed)) %>%
+#   rename(Region = "AdminRegion1", "Total Confirmed" = "Confirmed", Date = "Updated") %>%
+#   # dplyr::select(-Updated) %>%
+#   filter(Region %in% c("Madrid", "Catalonia", "Andalusia", "Basque Country", "Valencia", "Castilla Leon")) %>%
+#   pivot_wider(id_cols = Date, names_from = Region, values_from = "Total Confirmed") %>%
+#   kable() %>%
+#   kable_styling(bootstrap_options =
+#                   c("striped", "condensed"),
+#                   full_width = F,
+#                   position = "center")
+  
+```
+
+
+
+```{r}
+Spain_new <- our %>%
+  dplyr::select(Updated, ConfirmedChange, AdminRegion1) %>%
+  filter(AdminRegion1 %in% c("Madrid", "Catalonia", "Andalusia", "Aragon", "Basque Country", "Valencia", "Castilla Leon", "Castile-La Mancha", "Balearic Islands" ,"Murcia", "Galicia", "Canary Islands", "Navarre", "Extremadura", "Cantabria", "La Rioja", "Asturias", "Melilla", "Ceuta")) %>%
+  mutate(Date = dmy(Updated)) %>%
+  rename(Region = "AdminRegion1") %>%
+  hchart("line", hcaes(x = Date, y = ConfirmedChange, group = Region))
+
+widgetframe::frameWidget(Spain_new, width = 720)
+```
+
+
+
+
+
+
+
+
+
 
 ```{r}
 data_wrangled <- df %>%
@@ -65,6 +139,9 @@ data_wrangled <- df %>%
 ```
 
 
+
+## Lockdown Restriction to Citizen Daily Activity Frequency Changes
+
 ```{r}
 lockdown_date <- data.frame(Start = c("2020-03-13", "2020-03-16", "2020-03-28", "2020-04-04", "2020-04-13", "2020-04-18", "2020-05-01", "2020-05-02", "2020-05-11"), 
                             end = c("2020-03-15", "2020-03-27", "2020-04-03", "2020-04-12", "2020-04-17", "2020-04-30", "2020-05-01", "2020-05-10", "now"), 
@@ -79,12 +156,14 @@ The following Figure \@ref(fig:work) presents the changes of different activitie
 
 
 
+
+
 ```{r work, fig.cap= "The frequency that people visit workplaces and residential relative to the baseline period Jan 3 - Feb 6, 2020. Since the outbreak of COVID-19, frequency that people visit residentials was increase dramatically and decreased when the fourth stage lockdown restriction finished. In contrast, the frequency that people visit workplaces decrease significantly until the fourth stage lockdown restriction finished."}
 Activity <- data_wrangled %>%
-  select(date, residential, workplaces) %>%
-  pivot_longer(cols = c(residential, workplaces), names_to = "Daily_Activity", values_to = "gcmr") %>%
+  dplyr::select(date, residential, workplaces) %>%
+  pivot_longer(cols = c(residential, workplaces), names_to = "Daily_Activity", values_to = "Changes") %>%
   ggplot() +
-  geom_smooth(aes(x = date, y = gcmr, colour = Daily_Activity), 
+  geom_smooth(aes(x = date, y = Changes, colour = Daily_Activity), 
               se = FALSE, 
               method = 'loess') +
   geom_rect(data = lockdown_date %>% 
@@ -122,10 +201,10 @@ Within the lockdown period, parks remain closed. Therefore, runners and cyclists
 
 ```{r daily, fig.cap="The frequency changes that people visit pharmacy, parks, retail and recreation relative  to the baseline period Jan 3 - Feb 6, 2020"}
 Daily <- data_wrangled %>%
-  select(date, retail_recreation, grocery_pharmacy, park) %>%
-  pivot_longer(cols = c(retail_recreation, grocery_pharmacy, park), names_to = "Activity", values_to = "gcmr") %>%
+  dplyr::select(date, retail_recreation, grocery_pharmacy, park) %>%
+  pivot_longer(cols = c(retail_recreation, grocery_pharmacy, park), names_to = "Activity", values_to = "Changes") %>%
   ggplot() +
-  geom_smooth(aes(x = date, y = gcmr, colour = Activity), se = FALSE, method = 'loess') +
+  geom_smooth(aes(x = date, y = Changes, colour = Activity), se = FALSE, method = 'loess') +
   geom_rect(data = lockdown_date %>% filter(lockdown_level == "4"), aes(xmin = as.Date(Start), xmax = as.Date(end), ymin = -Inf, ymax = Inf),alpha = 0.25, fill = "#BA5370") +
   theme_light() +
   scale_x_date(breaks=date_breaks("1 month"),
@@ -151,32 +230,9 @@ Daily
 
 
 
-```{r}
-# # Define UI for application that draws a histogram
-# ui <- fluidPage(
-#     shiny::checkboxGroupInput("activity", "Please tick the Activity", choices = c("gcmr_grocery_pharmacy",
-#                                                                                   "gcmr_parks",
-#                                                                                   "gcmr_transit_stations",
-#                                                                                   "gcmr_workplaces",
-#                                                                                   "gcmr_residentia"), selected = "gcmr_grocery_pharmacy"),
-#     plotOutput("plot_line")
-# )
-# 
-# # Define server logic required to draw a histogram
-# server <- function(input, output) {
-#     output$plot_line <- renderPlot({
-#         data_activity %>%
-#             filter(Activity %in% input$activity) %>%
-#             ggplot() +
-#             geom_line(aes(x = date, y = gcmr, color = Activity))
-#     })
-# 
-# }
-# 
-# # Run the application
-# shinyApp(ui = ui, server = server)
 
-```
+
+
 
 
 # References

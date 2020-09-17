@@ -18,8 +18,17 @@
       <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       <guid>/post/covid-19-in-spain/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/Spain_COVID19/index_files/figure-html//widgets/widget_unnamed-chunk-4.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:720px;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/Spain_COVID19/index_files/figure-html//widgets/widget_unnamed-chunk-6.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;div id=&#34;lockdown-restriction-to-citizen-daily-activity-frequency-changes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Lockdown Restriction to Citizen Daily Activity Frequency Changes&lt;/h2&gt;
 &lt;p&gt;Countries around the world are in uncharted territory. The emergence and spread of COVID-19 has touched every facet of society. The Spain nationwide lockdown began at March 15, as a result, daily life comes to a halt. To be specific, public gathering party are canceled, employees were sent back to home. All sizes of business are facing many uncertainties about their prospects.&lt;/p&gt;
 &lt;p&gt;The following Figure &lt;a href=&#34;#fig:work&#34;&gt;1&lt;/a&gt; presents the changes of different activities regarding the lockdown restrictions. Up to now, stage four restrictions happened twice since the beginning of lockdown at March 13. Stage four was an advanced phase, in which the restriction was limited. More than 23,000 people have died in Spain after contracting coronavirus, making the country one of the worst affected in the world by the illness. At this period, thousands of employee were forced to work at home during nearly three month coronavirus lockdown. Therefore, frequency that people visited workplaces has dropped about 50% compare with before. After the fourth stage lockdown restriction ended, employees allowed to work in the physical workplace and frequency that people visit workplaces increased, still lower than the average rate. Remote working caused by coronavirus has made many people aware of the convenience. Besides, Spain government are protecting the rights of remote workers, such as distance working must be a voluntary choice or employees have the right to apply compensation for any direct or indirect costs related to remote work &lt;a href=&#34;https://english.elpais.com/economy_and_business/2020-06-26/flexible-schedules-and-covered-expenses-spain-drafts-bill-protecting-the-rights-of-remote-workers.htmla&#34;&gt;ELPAIS&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(ELPAIS 2020)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:work&#34;&gt;&lt;/span&gt;
@@ -34,6 +43,7 @@ Figure 1: The frequency that people visit workplaces and residential relative to
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: The frequency changes that people visit pharmacy, parks, retail and recreation relative to the baseline period Jan 3 - Feb 6, 2020
 &lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
 &lt;h1&gt;References&lt;/h1&gt;
