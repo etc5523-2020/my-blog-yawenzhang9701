@@ -47,7 +47,7 @@ read <- read.csv("data/WHO-COVID-19-global-data.csv")
 df <- read_csv("data/df.csv") #Save data
 ```
 
-
+## Spain Confirmed Cases Outlier and Analysis
 
 
 ```{r}
@@ -58,7 +58,10 @@ our <- read.csv("data/Bing-COVID19-Data.csv") %>%
 
 
 
-```{r}
+Coronavirus crisis is one of the darkest and dramatic moments in recent Spanish history which the virus is spreading faster than in any neighboring nation. From the Map \@ref(fig:map) below, Madrid, the Spanish region with the highest number of cases, had the confirmed case of 81047 in total. After that, Catalonia became the second highest number of cases until Sep 13th. 
+
+
+```{r map, fig.cap="Total Confirmed Cases in Each Region"}
 
 post <- leaflet() %>%
             #use setView() to choose the  map center and zoom level
@@ -78,6 +81,8 @@ post <- leaflet() %>%
 widgetframe::frameWidget(post, width = "100%")
 ```
 
+
+
 ```{r}
 # our %>%
 #   dplyr::select(Updated, Confirmed,AdminRegion1)%>%
@@ -95,24 +100,32 @@ widgetframe::frameWidget(post, width = "100%")
   
 ```
 
+However, this set of number does not show the full picture of Spain’s coronavirus crisis. From figure \@ref(fig:line), cases for most days is zero or not available, how the coronavirus outbreak is developing through the data is not accurate. [ELPAIS](https://english.elpais.com/society/2020-04-05/spains-coronavirus-crisis-why-the-numbers-are-failing-to-show-the-full-picture.html)[@Inaccurate_cases] explain the potential reason for this situation. To be specific, the hospital may spend more than one week to process person contracting the disease, some symptoms presents and ask for a test and getting the results. In this one-week period, this person did not get isolation and may have local transmission of the coronavirus began to increase. That’s why expert believe that the number of confirmed cases may be 10 times higher than what they have been reported. 
 
-
-```{r}
+```{r line, fig.cap="Time serious of daily new cases in each region"}
 Spain_new <- our %>%
   dplyr::select(Updated, ConfirmedChange, AdminRegion1) %>%
   filter(AdminRegion1 %in% c("Madrid", "Catalonia", "Andalusia", "Aragon", "Basque Country", "Castilla Leon", "Castile-La Mancha", "Balearic Islands")) %>%
   mutate(Date = dmy(Updated)) %>%
   rename(Region = "AdminRegion1") %>%
-  hchart("line", hcaes(x = Date, y = ConfirmedChange, group = Region))
+  hchart("line", hcaes(x = Date, y = ConfirmedChange, group = Region)) 
 
 widgetframe::frameWidget(Spain_new, width = 720)
 ```
 
+What more, what caused the coronavirus in Spain to be a crisis? [Guardian](https://www.theguardian.com/world/2020/mar/26/spain-coronavirus-response-analysis)[@Guardian] gives two fundamental reasons. 
+-	First:
+The main reason for the quick spread through Spain may be mundane. Hugging, kissing and animated chatter from other’s face in a few inches have become a commonplace thing. 
+-	Second:
+Other reason was the government reacted late and clumsily and since the financial crisis, Spain has been extremely fragile. Therefore, this country lack essential equipment. It is worth to mention that, during the crisis, protective clothing for doctors and coronavirus tests are still only just being sourced and China provided assistance within its capability to help Spain [Xinhua](http://www.xinhuanet.com/english/2020-05/13/c_139051653.htm)[@Xinhua].
+  
+  
+  
+Due to coronavirus continued deterioration, the lockdown that began on 14 March enforced with police and popular pressure [Guardian](https://www.theguardian.com/world/2020/mar/26/spain-coronavirus-response-analysis)[@Guardian]. The next following section will explore lockdown restriction to citizen daily activity frequency changes.
 
+  
 
-
-
-
+## Lockdown Restriction to Citizen Daily Activity Frequency Changes
 
 
 
@@ -140,7 +153,11 @@ data_wrangled <- df %>%
 
 
 
-## Lockdown Restriction to Citizen Daily Activity Frequency Changes
+
+
+
+
+
 
 ```{r}
 lockdown_date <- data.frame(Start = c("2020-03-13", "2020-03-16", "2020-03-28", "2020-04-04", "2020-04-13", "2020-04-18", "2020-05-01", "2020-05-02", "2020-05-11"), 
