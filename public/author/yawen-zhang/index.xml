@@ -5,7 +5,7 @@
     <link>/author/yawen-zhang/</link>
       <atom:link href="/author/yawen-zhang/index.xml" rel="self" type="application/rss+xml" />
     <description>Yawen Zhang</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 14 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Yawen Zhang</title>
@@ -13,57 +13,422 @@
     </image>
     
     <item>
-      <title>An example preprint / working paper</title>
-      <link>/publication/preprint/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
-  &lt;/div&gt;
+      <title>COVID-19 in Spain 🇪🇸</title>
+      <link>/post/covid-19-in-spain/</link>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/post/covid-19-in-spain/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;about-spain&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;About Spain 🇪🇸&lt;/h2&gt;
+&lt;p&gt;The COVID-19 pandemic in Spain is part of the pandemic of Coronavirus Disease 2019 (&lt;strong&gt;COVID‑19&lt;/strong&gt;). Spain has the second highest total confirmed cases in Europe after Russia. The first confirmed cases come from Germany and spread to Spain on 31 Jan 2019. Up to 15 March 2020, all 50 provinces have confirmed cases of the country. Spain became one of the most draconian countries in the world and a lockdown restriction imposed on 14 March 2020. Until 13 Sep, there are about 566,326 confirmed cases and 29,747 deaths.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Supplementary notes can be added here, including 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;data-source-and-descrptions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Source and Descrptions 🎯&lt;/h2&gt;
+&lt;p&gt;The data is taken from the &lt;a href=&#34;https://github.com/joachim-gassen/tidycovid19&#34;&gt;tidycovid19&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Gassen 2020a)&lt;/span&gt; package created by Joachim Gassen. The &lt;code&gt;tidycovid19&lt;/code&gt; package was created to provide transparent access to various data sources. Then, used &lt;code&gt;download_merged_data&lt;/code&gt; to merge the dataset. This merge dataset contains data of coronavirus confirmed, recovered, death original collected from &lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34;&gt;Johns Hopkins University&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(University 2020)&lt;/span&gt;.Some other variables contains the frequency places are visited comes from &lt;a href=&#34;https://www.google.com/covid19/mobility/&#34;&gt;Google Commmunity Mobility Reports&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Google 2020)&lt;/span&gt;. The raw data was stored in two CSV files separately. The data collection date for this blog until September 13, 2020. The following map and plots present these variables in the data set and also contain descriptions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;spain-confirmed-cases-and-analysis&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Spain Confirmed Cases and Analysis 🗺&lt;/h2&gt;
+&lt;p&gt;Coronavirus crisis is one of the darkest and dramatic moments in recent Spanish history which the virus is spreading faster than in any neighboring nation. From the Map &lt;a href=&#34;#fig:map&#34;&gt;1&lt;/a&gt; below, Madrid, the Spanish region with the highest number of cases, had the confirmed case of 81047 in total. After that, Catalonia became the second highest number of cases until Sep 13th.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:map&#34;&gt;&lt;/span&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:160%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/Spain_COVID19/index_files/figure-html//widgets/widget_map.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Total Confirmed Cases in Each Region
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;However, this set of number does not show the full picture of Spain’s coronavirus crisis. From figure &lt;a href=&#34;#fig:line&#34;&gt;2&lt;/a&gt;, cases for most days is zero or not available, how the coronavirus outbreak is developing through the data is not accurate. &lt;a href=&#34;https://english.elpais.com/society/2020-04-05/spains-coronavirus-crisis-why-the-numbers-are-failing-to-show-the-full-picture.html&#34;&gt;ELPAIS&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(ELTAIS 2020)&lt;/span&gt; explain the potential reason for this situation. To be specific, the hospital may spend more than one week to process person contracting the disease, some symptoms presents and ask for a test and getting the results. In this one-week period, this person did not get isolation and may have local transmission of the coronavirus began to increase. That’s why expert believe that the number of confirmed cases may be 10 times higher than what they have been reported.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:line&#34;&gt;&lt;/span&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:720px;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/Spain_COVID19/index_files/figure-html//widgets/widget_line.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: Time serious of daily new cases in each region
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;What more, what caused the coronavirus in Spain to be a crisis? &lt;a href=&#34;https://www.theguardian.com/world/2020/mar/26/spain-coronavirus-response-analysis&#34;&gt;Guardian&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Guardian 2020)&lt;/span&gt; gives two fundamental reasons.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mundane:
+The main reason for the quick spread through Spain may be mundane. Hugging, kissing and animated chatter from other’s face in a few inches have become a commonplace thing.&lt;/li&gt;
+&lt;li&gt;Government:
+Other reason was the government reacted late and clumsily and since the financial crisis, Spain has been extremely fragile. Therefore, this country lack essential equipment. It is worth to mention that, during the crisis, protective clothing for doctors and coronavirus tests are still only just being sourced and China provided assistance within its capability to help Spain &lt;a href=&#34;http://www.xinhuanet.com/english/2020-05/13/c_139051653.htm&#34;&gt;Xinhua&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Xinhua 2020)&lt;/span&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Due to coronavirus continued deterioration, the lockdown that began on 14 March enforced with police and popular pressure &lt;a href=&#34;https://www.theguardian.com/world/2020/mar/26/spain-coronavirus-response-analysis&#34;&gt;Guardian&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Guardian 2020)&lt;/span&gt;. The next following section will explore lockdown restriction to citizen daily activity frequency changes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lockdown-restriction-to-citizen-daily-activity-frequency-changes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Lockdown Restriction to Citizen Daily Activity Frequency Changes 👣&lt;/h2&gt;
+&lt;p&gt;Countries around the world are in uncharted territory. The emergence and spread of COVID-19 has touched every facet of society. The Spain nationwide lockdown began at March 15, as a result, daily life comes to a halt. To be specific, public gathering party are canceled, employees were sent back to home. All sizes of business are facing many uncertainties about their prospects.&lt;/p&gt;
+&lt;p&gt;The following Figure &lt;a href=&#34;#fig:work&#34;&gt;3&lt;/a&gt; presents the changes of different activities regarding the lockdown restrictions🔒. Up to now, stage four restrictions happened twice since the beginning of lockdown at March 13. Stage four was an advanced phase, in which the restriction was limited. More than 23,000 people have died in Spain after contracting coronavirus, making the country one of the worst affected in the world by the illness. At this period, thousands of employee were forced to work at home during nearly three month coronavirus lockdown. Therefore, frequency that people visited workplaces has dropped about 50% compare with before. After the fourth stage lockdown restriction ended, employees allowed to work in the physical workplace and frequency that people visit workplaces increased, still lower than the average rate. Remote working caused by coronavirus has made many people aware of the convenience. Besides, Spain government are protecting the rights of remote workers, such as distance working must be a voluntary choice or employees have the right to apply compensation for any direct or indirect costs related to remote work &lt;a href=&#34;https://english.elpais.com/economy_and_business/2020-06-26/flexible-schedules-and-covered-expenses-spain-drafts-bill-protecting-the-rights-of-remote-workers.htmla&#34;&gt;ELPAIS&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(ELPAIS 2020)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:work&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/Spain_COVID19/index_files/figure-html/work-1.png&#34; alt=&#34;The frequency that people visit workplaces and residential relative to the baseline period Jan 3 - Feb 6, 2020.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: The frequency that people visit workplaces and residential relative to the baseline period Jan 3 - Feb 6, 2020.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Within the lockdown period, parks remain closed. Therefore, runners and cyclists take the broad avenue as a racetrack. Most of them transfer the outdoor sports to exercise at home. In Figure &lt;a href=&#34;#fig:daily&#34;&gt;4&lt;/a&gt;, people rarely visit parks during the lockdown period. At the end of April, it has seen a steadily declining number of deaths per day, leading to the country’s plan to broaden lockdown restrictions. Spain has released an exit strategy from the lockdown restriction in a bid to return the normality, while keeping COVID-19 under control &lt;a href=&#34;https://www.euronews.com/2020/04/29/coronavirus-spain-reveals-four-stage-plan-to-de-escalate-from-covid-19-lockdown&#34;&gt;euronews&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(euronews 2020)&lt;/span&gt;. With the gradual relaxation of the lockdown restriction, retail and recreation industry allowed to re-open to the public, such as sidewalk café reopened and Spaniards can exercise outdoors &lt;a href=&#34;https://www.cnn.com/2020/05/02/europe/spain-lockdown-coronavirus-exercise-intl/index.html&#34;&gt;CNN&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Goodman 2020)&lt;/span&gt;. As a consequence, frequency that people visit parks increase over than 50%.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:daily&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/Spain_COVID19/index_files/figure-html/daily-1.png&#34; alt=&#34;The frequency changes that people visit pharmacy, parks, retail and recreation relative  to the baseline period Jan 3 - Feb 6, 2020&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 4: The frequency changes that people visit pharmacy, parks, retail and recreation relative to the baseline period Jan 3 - Feb 6, 2020
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;The packages used for producing this post are:&lt;/p&gt;
+&lt;p&gt;tidyverse &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2019)&lt;/span&gt;, knitr &lt;span class=&#34;citation&#34;&gt;(Xie 2014)&lt;/span&gt;, kableExtra &lt;span class=&#34;citation&#34;&gt;(Zhu 2019)&lt;/span&gt;, dplyr &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2020)&lt;/span&gt;, tidycovid19&lt;span class=&#34;citation&#34;&gt;(Gassen 2020b)&lt;/span&gt;,zoo&lt;span class=&#34;citation&#34;&gt;(Zeileis and Grothendieck 2005)&lt;/span&gt;, ggplot&lt;span class=&#34;citation&#34;&gt;(Wickham 2016)&lt;/span&gt;,scales&lt;span class=&#34;citation&#34;&gt;(Wickham and Seidel 2020)&lt;/span&gt;, highcharter&lt;span class=&#34;citation&#34;&gt;(Kunst 2020)&lt;/span&gt;, leaflet&lt;span class=&#34;citation&#34;&gt;(Cheng, Karambelkar, and Xie 2019)&lt;/span&gt;, lubridate&lt;span class=&#34;citation&#34;&gt;(Grolemund and Wickham 2011)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The raw data comes from tidycovid19&lt;span class=&#34;citation&#34;&gt;(Gassen 2020a)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-leaflet&#34;&gt;
+&lt;p&gt;Cheng, Joe, Bhaskar Karambelkar, and Yihui Xie. 2019. &lt;em&gt;Leaflet: Create Interactive Web Maps with the Javascript ’Leaflet’ Library&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=leaflet&#34;&gt;https://CRAN.R-project.org/package=leaflet&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-ELPAIS_economics&#34;&gt;
+&lt;p&gt;ELPAIS. 2020. “Flexible Schedules and Covered Expenses: Spain Drafts Bill Protecting the Rights of Remote Workers.” &lt;a href=&#34;https://english.elpais.com/economy_and_business/2020-06-26/flexible-schedules-and-covered-expenses-spain-drafts-bill-protecting-the-rights-of-remote-workers.html&#34;&gt;https://english.elpais.com/economy_and_business/2020-06-26/flexible-schedules-and-covered-expenses-spain-drafts-bill-protecting-the-rights-of-remote-workers.html&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Inaccurate_cases&#34;&gt;
+&lt;p&gt;ELTAIS. 2020. “Spain’s Coronavirus Crisis: Why the Numbers Are Failing to Show the Full Picture.” &lt;a href=&#34;https://english.elpais.com/society/2020-04-05/spains-coronavirus-crisis-why-the-numbers-are-failing-to-show-the-full-picture.html&#34;&gt;https://english.elpais.com/society/2020-04-05/spains-coronavirus-crisis-why-the-numbers-are-failing-to-show-the-full-picture.html&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-euronews&#34;&gt;
+&lt;p&gt;euronews. 2020. “Coronavirus: Spain Reveals Four-Stage Plan to de-Escalate from Covid-19 Lockdown.” &lt;a href=&#34;https://www.euronews.com/2020/04/29/coronavirus-spain-reveals-four-stage-plan-to-de-escalate-from-covid-19-lockdown&#34;&gt;https://www.euronews.com/2020/04/29/coronavirus-spain-reveals-four-stage-plan-to-de-escalate-from-covid-19-lockdown&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Spain&#34;&gt;
+&lt;p&gt;Gassen, Joachim. 2020a. “Download, Tidy and Visualize Covid-19 Related Data.” &lt;em&gt;GitHub Repository&lt;/em&gt;. https://github.com/joachim-gassen/tidycovid19; GitHub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-tidycovid19&#34;&gt;
+&lt;p&gt;———. 2020b. &lt;em&gt;Tidycovid19: Download, Tidy and Visualize Covid-19 Related Data&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-CNN&#34;&gt;
+&lt;p&gt;Goodman, Al. 2020. “After 7 Weeks of Lockdown, Spaniards Can Finally Exercise Outdoors – as Death Toll Passes 25,000.” &lt;a href=&#34;https://www.cnn.com/2020/05/02/europe/spain-lockdown-coronavirus-exercise-intl/index.html&#34;&gt;https://www.cnn.com/2020/05/02/europe/spain-lockdown-coronavirus-exercise-intl/index.html&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Google&#34;&gt;
+&lt;p&gt;Google. 2020. “See How Your Community Is Moving Around Differently Due to Covid-19.” &lt;em&gt;Google Community&lt;/em&gt;. https://www.google.com/covid19/mobility/; Google.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-lubridate&#34;&gt;
+&lt;p&gt;Grolemund, Garrett, and Hadley Wickham. 2011. “Dates and Times Made Easy with lubridate.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 40 (3): 1–25. &lt;a href=&#34;http://www.jstatsoft.org/v40/i03/&#34;&gt;http://www.jstatsoft.org/v40/i03/&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Guardian&#34;&gt;
+&lt;p&gt;Guardian. 2020. “How Did Spain Get Its Coronavirus Response so Wrong?” &lt;a href=&#34;https://www.theguardian.com/world/2020/mar/26/spain-coronavirus-response-analysisl&#34;&gt;https://www.theguardian.com/world/2020/mar/26/spain-coronavirus-response-analysisl&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-highcharter&#34;&gt;
+&lt;p&gt;Kunst, Joshua. 2020. &lt;em&gt;Highcharter: A Wrapper for the ’Highcharts’ Library&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=highcharter&#34;&gt;https://CRAN.R-project.org/package=highcharter&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Johns_Hopkins&#34;&gt;
+&lt;p&gt;University, Johns Hopkins. 2020. “COVID-19 Data Repository by the Center for Systems Science and Engineering (Csse) at Johns Hopkins University.” &lt;em&gt;GitHub Repository&lt;/em&gt;. https://github.com/CSSEGISandData/COVID-19; GitHub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-ggplot&#34;&gt;
+&lt;p&gt;Wickham, Hadley. 2016. &lt;em&gt;Ggplot2: Elegant Graphics for Data Analysis&lt;/em&gt;. Springer-Verlag New York. &lt;a href=&#34;https://ggplot2.tidyverse.org&#34;&gt;https://ggplot2.tidyverse.org&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-tidyverse&#34;&gt;
+&lt;p&gt;Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” &lt;em&gt;Journal of Open Source Software&lt;/em&gt; 4 (43): 1686. &lt;a href=&#34;https://doi.org/10.21105/joss.01686&#34;&gt;https://doi.org/10.21105/joss.01686&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-dplyr&#34;&gt;
+&lt;p&gt;Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2020. &lt;em&gt;Dplyr: A Grammar of Data Manipulation&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=dplyr&#34;&gt;https://CRAN.R-project.org/package=dplyr&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-scales&#34;&gt;
+&lt;p&gt;Wickham, Hadley, and Dana Seidel. 2020. &lt;em&gt;Scales: Scale Functions for Visualization&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=scales&#34;&gt;https://CRAN.R-project.org/package=scales&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-knitr&#34;&gt;
+&lt;p&gt;Xie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research in R.” In &lt;em&gt;Implementing Reproducible Computational Research&lt;/em&gt;, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC. &lt;a href=&#34;http://www.crcpress.com/product/isbn/9781466561595&#34;&gt;http://www.crcpress.com/product/isbn/9781466561595&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Xinhua&#34;&gt;
+&lt;p&gt;Xinhua. 2020. “China to Continue Helping Spain Fight Covid-19 Epidemic: FM ?” &lt;a href=&#34;http://www.xinhuanet.com/english/2020-05/13/c_139051653.htm&#34;&gt;http://www.xinhuanet.com/english/2020-05/13/c_139051653.htm&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-zoo&#34;&gt;
+&lt;p&gt;Zeileis, Achim, and Gabor Grothendieck. 2005. “Zoo: S3 Infrastructure for Regular and Irregular Time Series.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 14 (6): 1–27. &lt;a href=&#34;https://doi.org/10.18637/jss.v014.i06&#34;&gt;https://doi.org/10.18637/jss.v014.i06&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-kableExtra&#34;&gt;
+&lt;p&gt;Zhu, Hao. 2019. &lt;em&gt;KableExtra: Construct Complex Table with ’Kable’ and Pipe Syntax&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=kableExtra&#34;&gt;https://CRAN.R-project.org/package=kableExtra&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>An example journal article</title>
-      <link>/publication/journal-article/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-  &lt;/div&gt;
+      <title>Canada COVID19 Post 🇨🇦</title>
+      <link>/post/canada-covid19-post/</link>
+      <pubDate>Fri, 28 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/post/canada-covid19-post/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;about-canada&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;About Canada 🇨🇦&lt;/h2&gt;
+&lt;p&gt;Coronavirus disease 2019 (&lt;strong&gt;COVID‑19&lt;/strong&gt;) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The situation around the world still serious, and Canada is one of them. The virus was confirmed to spread Canada on January 25, 2020, after a citizen who had traveled ✈️ from Wuhan, Hubei to Toronto, tested positive. With government policies, such as restricting people’s travel and maintaining social distancing, the cases have declined significantly.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
-  &lt;/div&gt;
+&lt;div id=&#34;data-source-and-description&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Source and Description 🎯&lt;/h2&gt;
+&lt;p&gt;The dataset used in this post is from Isha Berry personal &lt;a href=&#34;https://github.com/ishaberry/Covid19Canada&#34;&gt;GitHub&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Berry I 2020)&lt;/span&gt; and the data source is &lt;strong&gt;Canadian Medical Association Journal (CMAJ)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The COVID-19 data regarding Canada was collected by COVID-19 Canada Open Data Working Group on confirmed and positive cases. Each line in the dataset represents a unique cases. The original dataset also include information such as age, sex, history travel. The cases, death, recovered dataset were created since the first relevant event occurred. The raw data was stored in seven CSV files separately. The data collection date for this blog until August 27, 2020. The following tables and plots present these variables in the data set and also contain descriptions.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;Supplementary notes can be added here, including 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>An example conference paper</title>
-      <link>/publication/conference-paper/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>/publication/conference-paper/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-  &lt;/div&gt;
+&lt;div id=&#34;each-province-covid-19-details&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Each Province COVID-19 Details 🔍&lt;/h2&gt;
+&lt;p&gt;This interactive datatable concentrate on number of cumulative confirmed cases, daily new cases, cumulative deaths, daily new deaths and the number of recovered in each province and the whole Canada.&lt;/p&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:95%;height:524.08px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/post/Canada_COVID19/index_files/figure-html//widgets/widget_DT-table.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;/div&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
-  &lt;/div&gt;
+&lt;div id=&#34;numercial-summary-statistics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Numercial Summary Statistics 📄&lt;/h2&gt;
+&lt;p&gt;Table &lt;a href=&#34;#tab:whole-Canada&#34;&gt;1&lt;/a&gt; shows that numerical summary statistics of four variables: daily new cases, cumulative cases, daily new deaths and cumulative deaths. In the Max column, the max of daily new cases and daily new deaths represent the maximum value in a day since the COVID-19 spread to Canada, while the max of cumulative cases and cumulative deaths shows the latest results. At the end of the table, cases and deaths in Canada were declined significantly 📉.&lt;/p&gt;
+&lt;div id=&#34;stories-behind-the-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Stories behind the Data:&lt;/h3&gt;
+&lt;p&gt;Although cases and deaths in Canada was declined obviously, the authenticity of the data is not accurate. Indigenous Canadians as the indigenous people within the boundaries of the Canada. Indigenous people in Canada take 4.9% of the whole national population. Regarding the CBC news, Indigenous Services Canada releases cumulative number of positive cases, but no data on deaths, recoveries regarding the news from &lt;a href=&#34;https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676&#34;&gt;CBC&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(CBC 2020)&lt;/span&gt;. As a result, the histogram at the end of the Table &lt;a href=&#34;#tab:whole-Canada&#34;&gt;1&lt;/a&gt; does not present a full picture of the indigenous communities. Besides, indigenous communities received inequitable measures from federal government. As of June 25, Canada’s specific measures to limit the spread of COVID-19 in First Nations communities in Canada represent less than one per cent of the federal government’s funding to mitigate the impact of COVID-19 &lt;a href=&#34;https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027&#34;&gt;The Conversation&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Conversation 2020)&lt;/span&gt;.&lt;/p&gt;
+&lt;table class=&#34;table table-striped table-hover&#34; style=&#34;font-size: 12px; margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption style=&#34;font-size: initial !important;&#34;&gt;
+&lt;span id=&#34;tab:whole-Canada&#34;&gt;Table 1: &lt;/span&gt;Numerical Summary Statistics in Canada
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Variable
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Mean
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Min
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Q1
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Q2
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Q3
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+Max
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Hist
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+cases
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+773.80723
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+84
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+343.75
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+617.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1196.75
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2560
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+▇▃▃▂▁
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+cumulative_cases
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+79281.09036
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+341
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+46659.75
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+96145.5
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+111333.00
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+128709
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+▃▂▂▅▇
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+deaths
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+52.82081
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+6.00
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+22.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+96.00
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+229
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+▇▂▂▂▁
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+cumulative_deaths
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+5661.34104
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+1757.00
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+7456.0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+8848.00
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+9138
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+▃▁▁▂▇
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/div&gt;
-&lt;p&gt;Supplementary notes can be added here, including 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;explore-the-relationship-between-testing-and-cases&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Explore the Relationship between Testing and Cases 📈&lt;/h2&gt;
+&lt;p&gt;Only for personal interest 🤨, I want to explore the relationship between cases and testing. Since the first cases arrived in Canada in January 25, 2020, the government started to test from March 8, 2020. Therefore, I combine the testing data and cases data together and select all data from March 8 until now. In my personal prediction, with the development of testing, there will be more confirmed cases. In other words, these two variables have the positive relationship. However, from this combination graph, it could not find the relationship between cases and testing in Fig&lt;a href=&#34;#fig:line&#34;&gt;1&lt;/a&gt;. In addition, R-squared is 0.188 which is close to 0. Also represents if the cases and testing is linear regression, all the real data is far away from the line. The results regarding R-squared is show in Table &lt;a href=&#34;#tab:summary&#34;&gt;2&lt;/a&gt;. The reason they are not related may be that Canada has almost controlled the worsening of the COVID-19 in this period.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:line&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/Canada_COVID19/index_files/figure-html/line-1.png&#34; alt=&#34;Relationship between testing and cases&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Relationship between testing and cases
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;table class=&#34;table table-striped table-hover&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;
+&lt;span id=&#34;tab:summary&#34;&gt;Table 2: &lt;/span&gt;Summary of the relationship between testing and cases
+&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+r.squared
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+adj.r.squared
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+statistic
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+p.value
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+AIC
+&lt;/th&gt;
+&lt;th style=&#34;text-align:right;&#34;&gt;
+BIC
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.1887101
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0.1837632
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+38.14722
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+0
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2520.831
+&lt;/td&gt;
+&lt;td style=&#34;text-align:right;&#34;&gt;
+2530.167
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;The packages used for producing this post are:&lt;/p&gt;
+&lt;p&gt;tidyverse &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2019)&lt;/span&gt;, broom &lt;span class=&#34;citation&#34;&gt;(Robinson, Hayes, and Couch 2020)&lt;/span&gt;, skimr &lt;span class=&#34;citation&#34;&gt;(Waring et al. 2020)&lt;/span&gt;, DT &lt;span class=&#34;citation&#34;&gt;(Xie, Cheng, and Tan 2020)&lt;/span&gt;, knitr &lt;span class=&#34;citation&#34;&gt;(Xie 2014)&lt;/span&gt;, kableExtra &lt;span class=&#34;citation&#34;&gt;(Zhu 2019)&lt;/span&gt;, dplyr &lt;span class=&#34;citation&#34;&gt;(Wickham et al. 2020)&lt;/span&gt;, lubridate&lt;span class=&#34;citation&#34;&gt;(Grolemund and Wickham 2011)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Two news comes from:
+CBC&lt;span class=&#34;citation&#34;&gt;(CBC 2020)&lt;/span&gt;, The Conversation&lt;span class=&#34;citation&#34;&gt;(Conversation 2020)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The raw data comes from Canada&lt;span class=&#34;citation&#34;&gt;(Berry I 2020)&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-Canada&#34;&gt;
+&lt;p&gt;Berry I, Tuite A, Soucy J-PR. 2020. “Covid19Canada.” &lt;em&gt;GitHub Repository&lt;/em&gt;. &lt;a href=&#34;https://github.com/ishaberry/Covid19Canada&#34;&gt;https://github.com/ishaberry/Covid19Canada&lt;/a&gt;; GitHub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-cbc&#34;&gt;
+&lt;p&gt;CBC. 2020. “Data Gaps Exist on Covid-19 Cases in Indigenous Communities, Says Research Fellow.” &lt;a href=&#34;https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676&#34;&gt;https://www.cbc.ca/news/indigenous/coronavirus-indigenous-data-gap-1.5556676&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-conversation&#34;&gt;
+&lt;p&gt;Conversation, The. 2020. “Indigenous Communities at Increased Risk During the Coronavirus Pandemic.” &lt;a href=&#34;https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027&#34;&gt;https://theconversation.com/indigenous-communities-at-increased-risk-during-the-coronavirus-pandemic-142027&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-lubridate&#34;&gt;
+&lt;p&gt;Grolemund, Garrett, and Hadley Wickham. 2011. “Dates and Times Made Easy with lubridate.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 40 (3): 1–25. &lt;a href=&#34;http://www.jstatsoft.org/v40/i03/&#34;&gt;http://www.jstatsoft.org/v40/i03/&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-broom&#34;&gt;
+&lt;p&gt;Robinson, David, Alex Hayes, and Simon Couch. 2020. &lt;em&gt;Broom: Convert Statistical Objects into Tidy Tibbles&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=broom&#34;&gt;https://CRAN.R-project.org/package=broom&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-skimr&#34;&gt;
+&lt;p&gt;Waring, Elin, Michael Quinn, Amelia McNamara, Eduardo Arino de la Rubia, Hao Zhu, and Shannon Ellis. 2020. &lt;em&gt;Skimr: Compact and Flexible Summaries of Data&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=skimr&#34;&gt;https://CRAN.R-project.org/package=skimr&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-tidyverse&#34;&gt;
+&lt;p&gt;Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” &lt;em&gt;Journal of Open Source Software&lt;/em&gt; 4 (43): 1686. &lt;a href=&#34;https://doi.org/10.21105/joss.01686&#34;&gt;https://doi.org/10.21105/joss.01686&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-dplyr&#34;&gt;
+&lt;p&gt;Wickham, Hadley, Romain François, Lionel Henry, and Kirill Müller. 2020. &lt;em&gt;Dplyr: A Grammar of Data Manipulation&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=dplyr&#34;&gt;https://CRAN.R-project.org/package=dplyr&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-knitr&#34;&gt;
+&lt;p&gt;Xie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research in R.” In &lt;em&gt;Implementing Reproducible Computational Research&lt;/em&gt;, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC. &lt;a href=&#34;http://www.crcpress.com/product/isbn/9781466561595&#34;&gt;http://www.crcpress.com/product/isbn/9781466561595&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-DT&#34;&gt;
+&lt;p&gt;Xie, Yihui, Joe Cheng, and Xianying Tan. 2020. &lt;em&gt;DT: A Wrapper of the Javascript Library ’Datatables’&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=DT&#34;&gt;https://CRAN.R-project.org/package=DT&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-kableExtra&#34;&gt;
+&lt;p&gt;Zhu, Hao. 2019. &lt;em&gt;KableExtra: Construct Complex Table with ’Kable’ and Pipe Syntax&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=kableExtra&#34;&gt;https://CRAN.R-project.org/package=kableExtra&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     

@@ -7,7 +7,7 @@ categories: []
 tags: []
 subtitle: ''
 summary: ''
-authors: []
+authors: [Yawen Zhang]
 lastmod: '2020-09-14T08:22:49+08:00'
 featured: no
 image:
@@ -123,9 +123,10 @@ widgetframe::frameWidget(Spain_new, width = 720)
 ```
 
 What more, what caused the coronavirus in Spain to be a crisis? [Guardian](https://www.theguardian.com/world/2020/mar/26/spain-coronavirus-response-analysis)[@Guardian] gives two fundamental reasons. 
--	First:
+  
+* Mundane:
 The main reason for the quick spread through Spain may be mundane. Hugging, kissing and animated chatter from other’s face in a few inches have become a commonplace thing. 
--	Second:
+* Government:
 Other reason was the government reacted late and clumsily and since the financial crisis, Spain has been extremely fragile. Therefore, this country lack essential equipment. It is worth to mention that, during the crisis, protective clothing for doctors and coronavirus tests are still only just being sourced and China provided assistance within its capability to help Spain [Xinhua](http://www.xinhuanet.com/english/2020-05/13/c_139051653.htm)[@Xinhua].
   
   

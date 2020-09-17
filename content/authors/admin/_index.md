@@ -1,5 +1,5 @@
 ---
-bio: My research interests the data related to Canada COVID-19.
+bio: I am Yawen Zhang. My research interests are wild caught data.
 education:
   courses:
   - course: Master of Business Analytics
@@ -22,4 +22,4 @@ user_groups:
 
 Hi, this is Yawen's blog :thought_balloon:
   
-I am a new graduate from undergraduate :woman_student: and studying at Monash major in Master of Business Analytics. The things I enjoy doing include data analysis :bar_chart:, cooking :woman_cook: and traveling :national_park:. 
+I am a new graduate from undergraduate :woman_student: and studying at Monash University major in Master of Business Analytics. The things I enjoy doing include data analysis :bar_chart:, cooking :woman_cook: and traveling :national_park:. 
