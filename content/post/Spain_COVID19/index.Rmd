@@ -48,11 +48,11 @@ df <- read_csv("data/df.csv") #Save data
 
 ## About Spain `r emo::ji("es")`
 
-The COVID-19 pandemic in Spain is part of the pandemic of Coronavirus Disease 2019 (**COVID‑19**). Spain has the second highest total confirmed cases in Europe after Russia. The first confirmed cases come from Germany and spread to Spain on 31 Jan 2019. Up to 15 March 2020, all 50 provinces have confirmed cases of the country. Spain became one of the most draconian countries in the world and a lockdown restriction imposed on 14 March 2020. Until 13 Sep, there are about 566,326 confirmed cases and 29,747 deaths. 
+The COVID-19 pandemic in Spain is part of the pandemic of Coronavirus Disease 2019 (**COVID‑19**). Spain has the second highest total confirmed cases in Europe after Russia. The first confirmed cases came from Germany and spread to Spain on 31 Jan 2019. Up to 15 March 2020, all 50 provinces have confirmed cases of the country. Spain became one of the most draconian countries in the world and a lockdown restriction imposed on 14 March 2020. Until 13 Sep, there are about 566,326 confirmed cases and 29,747 deaths [WHO](https://covid19.who.int/region/euro/country/es)[@WHO]. 
 
 
-## Data Source and Descrptions `r emo::ji("dart")`
-The data is taken from the [tidycovid19](https://github.com/joachim-gassen/tidycovid19)[@Spain] package created by Joachim Gassen. The `tidycovid19` package was created to provide transparent access to various data sources. Then, used `download_merged_data` to merge the dataset. This merge dataset contains data of coronavirus confirmed, recovered, death original collected from [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19)[@Johns_Hopkins].Some other variables contains the frequency places are visited comes from [Google Commmunity Mobility Reports](https://www.google.com/covid19/mobility/)[@Google]. The raw data was stored in two CSV files separately. The data collection date for this blog until September 13, 2020. The following map and plots present these variables in the data set and also contain descriptions.
+## Data Source and Descriptions `r emo::ji("spiral_notepad")`
+The data is taken from the [tidycovid19](https://github.com/joachim-gassen/tidycovid19)[@Spain] package `r emo::ji("package")` created by Joachim Gassen. The `tidycovid19` package was created to provide transparent access to various data sources. Then, used `download_merged_data` to merge the dataset. This merge dataset contains data of coronavirus confirmed, recovered, death original collected from [Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19)[@Johns_Hopkins].Some other variables contains the frequency places are visited comes from [Google Commmunity Mobility Reports](https://www.google.com/covid19/mobility/)[@Google]. The raw data was stored in two CSV files separately. The data collection date for this blog until September 13, 2020. The following map and plots present these variables in the data set and also contain descriptions.
 
 
 
@@ -109,7 +109,7 @@ widgetframe::frameWidget(post, width = "160%")
   
 ```
 
-However, this set of number does not show the full picture of Spain’s coronavirus crisis. From figure \@ref(fig:line), cases for most days is zero or not available, how the coronavirus outbreak is developing through the data is not accurate. [ELPAIS](https://english.elpais.com/society/2020-04-05/spains-coronavirus-crisis-why-the-numbers-are-failing-to-show-the-full-picture.html)[@Inaccurate_cases] explain the potential reason for this situation. To be specific, the hospital may spend more than one week to process person contracting the disease, some symptoms presents and ask for a test and getting the results. In this one-week period, this person did not get isolation and may have local transmission of the coronavirus began to increase. That’s why expert believe that the number of confirmed cases may be 10 times higher than what they have been reported. 
+However, this set of number does not show the full picture of Spain’s coronavirus crisis. From figure \@ref(fig:line) `r emo::ji("chart_with_upwards_trend")`, cases for most days is zero or not available, how the coronavirus outbreak is developing through the data is not accurate. [ELPAIS](https://english.elpais.com/society/2020-04-05/spains-coronavirus-crisis-why-the-numbers-are-failing-to-show-the-full-picture.html)[@Inaccurate_cases] explain the potential reason for this situation. To be specific, the hospital may spend more than one week to process person contracting the disease, some symptoms presents and ask for a test and getting the results. In this one-week period, this person did not get isolation and may have local transmission of the coronavirus began to increase. That’s why expert believe that the number of confirmed cases may be 10 times higher than what they have been reported. 
 
 ```{r line, fig.cap="Time serious of daily new cases in each region"}
 Spain_new <- our %>%
@@ -127,7 +127,7 @@ What more, what caused the coronavirus in Spain to be a crisis? [Guardian](https
 * Mundane:
 The main reason for the quick spread through Spain may be mundane. Hugging, kissing and animated chatter from other’s face in a few inches have become a commonplace thing. 
 * Government:
-Other reason was the government reacted late and clumsily and since the financial crisis, Spain has been extremely fragile. Therefore, this country lack essential equipment. It is worth to mention that, during the crisis, protective clothing for doctors and coronavirus tests are still only just being sourced and China provided assistance within its capability to help Spain [Xinhua](http://www.xinhuanet.com/english/2020-05/13/c_139051653.htm)[@Xinhua].
+Other reason was the government reacted late and clumsily and since the financial crisis, Spain has been extremely fragile. Therefore, this country lack essential equipment. It is worth to mention that, during the crisis, protective clothing for doctors and coronavirus tests are still only just being sourced and China provided assistance within its capability to help Spain (http://www.xinhuanet.com/english/2020-05/13/c_139051653.htm)[@Xinhua].
   
   
   
@@ -222,7 +222,7 @@ Activity
 
 
 
-Within the lockdown period, parks remain closed. Therefore, runners and cyclists take the broad avenue as a racetrack. Most of them transfer the outdoor sports to exercise at home. In Figure \@ref(fig:daily), people rarely visit parks during the lockdown period. At the end of April, it has seen a steadily declining number of deaths per day, leading to the country's plan to broaden lockdown restrictions. Spain has released an exit strategy from the lockdown restriction in a bid to return the normality, while keeping COVID-19 under control [euronews](https://www.euronews.com/2020/04/29/coronavirus-spain-reveals-four-stage-plan-to-de-escalate-from-covid-19-lockdown)[@euronews]. With the gradual relaxation of the lockdown restriction, retail and recreation industry allowed to re-open to the public, such as sidewalk café reopened and Spaniards can exercise outdoors [CNN](https://www.cnn.com/2020/05/02/europe/spain-lockdown-coronavirus-exercise-intl/index.html)[@CNN]. As a consequence, frequency that people visit parks increase over than 50%. 
+Within the lockdown period, parks remain closed. Most of them transfer the outdoor sports to exercise at home. In Figure \@ref(fig:daily), people rarely visit parks during the lockdown period. At the end of April, it has seen a steadily declining number of cases per day, leading to the country's plan to broaden lockdown restrictions. Spain has released an exit strategy from the lockdown restriction in a bid to return the normality, while keeping COVID-19 under control [euronews](https://www.euronews.com/2020/04/29/coronavirus-spain-reveals-four-stage-plan-to-de-escalate-from-covid-19-lockdown)[@euronews]. With the gradual relaxation of the lockdown restriction, retail and recreation industry allowed to re-open to the public, such as sidewalk café reopened and Spaniards can exercise outdoors [CNN](https://www.cnn.com/2020/05/02/europe/spain-lockdown-coronavirus-exercise-intl/index.html)[@CNN]. As a consequence, frequency that people visit parks increase over than 50%. 
 
 
 
