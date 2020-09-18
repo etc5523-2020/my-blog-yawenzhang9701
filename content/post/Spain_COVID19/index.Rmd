@@ -56,7 +56,7 @@ The data is taken from the [tidycovid19](https://github.com/joachim-gassen/tidyc
 
 
 
-## Spain Confirmed Cases and Analysis `r emo::ji("world_map")`
+## Is data reflect the real situation? What caused the Coronavirus crisis in Spain? `r emo::ji("world_map")`
 
 
 ```{r}
@@ -133,7 +133,7 @@ The main reason for the quick spread through Spain may be mundane. Hugging, kiss
 Other reason was the government reacted late and clumsily. 
 
 
-Since the financial crisis, Spain has been extremely fragile and this country lack essential equipment. During the crisis, protective clothing for doctors and coronavirus tests were still only just being sourced and China provided assistance within its capability to help Spain (http://www.xinhuanet.com/english/2020-05/13/c_139051653.htm)[@Xinhua].
+Since the financial crisis, Spain has been extremely fragile and this country lack essential equipment. During the crisis, protective clothing for doctors and coronavirus tests were still only just being sourced and China provided assistance within its capability to help Spain [Xinhua](http://www.xinhuanet.com/english/2020-05/13/c_139051653.htm)[@Xinhua]. 
   
   
   
@@ -141,9 +141,7 @@ Due to coronavirus continued deterioration, the lockdown that began on 14 March 
 
   
 
-## Lockdown Restriction to Citizen Daily Activity Frequency Changes `r emo::ji("footprints")`
-
-
+## How lockdown restriction affect citizen daily activity frequency? `r emo::ji("footprints")`
 
 
 ```{r}
@@ -183,7 +181,7 @@ lockdown_date <- data.frame(Start = c("2020-03-13", "2020-03-16", "2020-03-28", 
 
 Countries around the world are in uncharted territory. The emergence and spread of COVID-19 has touched every facet of society. The Spain nationwide lockdown began at March 14, as a result, daily life comes to a halt, such as public gathering party are canceled, employees were sent back to home. All sizes of business are facing many uncertainties about their prospects. 
   
-
+  
 
 The following Figure \@ref(fig:work) and Figure \@ref(fig:daily) presents the changes of different activities regarding the lockdown restrictions`r emo::ji("lock")`. Up to now, stage four restrictions happened twice since the beginning of lockdown at March 14. Stage four was an advanced phase, in which the restriction was limited. More than 23,000 people have died in Spain after contracting coronavirus, making the country one of the worst affected in the world by the illness. At this period, thousands of employee were forced to work at home during nearly three-month coronavirus lockdown. Therefore, frequency that people visited workplaces has dropped about 50% compare with before. After the fourth stage lockdown restriction ended, employees allowed to work in the physical workplace and frequency that people visit workplaces increased, but still lower than the average rate. Remote working caused by coronavirus has made many people aware of the convenience. Besides, Spain government are protecting the rights of remote workers, such as distance working must be a voluntary choice or employees have the right to apply compensation for any direct or indirect costs related to remote work [ELPAIS](https://english.elpais.com/economy_and_business/2020-06-26/flexible-schedules-and-covered-expenses-spain-drafts-bill-protecting-the-rights-of-remote-workers.htmla)[@ELPAIS_economics].
 
@@ -260,8 +258,7 @@ Daily <- data_wrangled %>%
   theme(plot.title = element_text(size = 11, hjust = 0.5))
 Daily
 ```
-
-For now, Spain has decreased to the first level of lockdown, daily life gradually return to normal. However, face mask are now obligatory at ALL times and keep two meters social distance. Some regions such as Aragon Madrid and Cataluña are currently experiencing outbreaks that has brought back lockdown in some towns and regions. The government is also making regulations based on the current situation. 
+Overall, as the pandemic is under control, people's travel frequency has gradually increased, especially for the outdoor activities. For now, Spain has decreased to the first level of lockdown, daily life gradually return to normal. However, face mask are now obligatory at ALL times and keep two meters social distance. Some regions such as Aragon Madrid and Cataluña are currently experiencing outbreaks that has brought back lockdown in some towns and regions. The government is also making regulations based on the current situation. 
 
 
 ## Acknowledgements
