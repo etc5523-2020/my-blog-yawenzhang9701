@@ -67,7 +67,7 @@ our <- read.csv("data/Bing-COVID19-Data.csv") %>%
 
 
 
-Coronavirus crisis is one of the darkest and dramatic moments in recent Spanish history which the virus is spreading faster than any neighboring nation. From the Map \@ref(fig:map) below, Madrid, the Spanish region with the highest number of cases, had the confirmed case of 81,047 in total. After that, Catalonia became the second highest number of cases up to 62,524 until September 13th. 
+Coronavirus crisis is one of the darkest and dramatic moments in recent Spanish history which the virus is spreading faster than any neighboring nation. From the Map \@ref(fig:map) below, Madrid, the Spanish region with the highest number of cases, had the confirmed case of 81,047 in total. After that, Catalonia became the second highest number of cases up to 62,524 until September 13th.  
 
 
 ```{r map, fig.cap="Total Confirmed Cases in Each Region"}
