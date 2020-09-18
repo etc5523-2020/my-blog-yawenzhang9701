@@ -141,7 +141,7 @@ Due to coronavirus continued deterioration, the lockdown that began on 14 March 
 
   
 
-## How lockdown restriction affect citizen daily activity frequency? `r emo::ji("footprints")`
+## How lockdown restriction impact citizen daily activity? `r emo::ji("footprints")`
 
 
 ```{r}
