@@ -82,7 +82,7 @@ post <- leaflet() %>%
                 layerId = ~AdminRegion1,
                 lng = ~Longitude,
                 lat = ~Latitude,
-                radius = ~(Confirmed/3000), # to scale down
+                radius = ~(Confirmed/1500), # to scale down
                 label = ~paste("Region",AdminRegion1,",Case Number",Confirmed), #  show label name when mouse hovers
                 weight = 2,
                 color = "red"
