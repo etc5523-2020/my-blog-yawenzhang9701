@@ -129,7 +129,7 @@ Both two graphs have transferred to plotly, which makes it easy to create intera
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code&gt;read.csv(&amp;quot;https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv&amp;quot;, stringsAsFactors = FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;By looking through other shiny app dashboards, adding several value boxes in the front of the map section, which contains the amount of confirmed, recovered, death and active cases in a day. This new idea could make data communication with users.&lt;/li&gt;
+&lt;li&gt;By looking through other shiny app dashboards, adding several value boxes involves the amount of confirmed, recovered, death and active cases in a day could make data communication with users.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;some-things-id-like-to-add-that-cannot-be-done-yet-due-to-limitation-in-data-or-technology&#34; class=&#34;section level3&#34;&gt;
