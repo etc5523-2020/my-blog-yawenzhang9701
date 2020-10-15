@@ -5,7 +5,7 @@
     <link>/author/yawen-zhang/</link>
       <atom:link href="/author/yawen-zhang/index.xml" rel="self" type="application/rss+xml" />
     <description>Yawen Zhang</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 14 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Yawen Zhang</title>
@@ -13,23 +13,63 @@
     </image>
     
     <item>
-      <title>Situation in Spain 🇪🇸 with COVID-19</title>
-      <link>/post/covid-19-in-spain/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/post/covid-19-in-spain/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;coronavirus-history-in-spain&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Coronavirus History in Spain 🇪🇸&lt;/h2&gt;
-&lt;p&gt;The COVID-19 pandemic in Spain is part of the pandemic of Coronavirus Disease 2019 (&lt;strong&gt;COVID‑19&lt;/strong&gt;). Spain has the second-highest total confirmed cases in Europe after Russia. The first confirmed cases came from Germany and spread to Spain on 31 Jan 2019. Up to 15 Mar 2020, all 50 provinces have confirmed cases of the country. Spain became one of the most draconian countries in the world and a lockdown restriction imposed on 14 March 2020. Until 13 Sep 2020, there are about 566,326 confirmed cases and 29,747 deaths &lt;a href=&#34;https://covid19.who.int/region/euro/country/es&#34;&gt;WHO&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Organization 2020)&lt;/span&gt;.&lt;/p&gt;
+      <title>An example preprint / working paper</title>
+      <link>/publication/preprint/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/preprint/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;data-source-and-descriptions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Data Source and Descriptions 🚨&lt;/h2&gt;
-&lt;p&gt;The data is taken from the &lt;a href=&#34;https://github.com/joachim-gassen/tidycovid19&#34;&gt;tidycovid19&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Gassen 2020a)&lt;/span&gt; package 📦 created by Joachim Gassen. The &lt;code&gt;tidycovid19&lt;/code&gt; package was created to provide transparent access to various data sources. Then, used &lt;code&gt;download_merged_data&lt;/code&gt; to merge the dataset. This merged dataset contains data of coronavirus confirmed, recovered, death original collected from &lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34;&gt;Johns Hopkins University&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(University 2020)&lt;/span&gt;. Some other variables contain the frequency places are visited from &lt;a href=&#34;https://www.google.com/covid19/mobility/&#34;&gt;Google Community Mobility Reports&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Google 2020)&lt;/span&gt;. The second set of data comes from &lt;a href=&#34;https://github.com/microsoft/Bing-COVID-19-Data&#34;&gt;Bing&lt;/a&gt;&lt;span class=&#34;citation&#34;&gt;(Bing 2020)&lt;/span&gt;, which contains all the regions location and cases in Spain. The raw data was stored in two CSV files separately. The data collection date for this blog until 13 Sep 2020. The following map and plots present these variables in the data set and also contain descriptions.&lt;/p&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example journal article</title>
+      <link>/publication/journal-article/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/publication/journal-article/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example conference paper</title>
+      <link>/publication/conference-paper/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>/publication/conference-paper/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
+&#34;citation&#34;&gt;(Bing 2020)&lt;/span&gt;, which contains all the regions location and cases in Spain. The raw data was stored in two CSV files separately. The data collection date for this blog until 13 Sep 2020. The following map and plots present these variables in the data set and also contain descriptions.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;is-data-reflect-the-real-situation-what-caused-the-coronavirus-crisis-in-spain&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Is data reflect the real situation? What caused the Coronavirus crisis in Spain? 🗺&lt;/h2&gt;

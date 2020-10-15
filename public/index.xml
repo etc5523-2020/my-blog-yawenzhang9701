@@ -98,38 +98,38 @@ As a business analytics student, I will try my best to approach the recent COVID
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Map and table
 &lt;img src=&#34;map.png&#34; width=&#34;100%&#34; /&gt;
-This map section of the dashboard shows the world map and a list of countries with their respective number of confirmed, recovered and death cases. A time-lapse feature with a simple slider is included to get an idea about the development of the pandemic. The start bottom at the lower right corner of the slider could assist users in overview the dynamic changes.
+This map section of the dashboard shows the world map and a list of countries with their respective number of confirmed, recovered and death cases. A time-lapse feature with a simple slider is included to get an idea on about the development of the pandemic. The start bottom at the lower right corner of the slider could help users in overview the dynamic changes.
 Within the leaflet map, I add a label of each point to the map to quickly determine the location for each country. Users could also choose the different types of data in the map by clicking the checkbox, which contains confirmed, recovered and deaths.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Graph
 &lt;img src=&#34;graphs.png&#34; width=&#34;100%&#34; /&gt;
-This section contains plots visualizing several interesting aspects of the COVID-19 pandemic progression with brief explanation.
+This section contains plots visualizing several interesting aspects of the COVID-19 pandemic progression with a brief explanation.
 In the left graph, users have the ability to manually select the countries and different type of variables such as confirmed, deaths, recovered she or he interested in.
-The second graph on the right shows the global evolution of cases from 2020-01-22 to 2020-10-07. I add active cases to measure the worldwide COVID-19. Active cases could remove deaths and recoveries from daily new cases. This plot has a checkbox with which the y-axis can be switched to a logarithmic scale.&lt;br /&gt;
+The second graph on the right shows the global evolution of cases from 2020-01-22 to 2020-10-07. I add active cases to measure worldwide COVID-19. Active cases could remove deaths and recoveries from daily new cases. This plot has a checkbox with which the y-axis can be switched to a logarithmic scale.&lt;br /&gt;
 Both two graphs have transferred to plotly, which makes it easy to create interactive data visualization.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;About
-The dashboard is rounded off with the “About” section which briefly describes the motivation, data sources and additional information on the creator, which gives users a brief background of this shiny app.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;About&lt;/p&gt;
+&lt;p&gt;The dashboard is rounded off with the “About” section, which briefly describes the motivation, data sources and additional information on the creator, which gives users a brief background of this shiny app.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-can-i-improve-on&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;What can I improve on? 😵&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;In map section, a separate tab called province and state could added in the table beside the country. Also, connect the table with the timeline.&lt;/li&gt;
+&lt;li&gt;In the map section, a separate tab called province and state could add in the table beside the country. Also, connect the table with the timeline.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;new_tab.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;It may be more logical to swap the positions of the left and right graphs because we will review the global situation first, then observe the situation of each countries.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It may be more logical to swap the positions of the left and right graphs because we will review the global situation first, then observe the situation of each country.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The graph on the left needs to add one variable within the existing three metrics called active, which could be consistent with the variables on the right. Active cases could remove deaths and recoveries from daily new cases. It measures the daily epidemic situation more accurately.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Since the overall inspiration comes from the &lt;a href=&#34;https://coronavirus.jhu.edu/map.html&#34;&gt;John Hopkins Dashboard&lt;/a&gt;, adding an acknowledgment part in the about section is necessary. It is courteous and ethical to let readers know that this dashboard had writing help and cooperation with other scholars in the development of my work.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Since the overall inspiration comes from the &lt;a href=&#34;https://coronavirus.jhu.edu/map.html&#34;&gt;John Hopkins Dashboard&lt;/a&gt;, adding an acknowledgement part in the about section is necessary. It is courteous and ethical to let readers know that this dashboard had writing help and cooperation with other scholars in the development of my work.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;some-things-id-like-to-add-that-is-plausible&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Some things I’d like to add that is plausible 🤨&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;The input data for this dashboard is from the R package, so far, the data is constantly updated. It will be more readable to add the link to read. As a result, daily cases can be updated directly.&lt;/li&gt;
+&lt;li&gt;The input data for this dashboard is from the R package; so far, the data is constantly updated. It will be more readable to add the link to read. As a result, daily cases can be updated directly.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code&gt;read.csv(&amp;quot;https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv&amp;quot;, stringsAsFactors = FALSE)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;By looking through other shiny app dashboards, adding several value boxes in the front of the map section, which contains the amount of confirmed, recovered, death and active cases in a day. This new idea could make a data communication with users.&lt;/li&gt;
+&lt;li&gt;By looking through other shiny app dashboards, adding several value boxes in the front of the map section, which contains the amount of confirmed, recovered, death and active cases in a day. This new idea could make data communication with users.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;some-things-id-like-to-add-that-cannot-be-done-yet-due-to-limitation-in-data-or-technology&#34; class=&#34;section level3&#34;&gt;
@@ -139,9 +139,9 @@ The dashboard is rounded off with the “About” section which briefly describe
 &lt;p&gt;For example, you could expand the map, then move your mouse to these coloured circles in Australia and read the title in the label. At the bottom side of Australia, that circle should be Victoria instead of Australia.
 &lt;img src=&#34;map_fix.png&#34; width=&#34;100%&#34; /&gt;
 This issue comes from the data processing steps, in the raw data, some countries have the amount of cases both in the whole country and each state while others only have the number of causes related to that country. However, continue to do in-depth data processing to separate state and countries is a challenging work for me.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Although I connect the slider bar with the map and table, connecting the DT table with map is not in my ability. In my imagination, if I click one of rows in DT table, the map will locate to that row I click directly no matter that row stands for countries or states.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Although I connect the slider bar with the map and table, connecting the DT table with the map is not in my ability. In my imagination, if I click one of the row in DT table, the map will locate to that row I click directly no matter that row stands for countries or states.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Overall, there are several areas I could improve on. Therefore, we create this shiny dashboard into an open-source version, and I could get feedback quickly. I appreciate all of you to contribute to this project with additional visualizations, information etc. If you find any bug/issue or have an idea how to improve the dashboard, please create an issue on &lt;a href=&#34;https://github.com/etc5523-2020/shiny-assessment-yawenzhang9701&#34;&gt;GitHub&lt;/a&gt;. I will try to look into it as soon as possible. From my dashboard, if it could help you to improve your skills and learn new things, it will be my pleasure.&lt;/p&gt;
+&lt;p&gt;Overall, there are several areas I could improve on. Therefore, we create this shiny dashboard into an open-source version, and I could get feedback quickly. I appreciate all of you to contribute to this project with additional visualizations, information etc. If you find any bug/issue or have an idea how to improve the dashboard, please create an issue on &lt;a href=&#34;https://github.com/etc5523-2020/shiny-assessment-yawenzhang9701&#34;&gt;GitHub&lt;/a&gt;. I will try to look into it as soon as possible. From my dashboard, if it could help you to improve your skills and learn new things, it would be my pleasure.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;acknowledgements&#34; class=&#34;section level2&#34;&gt;
