@@ -20,11 +20,12 @@
       <description>
 
 
-&lt;p&gt;The novel coronavirus has been an unavoidable topic for several months now. This coronavirus outbreak was first documented in Wuhan, Hubei Province, China in December 2019. These were caused by a new type of coronavirus, and the disease is now commonly referred to as COVID-19. The COVID-19 pandemic has been an unavoidable topic for several months. The number of COVID-19 cases started to escalate more quickly in mid-January, and the virus soon spread beyond China’s broad. As of writing this, it has now been confirmed on six continents and in more than 100 countries.
+&lt;p&gt;The novel coronavirus has been an unavoidable topic for several months. This coronavirus outbreak was first documented in Wuhan, Hubei Province, China in December 2019. These were caused by a new type of coronavirus, and the disease is now commonly referred to as COVID-19. The number of COVID-19 cases started to escalate more quickly in mid-January, and the virus soon spread beyond China’s broad. As of writing this, it has now been confirmed on six continents and in more than 100 countries.
 As a business analytics student, I will try my best to approach the recent COVID-19 pandemic from a data perspective. Therefore, I create a dashboard to track and visualize the spread of COVID-19. You can find the R Shiny dashboard I created &lt;a href=&#34;https://yawen.shinyapps.io/shiny-assessment-yawenzhang9701/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;brief-introduction&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Brief Introduction 📸&lt;/h2&gt;
-&lt;p&gt;This coronavirus shiny app provides an overview of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic. Since only look at the data, it is hard to interpret how fast is the virus spreading, and how does the situation in each country. Then, I created this dashboard to track and visualize the spread by providing several interactive plots and tables, including the timeline function and the ability to overlay past outbreaks. By looking through this dashboard, I hope it is possible to get a deeper understanding of this pandemic.&lt;/p&gt;
+&lt;p&gt;This coronavirus shiny app provides an overview of the 2019 Novel Coronavirus COVID-19 (2019-nCoV) epidemic. Since only look at the data, it is hard to interpret how fast is the virus spreading, and how does the situation in each country. Then, I created this dashboard to track and visualize the spread by providing several interactive plots and tables, including the timeline function and the ability to overlay past outbreaks.&lt;/p&gt;
+&lt;p&gt;This blog post is an introduction of the Coronavirus Pandemic Shiny app, and mainly focus on reviewing the app and offer the points need to improve. By looking through this dashboard, I hope it is possible to get a deeper understanding of this pandemic.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;self-review&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Self Review&lt;/h2&gt;
@@ -105,7 +106,7 @@ Figure 4: Problems in Map Section
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/center&gt;
-&lt;p&gt;This issue comes from the data processing steps, in the raw data, some countries have the number of cases both in the whole country and each state while others only have the number of causes related to that country. However, continue to do in-depth data processing to separate state and countries is a challenging work for me.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;This issue comes from the data processing steps, in the raw data, some countries have the number of cases both in the whole country and each state while others only have the number of causes related to that country. However, continue to do in-depth data processing to separate states and countries is a challenging work for me.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Although I connect the slider bar with the map and table, combining the DT table with the map is not in my ability. In my imagination, if I click one of the rows in DT table, the map will locate to that row I click directly no matter that row stands for countries or states.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
