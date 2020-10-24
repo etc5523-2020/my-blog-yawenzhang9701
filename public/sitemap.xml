@@ -33,12 +33,17 @@
   </url>
   
   <url>
-    <loc>/post/shiny-app-introduction/</loc>
-    <lastmod>2020-10-11T13:39:49+08:00</lastmod>
+    <loc>/post/</loc>
+    <lastmod>2020-10-24T20:19:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>/post/package-review/</loc>
+    <lastmod>2020-10-24T20:19:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/shiny-app-introduction/</loc>
     <lastmod>2020-10-11T13:39:49+08:00</lastmod>
   </url>
   
@@ -174,10 +179,6 @@
   
   <url>
     <loc>/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>/post/package_review/</loc>
   </url>
   
   <url>

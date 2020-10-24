@@ -1,8 +1,20 @@
 ---
 title: R-Package Review `r emo::ji("package")`
-author: "Yawen Zhang"
-date: "10/24/2020"
-output: html_document
+author: Yawen Zhang
+date: '2020-10-24'
+slug: package-review
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-10-24T20:19:37+08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Overview
 In this blog post I will be reviewing [Mayunk Bharadwaj](mbha0014@student.monash.edu)'s R package `ozcovid` made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from [GitHub](https://github.com/etc5523-2020/r-package-assessment-mayunk264/issues).
 
-The goal of ozcovid is help user to explore Australia’s coronavirus data through the interactive Shiny application ‘Coronavirus in Australia’ and the dataset `oz_covid_data`. The package also contains three functions: 
+The goal of ozcovid is help user to explore Australia’s coronavirus data through the interactive Shiny application ‘Coronavirus in Australia’ and the dataset `oz_covid_data`. The package also contains three functions:  
 
 - `launch_app()`: 
 
@@ -39,7 +51,7 @@ The `launch_app()` function is the centerpiece of the package. I can follow the 
 knitr::include_graphics("line.png")
 ```
   </center>
-
+  
 -	Coronavirus Summary Table: a table that displays daily and cumulative coronavirus confirmed cases, deaths, and recoveries by date (Refer to Figure \@ref(fig:table)). 
 
   <center>
@@ -59,4 +71,6 @@ knitr::include_graphics("bar.png")
 In this shiny application, users have the ability to manually select or click the graph to achieve interactively and help users get an idea about the development of the pandemic. 
 
 Furthermore, as described in the help file and vignette, I successfully used the  `oz_covid_data()` function to obtain the data in the application. Two functions `stateSelectInput()` and `vicEventRenderText()` may assist other users in generating their shiny application.
+
+
 
