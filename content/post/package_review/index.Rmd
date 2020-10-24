@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Overview
-In this blog post I will be reviewing [Mayunk Bharadwaj](mbha0014@student.monash.edu)'s R package `ozcovid` made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from [GitHub](https://github.com/etc5523-2020/r-package-assessment-mayunk264/issues).
+In this blog post I will be reviewing Mayunk Bharadwaj's R package `ozcovid` made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from [GitHub](https://github.com/etc5523-2020/r-package-assessment-mayunk264/issues).
 
 The goal of ozcovid is help user to explore Australia’s coronavirus data through the interactive Shiny application ‘Coronavirus in Australia’ and the dataset `oz_covid_data`. The package also contains three functions:  
 
