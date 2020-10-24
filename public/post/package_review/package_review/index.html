@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="Postgraduate student in Business Analytics">
+  <meta name="description" content="Overview In this blog post I will be reviewing Mayunk Bharadwaj’s R package ozcovid made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from GitHub.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/">
+  <link rel="alternate" hreflang="en-us" href="/post/package_review/package_review/">
 
   
 
@@ -240,18 +240,14 @@
 
   
   
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  
 
-  
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Yawen Zhang">
   
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="/">
+  <link rel="canonical" href="/post/package_review/package_review/">
 
   
   
@@ -267,29 +263,61 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Yawen Zhang">
-  <meta property="og:url" content="/">
-  <meta property="og:title" content="Yawen Zhang">
-  <meta property="og:description" content="Postgraduate student in Business Analytics"><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="/post/package_review/package_review/">
+  <meta property="og:title" content="R-Package Review 📦 | Yawen Zhang">
+  <meta property="og:description" content="Overview In this blog post I will be reviewing Mayunk Bharadwaj’s R package ozcovid made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from GitHub."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2030-06-01T13:00:00&#43;00:00">
+    
+    
   
 
   
+
+
+    
+
+
+
+
+
+
+  
+
+
+
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/package_review/package_review/"
   },
-  "url": "/"
+  "headline": "R-Package Review 📦",
+  
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Yawen Zhang"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yawen Zhang",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Overview In this blog post I will be reviewing Mayunk Bharadwaj’s R package ozcovid made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from GitHub."
 }
 </script>
 
+  
 
   
 
@@ -303,12 +331,12 @@
 
 
 
-  <title>Yawen Zhang</title>
+  <title>R-Package Review 📦 | Yawen Zhang</title>
 
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class=" ">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class=" ">
 
   
   
@@ -427,7 +455,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#hero" data-target="#hero"><span>Demo</span></a>
+          <a class="nav-link " href="/#hero"><span>Demo</span></a>
         </li>
 
         
@@ -464,7 +492,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#posts" data-target="#posts"><span>Posts</span></a>
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
         </li>
 
         
@@ -501,7 +529,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#contact" data-target="#contact"><span>Contact</span></a>
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
         </li>
 
         
@@ -548,229 +576,9 @@
 
 
 
-  
-
-
-
-
-
-
-
-
-
-
+  <article class="article">
 
   
-<span class="js-widget-page d-none"></span>
-
-
-
-
-
-  
-  
-  
-  
-
-
-
-
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-  
-
-  
-
-  <section id="about" class="home-section wg-about   "  >
-    <div class="container">
-      
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
-
-      
-      
-      <img class="avatar avatar-circle" src="/author/yawen-zhang/avatar_hu2f2892ddea2c70f98b715c9a916714ec_564148_270x270_fill_q90_lanczos_center.jpg" alt="Yawen Zhang">
-      
-
-      <div class="portrait-title">
-        <h2>Yawen Zhang</h2>
-        <h3>Postgraduate student in Business Analytics</h3>
-
-        
-        <h3>
-          <a href="https://www.monash.edu/" target="_blank" rel="noopener">
-          <span>Monash University</span>
-          </a>
-        </h3>
-        
-      </div>
-
-      <ul class="network-icon" aria-hidden="true">
-        
-      </ul>
-
-    </div>
-  </div>
-  <div class="col-12 col-lg-8">
-
-    
-    <h1>Biography</h1>
-
-    <p>Hi, this is Yawen&rsquo;s blog 💭</p>
-<p>I am a new graduate from undergraduate 👩‍🎓 and studying at Monash University major in Master of Business Analytics. The things I enjoy doing include data analysis 📊, cooking 👩‍🍳 and traveling 🏞️.</p>
-
-
-    <div class="row">
-
-      
-      <div class="col-md-5">
-        <h3>Interests</h3>
-        <ul class="ul-interests">
-          
-          <li>Wild Caught Data</li>
-          
-          <li>Statistical Learning</li>
-          
-        </ul>
-      </div>
-      
-
-      
-      <div class="col-md-7">
-        <h3>Education</h3>
-        <ul class="ul-edu fa-ul">
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">Master of Business Analytics</p>
-              <p class="institution">Monash University</p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">Bachelor of Accounting</p>
-              <p class="institution">Monash University</p>
-            </div>
-          </li>
-          
-        </ul>
-      </div>
-      
-
-    </div>
-  </div>
-</div>
-
-    </div>
-  </section>
-
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-  
-
-  
-
-  <section id="posts" class="home-section wg-pages   "  >
-    <div class="container">
-      
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -785,354 +593,16 @@
 
   
 
-
-
-
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>R-Package Review 📦</h1>
 
   
 
-
-
-
-<div class="row ">
   
     
-      <div class="col-12 col-lg-4 section-heading">
-        <h1>Recent Posts</h1>
-        
-      </div>
-    
-  
-  <div class="col-12 col-lg-8">
-
-    
-
-    
-      
-        
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/shiny-app-introduction/" >COVID-19 Shiny Dashboard 🗺 in the World</a>
-    </h3>
-
-    
-    <a href="/post/shiny-app-introduction/" class="summary-link">
-      <div class="article-style">
-        The novel coronavirus has been an unavoidable topic for several months. This coronavirus outbreak was first documented in Wuhan, Hubei Province, China in December 2019. These were caused by a new type of coronavirus, and the disease is now commonly referred to as COVID-19.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-          Last updated on
-      
-    
-    Oct 11, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    6 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-      
-    
-      
-        
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/covid-19-in-spain/" >Situation in Spain 🇪🇸 with COVID-19</a>
-    </h3>
-
-    
-    <a href="/post/covid-19-in-spain/" class="summary-link">
-      <div class="article-style">
-        Coronavirus History in Spain 🇪🇸 The COVID-19 pandemic in Spain is part of the pandemic of Coronavirus Disease 2019 (COVID‑19). Spain has the second-highest total confirmed cases in Europe after Russia.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-  
-  
-  <div>
-    
-
-  
-  <span >Yawen Zhang</span>
-  </div>
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-          Last updated on
-      
-    
-    Sep 14, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    8 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-      
-    
-      
-        
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/canada-covid19-post/" >Canada COVID19 Post 🇨🇦</a>
-    </h3>
-
-    
-    <a href="/post/canada-covid19-post/" class="summary-link">
-      <div class="article-style">
-        About Canada 🇨🇦 Coronavirus disease 2019 (COVID‑19) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The situation around the world still serious, and Canada is one of them.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-  
-  
-  <div>
-    
-
-  
-  <span >Yawen Zhang</span>
-  </div>
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-          Last updated on
-      
-    
-    Aug 27, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    5 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-      
-    
-      
-        
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0">
-      <a href="/post/package_review/" >R-Package Review 📦</a>
-    </h3>
-
-    
-    <a href="/post/package_review/" class="summary-link">
-      <div class="article-style">
-        Overview In this blog post I will be reviewing Mayunk Bharadwaj’s R package ozcovid made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from GitHub.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
 
 
 <div class="article-metadata">
@@ -1168,33 +638,249 @@
 
 </div>
 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
       
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>In this blog post I will be reviewing <a href="mbha0014@student.monash.edu">Mayunk Bharadwaj</a>’s R package <code>ozcovid</code> made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from <a href="https://github.com/etc5523-2020/r-package-assessment-mayunk264/issues">GitHub</a>.</p>
+<p>The goal of ozcovid is help user to explore Australia’s coronavirus data through the interactive Shiny application ‘Coronavirus in Australia’ and the dataset <code>oz_covid_data</code>. The package also contains three functions:</p>
+<ul>
+<li><p><code>launch_app()</code>:</p>
+<p>The function allows the user to interact with Australia’s coronavirus data by launching the shiny dashboard ’Coronavirus In Australia’.</p></li>
+<li><p><code>stateSelectInput()</code>:</p>
+<p>This function aims to select the state/territory of choice within the shiny app to generate a graph of confirmed coronavirus cases over time. This function generated from the ui components of the Shiny application</p></li>
+<li><p><code>vicEventRenderText()</code></p>
+<p>This function generates a sentence describing the date and number of deaths in Victoria related to coronavirus on that date by asking the user to click on any point on the Victorian coronavirus-related deaths graphic. This function generated from the server components of the Shiny application.</p></li>
+</ul>
+</div>
+<div id="what-did-i-think-this-package-would-do-did-it-do-it" class="section level2">
+<h2>What did I think this package would do? Did it do it?</h2>
+<p>At the onset of viewing the GitHub page, the readme file, and pkgdown page using <code>pkgdown::built_site()</code> function in Rstudio, these materials gave a clear picture of the package. All the functions and data set inside the <code>ozcovid</code> package are relative to coronavirus in Australia.</p>
+<p>The <code>launch_app()</code> function is the centerpiece of the package. I can follow the steps in the readme file to run the shiny app. When executed, the function will return a Shiny application entitled ‘Coronavirus in Australia’. There are three main sections of the application:</p>
+<ul>
+<li>Confirmed Cases by state: a simple line plot was displaying confirmed coronavirus cases by the state over time.</li>
+</ul>
+<center>
+<div class="figure"><span id="fig:line"></span>
+<img src="line.png" alt="the line plot in Shiny Dashboard" width="80%" />
+<p class="caption">
+Figure 1: the line plot in Shiny Dashboard
+</p>
+</div>
+</center>
+<ul>
+<li>Coronavirus Summary Table: a table that displays daily and cumulative coronavirus confirmed cases, deaths, and recoveries by date.</li>
+</ul>
+<center>
+<div class="figure"><span id="fig:table"></span>
+<img src="table.png" alt="the table in Shiny Dashboard" width="80%" />
+<p class="caption">
+Figure 2: the table in Shiny Dashboard
+</p>
+</div>
+</center>
+<ul>
+<li>Deaths In Victoria: an interactive bar chart of Victoria’s coronavirus-related deaths.</li>
+</ul>
+<center>
+<div class="figure"><span id="fig:bar"></span>
+<img src="bar.png" alt="the bar chart in Shiny Dashboard" width="100%" />
+<p class="caption">
+Figure 3: the bar chart in Shiny Dashboard
+</p>
+</div>
+</center>
+<p>In this shiny application, users have the ability to manually select or click the graph to achieve interactively and help users get an idea about the development of the pandemic.</p>
+<p>Furthermore, as described in the help file and vignette, I successfully used the <code>oz_covid_data()</code> function to obtain the data in the application. Two functions <code>stateSelectInput()</code> and <code>vicEventRenderText()</code> may assist other users in generating their shiny application.</p>
+</div>
+
     </div>
 
     
 
-  </div>
-  <div class="ml-3">
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/package_review/package_review/&amp;text=R-Package%20Review%20%f0%9f%93%a6" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
-  </div>
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/package_review/package_review/&amp;t=R-Package%20Review%20%f0%9f%93%a6" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=R-Package%20Review%20%f0%9f%93%a6&amp;body=/post/package_review/package_review/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/package_review/package_review/&amp;title=R-Package%20Review%20%f0%9f%93%a6" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=R-Package%20Review%20%f0%9f%93%a6%20/post/package_review/package_review/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/package_review/package_review/&amp;title=R-Package%20Review%20%f0%9f%93%a6" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
       
     
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/yawen-zhang/avatar_hu2f2892ddea2c70f98b715c9a916714ec_564148_270x270_fill_q90_lanczos_center.jpg" alt="Yawen Zhang">
+      
 
-    
-    
-    
+      <div class="media-body">
+        <h5 class="card-title"><a href="/">Yawen Zhang</a></h5>
+        <h6 class="card-subtitle">Postgraduate student in Business Analytics</h6>
+        <p class="card-text">I am Yawen Zhang. My research interests are wild caught data.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
 
   </div>
-</div>
-
-    </div>
-  </section>
-
-
-
+</article>
 
       
 
@@ -1278,18 +964,6 @@
     
 
     
-    
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
     
 
     

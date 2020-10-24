@@ -857,5 +857,71 @@ Three
 </description>
     </item>
     
+    <item>
+      <title>R-Package Review 📦</title>
+      <link>/post/package_review/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/post/package_review/</guid>
+      <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;overview&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Overview&lt;/h2&gt;
+&lt;p&gt;In this blog post I will be reviewing &lt;a href=&#34;mbha0014@student.monash.edu&#34;&gt;Mayunk Bharadwaj&lt;/a&gt;’s R package &lt;code&gt;ozcovid&lt;/code&gt; made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from &lt;a href=&#34;https://github.com/etc5523-2020/r-package-assessment-mayunk264/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The goal of ozcovid is help user to explore Australia’s coronavirus data through the interactive Shiny application ‘Coronavirus in Australia’ and the dataset &lt;code&gt;oz_covid_data&lt;/code&gt;. The package also contains three functions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;launch_app()&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;The function allows the user to interact with Australia’s coronavirus data by launching the shiny dashboard ’Coronavirus In Australia’.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;stateSelectInput()&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;This function aims to select the state/territory of choice within the shiny app to generate a graph of confirmed coronavirus cases over time. This function generated from the ui components of the Shiny application&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;vicEventRenderText()&lt;/code&gt;：&lt;/p&gt;
+&lt;p&gt;This function generates a sentence describing the date and number of deaths in Victoria related to coronavirus on that date by asking the user to click on any point on the Victorian coronavirus-related deaths graphic. This function generated from the server components of the Shiny application.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-did-i-think-this-package-would-do-did-it-do-it&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What did I think this package would do? Did it do it?&lt;/h2&gt;
+&lt;p&gt;At the onset of viewing the GitHub page, the readme file, and pkgdown page using &lt;code&gt;pkgdown::built_site()&lt;/code&gt; function in Rstudio, these materials gave a clear picture of the package. All the functions and data set inside the &lt;code&gt;ozcovid&lt;/code&gt; package are relative to coronavirus in Australia.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;launch_app()&lt;/code&gt; function is the centerpiece of the package. I can follow the steps in the readme file to run the shiny app. When executed, the function will return a Shiny application entitled ‘Coronavirus in Australia’. There are three main sections of the application:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Confirmed Cases by state: a simple line plot was displaying confirmed coronavirus cases by the state over time (Refer to Figure &lt;a href=&#34;#fig:line&#34;&gt;1&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;center&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:line&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;line.png&#34; alt=&#34;the line plot in Shiny Dashboard&#34; width=&#34;75%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: the line plot in Shiny Dashboard
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;ul&gt;
+&lt;li&gt;Coronavirus Summary Table: a table that displays daily and cumulative coronavirus confirmed cases, deaths, and recoveries by date (Refer to Figure &lt;a href=&#34;#fig:table&#34;&gt;2&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;center&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:table&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;table.png&#34; alt=&#34;the table in Shiny Dashboard&#34; width=&#34;75%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: the table in Shiny Dashboard
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;ul&gt;
+&lt;li&gt;Deaths In Victoria: an interactive bar chart of Victoria’s coronavirus-related deaths (Refer to Figure &lt;a href=&#34;#fig:bar&#34;&gt;3&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;center&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:bar&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;bar.png&#34; alt=&#34;the bar chart in Shiny Dashboard&#34; width=&#34;75%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: the bar chart in Shiny Dashboard
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;p&gt;In this shiny application, users have the ability to manually select or click the graph to achieve interactively and help users get an idea about the development of the pandemic.&lt;/p&gt;
+&lt;p&gt;Furthermore, as described in the help file and vignette, I successfully used the &lt;code&gt;oz_covid_data()&lt;/code&gt; function to obtain the data in the application. Two functions &lt;code&gt;stateSelectInput()&lt;/code&gt; and &lt;code&gt;vicEventRenderText()&lt;/code&gt; may assist other users in generating their shiny application.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

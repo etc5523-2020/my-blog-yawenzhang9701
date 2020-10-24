@@ -1,0 +1,64 @@
+---
+title: R-Package Review 📦
+author: "Yawen Zhang"
+date: "10/24/2020"
+output: html_document
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>In this blog post I will be reviewing <a href="mbha0014@student.monash.edu">Mayunk Bharadwaj</a>’s R package <code>ozcovid</code> made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from <a href="https://github.com/etc5523-2020/r-package-assessment-mayunk264/issues">GitHub</a>.</p>
+<p>The goal of ozcovid is help user to explore Australia’s coronavirus data through the interactive Shiny application ‘Coronavirus in Australia’ and the dataset <code>oz_covid_data</code>. The package also contains three functions:</p>
+<ul>
+<li><p><code>launch_app()</code>:</p>
+<p>The function allows the user to interact with Australia’s coronavirus data by launching the shiny dashboard ’Coronavirus In Australia’.</p></li>
+<li><p><code>stateSelectInput()</code>:</p>
+<p>This function aims to select the state/territory of choice within the shiny app to generate a graph of confirmed coronavirus cases over time. This function generated from the ui components of the Shiny application</p></li>
+<li><p><code>vicEventRenderText()</code></p>
+<p>This function generates a sentence describing the date and number of deaths in Victoria related to coronavirus on that date by asking the user to click on any point on the Victorian coronavirus-related deaths graphic. This function generated from the server components of the Shiny application.</p></li>
+</ul>
+</div>
+<div id="what-did-i-think-this-package-would-do-did-it-do-it" class="section level2">
+<h2>What did I think this package would do? Did it do it?</h2>
+<p>At the onset of viewing the GitHub page, the readme file, and pkgdown page using <code>pkgdown::built_site()</code> function in Rstudio, these materials gave a clear picture of the package. All the functions and data set inside the <code>ozcovid</code> package are relative to coronavirus in Australia.</p>
+<p>The <code>launch_app()</code> function is the centerpiece of the package. I can follow the steps in the readme file to run the shiny app. When executed, the function will return a Shiny application entitled ‘Coronavirus in Australia’. There are three main sections of the application:</p>
+<ul>
+<li>Confirmed Cases by state: a simple line plot was displaying confirmed coronavirus cases by the state over time.</li>
+</ul>
+<center>
+<div class="figure"><span id="fig:line"></span>
+<img src="line.png" alt="the line plot in Shiny Dashboard" width="80%" />
+<p class="caption">
+Figure 1: the line plot in Shiny Dashboard
+</p>
+</div>
+</center>
+<ul>
+<li>Coronavirus Summary Table: a table that displays daily and cumulative coronavirus confirmed cases, deaths, and recoveries by date.</li>
+</ul>
+<center>
+<div class="figure"><span id="fig:table"></span>
+<img src="table.png" alt="the table in Shiny Dashboard" width="80%" />
+<p class="caption">
+Figure 2: the table in Shiny Dashboard
+</p>
+</div>
+</center>
+<ul>
+<li>Deaths In Victoria: an interactive bar chart of Victoria’s coronavirus-related deaths.</li>
+</ul>
+<center>
+<div class="figure"><span id="fig:bar"></span>
+<img src="bar.png" alt="the bar chart in Shiny Dashboard" width="100%" />
+<p class="caption">
+Figure 3: the bar chart in Shiny Dashboard
+</p>
+</div>
+</center>
+<p>In this shiny application, users have the ability to manually select or click the graph to achieve interactively and help users get an idea about the development of the pandemic.</p>
+<p>Furthermore, as described in the help file and vignette, I successfully used the <code>oz_covid_data()</code> function to obtain the data in the application. Two functions <code>stateSelectInput()</code> and <code>vicEventRenderText()</code> may assist other users in generating their shiny application.</p>
+</div>
