@@ -21,7 +21,7 @@ projects: []
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Overview
+## Overview `r emo::ji("thumbsup")`
 In this blog post I will be reviewing Mayunk Bharadwaj's R package `ozcovid` made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from [GitHub](https://github.com/etc5523-2020/r-package-assessment-mayunk264/issues).
 
 The goal of ozcovid is help user to explore Australia’s coronavirus data through the interactive Shiny application ‘Coronavirus in Australia’ and the dataset `oz_covid_data`. The package also contains three functions:  
@@ -38,7 +38,7 @@ The goal of ozcovid is help user to explore Australia’s coronavirus data throu
   
   This function generates a sentence describing the date and number of deaths in Victoria related to coronavirus on that date by asking the user to click on any point on the Victorian coronavirus-related deaths graphic. This function generated from the server components of the Shiny application. 
   
-## What did I think this package would do? Did it do it?
+## What did I think this package would do? Did it do it? `r emo::ji("camera_flash")`
 
 At the onset of viewing the GitHub page, the readme file, and pkgdown page using `pkgdown::built_site()` function in Rstudio, these materials gave a clear picture of the package. All the functions and data set inside the `ozcovid` package are relative to coronavirus in Australia. 
 
@@ -72,5 +72,26 @@ In this shiny application, users have the ability to manually select or click th
 
 Furthermore, as described in the help file and vignette, I successfully used the  `oz_covid_data()` function to obtain the data in the application. Two functions `stateSelectInput()` and `vicEventRenderText()` may assist other users in generating their shiny application.
 
+## Suggestions and Improvement `r emo::ji("open_book")`
+### Are the improvements that could be made to the code? `r emo::ji("raised_back_of_hand")`
 
+I think the code is well-written, and gives a concise and easy to understand documentation. However, I have two suggestions based on your code. 
+  
+First of all, add some arguments to your function. If a function without any argument when executed, it will generate some limitations, such as the function is not reproducible or meaningless. The existing two functions could only use in your shiny application, so there is no need to include an argument within the function. I would suggest adding a new function based on your repeating menu icon in the dashboard.
 
+```
+@export
+add_menu <- function(id, text_name, icon_name){
+  shinydashboard::menuItem(id, tabName = text_name, icon = icon(icon_name))
+}
+```
+This function aims to add menu bar in the shiny dashboard. It contains three arguments: sidebar menu which be used for a Shiny input value, the name of a tab that this menu item will activate and the available icons.
+
+In addition, the function with several arguments will be more complicated. You could add an example to tell users how to use this function. 
+
+Here is an example: 
+
+```
+@examples
+add_menu("Map", "Map", "map-marked-alt")
+```

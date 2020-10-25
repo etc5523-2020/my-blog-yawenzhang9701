@@ -23,7 +23,7 @@
 
 
 &lt;div id=&#34;overview&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Overview&lt;/h2&gt;
+&lt;h2&gt;Overview 👍&lt;/h2&gt;
 &lt;p&gt;In this blog post I will be reviewing Mayunk Bharadwaj’s R package &lt;code&gt;ozcovid&lt;/code&gt; made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from &lt;a href=&#34;https://github.com/etc5523-2020/r-package-assessment-mayunk264/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The goal of ozcovid is help user to explore Australia’s coronavirus data through the interactive Shiny application ‘Coronavirus in Australia’ and the dataset &lt;code&gt;oz_covid_data&lt;/code&gt;. The package also contains three functions:&lt;/p&gt;
 &lt;ul&gt;
@@ -36,7 +36,7 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-did-i-think-this-package-would-do-did-it-do-it&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;What did I think this package would do? Did it do it?&lt;/h2&gt;
+&lt;h2&gt;What did I think this package would do? Did it do it? 📸&lt;/h2&gt;
 &lt;p&gt;At the onset of viewing the GitHub page, the readme file, and pkgdown page using &lt;code&gt;pkgdown::built_site()&lt;/code&gt; function in Rstudio, these materials gave a clear picture of the package. All the functions and data set inside the &lt;code&gt;ozcovid&lt;/code&gt; package are relative to coronavirus in Australia.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;launch_app()&lt;/code&gt; function is the centerpiece of the package. I can follow the steps in the readme file to run the shiny app. When executed, the function will return a Shiny application entitled ‘Coronavirus in Australia’. There are three main sections of the application:&lt;/p&gt;
 &lt;ul&gt;
@@ -74,6 +74,23 @@ Figure 3: the bar chart in Shiny Dashboard
 &lt;/center&gt;
 &lt;p&gt;In this shiny application, users have the ability to manually select or click the graph to achieve interactively and help users get an idea about the development of the pandemic.&lt;/p&gt;
 &lt;p&gt;Furthermore, as described in the help file and vignette, I successfully used the &lt;code&gt;oz_covid_data()&lt;/code&gt; function to obtain the data in the application. Two functions &lt;code&gt;stateSelectInput()&lt;/code&gt; and &lt;code&gt;vicEventRenderText()&lt;/code&gt; may assist other users in generating their shiny application.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;suggestions-and-improvement&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Suggestions and Improvement 📖&lt;/h2&gt;
+&lt;div id=&#34;are-the-improvements-that-could-be-made-to-the-code&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Are the improvements that could be made to the code? 🤚&lt;/h3&gt;
+&lt;p&gt;I think the code is well-written, and gives a concise and easy to understand documentation. However, I have two suggestions based on your code.&lt;/p&gt;
+&lt;p&gt;First of all, add some arguments to your function. If a function without any argument when executed, it will generate some limitations, such as the function is not reproducible or meaningless. The existing two functions could only use in your shiny application, so there is no need to include an argument within the function. I would suggest adding a new function based on your repeating menu icon in the dashboard.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@export
+add_menu &amp;lt;- function(id, text_name, icon_name){
+  shinydashboard::menuItem(id, tabName = text_name, icon = icon(icon_name))
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This function aims to add menu bar in the shiny dashboard. It contains three arguments: sidebar menu which be used for a Shiny input value, the name of a tab that this menu item will activate and the available icons.&lt;/p&gt;
+&lt;p&gt;In addition, the function with several arguments will be more complicated. You could add an example to tell users how to use this function.&lt;/p&gt;
+&lt;p&gt;Here is an example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@examples
+add_menu(&amp;quot;Map&amp;quot;, &amp;quot;Map&amp;quot;, &amp;quot;map-marked-alt&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
