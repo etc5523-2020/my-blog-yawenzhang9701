@@ -21,7 +21,7 @@ projects: []
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Overview `r emo::ji("thumbsup")`
+## Overview `r emo::ji("clap")`
 In this blog post I will be reviewing Mayunk Bharadwaj's R package `ozcovid` made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from [GitHub](https://github.com/etc5523-2020/r-package-assessment-mayunk264/issues).
 
 The goal of ozcovid is help user to explore Australia’s coronavirus data through the interactive Shiny application ‘Coronavirus in Australia’ and the dataset `oz_covid_data`. The package also contains three functions:  
@@ -93,5 +93,55 @@ Here is an example:
 
 ```
 @examples
-add_menu("Map", "Map", "map-marked-alt")
+add_menu("Confirmed Cases by State", "dashboard", "dashboard")
 ```
+
+### Are there improvements that could be made to the shiny app inside the package? `r emo::ji("thought_balloon")`
+
+This shiny dashboard is very impressive and I really like how interactive it is. This shiny dashboard provided a more structured format instead of the complex shiny format. Some complexity shiny format would be easy for the end user's eye to stray and become confused by several plots on the same page. It generates a number of informative plots such as the line chart and the bar chart, and I was able to learn a lot about the state of coronavirus in Australia. 
+
+I think the improvement that I would recommend would be the aesthetics of the application could have been better. Being able to communicate data stylishly and beautifully is as important as the data analysis itself, in my opinion. Specifically, I think the use of sliderInput and valueBoxes might have made the application pop a bit more.
+
+Furthermore, this shiny dashboard could improve the application by using more complex and varied user input options. For example, you could add checkboxGroupInput where user is able to select multiple states. Or perhaps in the fourth section called 'Deaths in Victoria', adding a date range input so the user can obtain more specific information about arbitrary time periods (as opposed to a single day). 
+
+
+### Is the documentation sufficient to get started? `r emo::ji("thinking")`
+The documentation in the README file is a bit simpler, which only contains how to install packages and the example of the data set. I would recommend that provide a detailed overview of the package, such as display the data set in the form of a simple graph or give some screenshots of this well structured shiny dashboard. 
+
+The functions is well documented, however, my recommendation would be to provide additional information in `oz_covid_data` documentation. Specifically, in interpreting each variable, the format can be more standardized. You could follow the following code to make your documentation more profession.
+
+```
+\describe{
+   \item{date}{the date on a particular day}
+   \item{Daily Confirmed}{the daily confirmed coronavirus cases in Australia on that given date}
+   \item{...}{...}
+   }
+```
+
+## Learned from reviewing the package `r emo::ji("writing_hand")`
+I understand that making a r package is an ideal way to package and distribute R code and data for re-use by others. It is not only creating functions but also debugging, testing and documentation. Good documentation can help users know how to use this package which is helpful for promoting the package.
+Mayunk also documented his whole package when I type `?ozcocid` in the console, which includes a big picture of the package and his personal information. This part is missing in my package. 
+
+I also learned that I can add `expect_silent()` to test the functions I created. This testing method is checking that the code produces no output, messages, or warnings. 
+
+## Summary 
+Overall, Mayunk’s package and the shiny dashboard provided an interesting and insightful take on the state of coronavirus in Australia. Although the whole package is simple, there is no error or warning inside the package. 
+
+Well Done `r emo::ji("thumbsup")`! 
+
+I think the aesthetics of the package could have been better (e.g., give some arguments to the function) and improve the application by using more complex and varied user input options in the shiny dashboard. 
+
+## Appendix
+
+#### Documentation
+The package includes all the following forms of documentation:
+
+- <input type="checkbox" checked> </input> The **Installation instructions:** for the package is found in README
+- <input type="checkbox" checked> </input> The **Vignette(s)** demonstrating major functionality that runs successfully locally
+- <input type="checkbox" checked> </input> The **Function Documentation:** for all exported functions in R help
+- <input type="checkbox" checked> </input> The **Examples** for all exported functions in R Help that run successfully locally
+
+#### Functionality
+- <input type="checkbox" checked> </input> **Installation:** Installation succeeds as documented.
+- <input type="checkbox" checked> </input> **Functionality:** Any functional claims of the software been confirmed.
+- <input type="checkbox" unchecked> </input> **Automated tests:** Unit tests cover essential functions of the package and a reasonable range of inputs and conditions. All tests pass on the local machine.

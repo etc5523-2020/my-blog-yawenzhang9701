@@ -22,7 +22,7 @@ projects: []
 
 
 <div id="overview" class="section level2">
-<h2>Overview 👍</h2>
+<h2>Overview 👏</h2>
 <p>In this blog post I will be reviewing Mayunk Bharadwaj’s R package <code>ozcovid</code> made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from <a href="https://github.com/etc5523-2020/r-package-assessment-mayunk264/issues">GitHub</a>.</p>
 <p>The goal of ozcovid is help user to explore Australia’s coronavirus data through the interactive Shiny application ‘Coronavirus in Australia’ and the dataset <code>oz_covid_data</code>. The package also contains three functions:</p>
 <ul>
@@ -88,6 +88,55 @@ add_menu &lt;- function(id, text_name, icon_name){
 <p>In addition, the function with several arguments will be more complicated. You could add an example to tell users how to use this function.</p>
 <p>Here is an example:</p>
 <pre><code>@examples
-add_menu(&quot;Map&quot;, &quot;Map&quot;, &quot;map-marked-alt&quot;)</code></pre>
+add_menu(&quot;Confirmed Cases by State&quot;, &quot;dashboard&quot;, &quot;dashboard&quot;)</code></pre>
+</div>
+<div id="are-there-improvements-that-could-be-made-to-the-shiny-app-inside-the-package" class="section level3">
+<h3>Are there improvements that could be made to the shiny app inside the package? 💭</h3>
+<p>This shiny dashboard is very impressive and I really like how interactive it is. This shiny dashboard provided a more structured format instead of the complex shiny format. Some complexity shiny format would be easy for the end user’s eye to stray and become confused by several plots on the same page. It generates a number of informative plots such as the line chart and the bar chart, and I was able to learn a lot about the state of coronavirus in Australia.</p>
+<p>I think the improvement that I would recommend would be the aesthetics of the application could have been better. Being able to communicate data stylishly and beautifully is as important as the data analysis itself, in my opinion. Specifically, I think the use of sliderInput and valueBoxes might have made the application pop a bit more.</p>
+<p>Furthermore, this shiny dashboard could improve the application by using more complex and varied user input options. For example, you could add checkboxGroupInput where user is able to select multiple states. Or perhaps in the fourth section called ‘Deaths in Victoria’, adding a date range input so the user can obtain more specific information about arbitrary time periods (as opposed to a single day).</p>
+</div>
+<div id="is-the-documentation-sufficient-to-get-started" class="section level3">
+<h3>Is the documentation sufficient to get started? 🤔</h3>
+<p>The documentation in the README file is a bit simpler, which only contains how to install packages and the example of the data set. I would recommend that provide a detailed overview of the package, such as display the data set in the form of a simple graph or give some screenshots of this well structured shiny dashboard.</p>
+<p>The functions is well documented, however, my recommendation would be to provide additional information in <code>oz_covid_data</code> documentation. Specifically, in interpreting each variable, the format can be more standardized. You could follow the following code to make your documentation more profession.</p>
+<pre><code>\describe{
+   \item{date}{the date on a particular day}
+   \item{Daily Confirmed}{the daily confirmed coronavirus cases in Australia on that given date}
+   \item{...}{...}
+   }</code></pre>
+</div>
+</div>
+<div id="learned-from-reviewing-the-package-️" class="section level2">
+<h2>Learned from reviewing the package ✍️</h2>
+<p>I understand that making a r package is an ideal way to package and distribute R code and data for re-use by others. It is not only creating functions but also debugging, testing and documentation. Good documentation can help users know how to use this package which is helpful for promoting the package.
+Mayunk also documented his whole package when I type <code>?ozcocid</code> in the console, which includes a big picture of the package and his personal information. This part is missing in my package.</p>
+<p>I also learned that I can add <code>expect_silent()</code> to test the functions I created. This testing method is checking that the code produces no output, messages, or warnings.</p>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>Overall, Mayunk’s package and the shiny dashboard provided an interesting and insightful take on the state of coronavirus in Australia. Although the whole package is simple, there is no error or warning inside the package.</p>
+<p>Well Done 👍!</p>
+<p>I think the aesthetics of the package could have been better (e.g., give some arguments to the function) and improve the application by using more complex and varied user input options in the shiny dashboard.</p>
+</div>
+<div id="appendix" class="section level2">
+<h2>Appendix</h2>
+<div id="documentation" class="section level4">
+<h4>Documentation</h4>
+<p>The package includes all the following forms of documentation:</p>
+<ul>
+<li><input type="checkbox" checked> </input> The <strong>Installation instructions:</strong> for the package is found in README</li>
+<li><input type="checkbox" checked> </input> The <strong>Vignette(s)</strong> demonstrating major functionality that runs successfully locally</li>
+<li><input type="checkbox" checked> </input> The <strong>Function Documentation:</strong> for all exported functions in R help</li>
+<li><input type="checkbox" checked> </input> The <strong>Examples</strong> for all exported functions in R Help that run successfully locally</li>
+</ul>
+</div>
+<div id="functionality" class="section level4">
+<h4>Functionality</h4>
+<ul>
+<li><input type="checkbox" checked> </input> <strong>Installation:</strong> Installation succeeds as documented.</li>
+<li><input type="checkbox" checked> </input> <strong>Functionality:</strong> Any functional claims of the software been confirmed.</li>
+<li><input type="checkbox" unchecked> </input> <strong>Automated tests:</strong> Unit tests cover essential functions of the package and a reasonable range of inputs and conditions. All tests pass on the local machine.</li>
+</ul>
 </div>
 </div>

@@ -87,7 +87,7 @@
 
 
 &lt;div id=&#34;overview&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Overview 👍&lt;/h2&gt;
+&lt;h2&gt;Overview 👏&lt;/h2&gt;
 &lt;p&gt;In this blog post I will be reviewing Mayunk Bharadwaj’s R package &lt;code&gt;ozcovid&lt;/code&gt; made for Assignment 2 of ETC5523 containing coronavirus data, functions, and shiny application. The development version from &lt;a href=&#34;https://github.com/etc5523-2020/r-package-assessment-mayunk264/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The goal of ozcovid is help user to explore Australia’s coronavirus data through the interactive Shiny application ‘Coronavirus in Australia’ and the dataset &lt;code&gt;oz_covid_data&lt;/code&gt;. The package also contains three functions:&lt;/p&gt;
 &lt;ul&gt;
@@ -153,7 +153,56 @@ add_menu &amp;lt;- function(id, text_name, icon_name){
 &lt;p&gt;In addition, the function with several arguments will be more complicated. You could add an example to tell users how to use this function.&lt;/p&gt;
 &lt;p&gt;Here is an example:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@examples
-add_menu(&amp;quot;Map&amp;quot;, &amp;quot;Map&amp;quot;, &amp;quot;map-marked-alt&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+add_menu(&amp;quot;Confirmed Cases by State&amp;quot;, &amp;quot;dashboard&amp;quot;, &amp;quot;dashboard&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;are-there-improvements-that-could-be-made-to-the-shiny-app-inside-the-package&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Are there improvements that could be made to the shiny app inside the package? 💭&lt;/h3&gt;
+&lt;p&gt;This shiny dashboard is very impressive and I really like how interactive it is. This shiny dashboard provided a more structured format instead of the complex shiny format. Some complexity shiny format would be easy for the end user’s eye to stray and become confused by several plots on the same page. It generates a number of informative plots such as the line chart and the bar chart, and I was able to learn a lot about the state of coronavirus in Australia.&lt;/p&gt;
+&lt;p&gt;I think the improvement that I would recommend would be the aesthetics of the application could have been better. Being able to communicate data stylishly and beautifully is as important as the data analysis itself, in my opinion. Specifically, I think the use of sliderInput and valueBoxes might have made the application pop a bit more.&lt;/p&gt;
+&lt;p&gt;Furthermore, this shiny dashboard could improve the application by using more complex and varied user input options. For example, you could add checkboxGroupInput where user is able to select multiple states. Or perhaps in the fourth section called ‘Deaths in Victoria’, adding a date range input so the user can obtain more specific information about arbitrary time periods (as opposed to a single day).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;is-the-documentation-sufficient-to-get-started&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Is the documentation sufficient to get started? 🤔&lt;/h3&gt;
+&lt;p&gt;The documentation in the README file is a bit simpler, which only contains how to install packages and the example of the data set. I would recommend that provide a detailed overview of the package, such as display the data set in the form of a simple graph or give some screenshots of this well structured shiny dashboard.&lt;/p&gt;
+&lt;p&gt;The functions is well documented, however, my recommendation would be to provide additional information in &lt;code&gt;oz_covid_data&lt;/code&gt; documentation. Specifically, in interpreting each variable, the format can be more standardized. You could follow the following code to make your documentation more profession.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;\describe{
+   \item{date}{the date on a particular day}
+   \item{Daily Confirmed}{the daily confirmed coronavirus cases in Australia on that given date}
+   \item{...}{...}
+   }&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;learned-from-reviewing-the-package-️&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Learned from reviewing the package ✍️&lt;/h2&gt;
+&lt;p&gt;I understand that making a r package is an ideal way to package and distribute R code and data for re-use by others. It is not only creating functions but also debugging, testing and documentation. Good documentation can help users know how to use this package which is helpful for promoting the package.
+Mayunk also documented his whole package when I type &lt;code&gt;?ozcocid&lt;/code&gt; in the console, which includes a big picture of the package and his personal information. This part is missing in my package.&lt;/p&gt;
+&lt;p&gt;I also learned that I can add &lt;code&gt;expect_silent()&lt;/code&gt; to test the functions I created. This testing method is checking that the code produces no output, messages, or warnings.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summary&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Overall, Mayunk’s package and the shiny dashboard provided an interesting and insightful take on the state of coronavirus in Australia. Although the whole package is simple, there is no error or warning inside the package.&lt;/p&gt;
+&lt;p&gt;Well Done 👍!&lt;/p&gt;
+&lt;p&gt;I think the aesthetics of the package could have been better (e.g., give some arguments to the function) and improve the application by using more complex and varied user input options in the shiny dashboard.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;appendix&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Appendix&lt;/h2&gt;
+&lt;div id=&#34;documentation&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Documentation&lt;/h4&gt;
+&lt;p&gt;The package includes all the following forms of documentation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; The &lt;strong&gt;Installation instructions:&lt;/strong&gt; for the package is found in README&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; The &lt;strong&gt;Vignette(s)&lt;/strong&gt; demonstrating major functionality that runs successfully locally&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; The &lt;strong&gt;Function Documentation:&lt;/strong&gt; for all exported functions in R help&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; The &lt;strong&gt;Examples&lt;/strong&gt; for all exported functions in R Help that run successfully locally&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;functionality&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Functionality&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Installation:&lt;/strong&gt; Installation succeeds as documented.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Functionality:&lt;/strong&gt; Any functional claims of the software been confirmed.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; unchecked&gt; &lt;/input&gt; &lt;strong&gt;Automated tests:&lt;/strong&gt; Unit tests cover essential functions of the package and a reasonable range of inputs and conditions. All tests pass on the local machine.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
