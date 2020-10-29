@@ -15,6 +15,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -139,9 +140,18 @@ The package includes all the following forms of documentation:
 - <input type="checkbox" checked> </input> The **Installation instructions:** for the package is found in README
 - <input type="checkbox" checked> </input> The **Vignette(s)** demonstrating major functionality that runs successfully locally
 - <input type="checkbox" checked> </input> The **Function Documentation:** for all exported functions in R help
-- <input type="checkbox" checked> </input> The **Examples** for all exported functions in R Help that run successfully locally
+- <input type="checkbox" unchecked> </input> The **Examples** for all exported functions in R Help that run successfully locally. 
 
 #### Functionality
 - <input type="checkbox" checked> </input> **Installation:** Installation succeeds as documented.
 - <input type="checkbox" checked> </input> **Functionality:** Any functional claims of the software been confirmed.
-- <input type="checkbox" unchecked> </input> **Automated tests:** Unit tests cover essential functions of the package and a reasonable range of inputs and conditions. All tests pass on the local machine.
+- <input type="checkbox" checked> </input> **Automated tests:** Unit tests cover essential functions of the package and a reasonable range of inputs and conditions. All tests pass on the local machine.
+
+## Acknowledgements
+
+One package used in this post is `knitr` [@knitr]. 
+
+Thanks for [@package_git] created the package.
+
+
+##  References

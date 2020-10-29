@@ -129,7 +129,7 @@ Mayunk also documented his whole package when I type &lt;code&gt;?ozcocid&lt;/co
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; The &lt;strong&gt;Installation instructions:&lt;/strong&gt; for the package is found in README&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; The &lt;strong&gt;Vignette(s)&lt;/strong&gt; demonstrating major functionality that runs successfully locally&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; The &lt;strong&gt;Function Documentation:&lt;/strong&gt; for all exported functions in R help&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; The &lt;strong&gt;Examples&lt;/strong&gt; for all exported functions in R Help that run successfully locally&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; unchecked&gt; &lt;/input&gt; The &lt;strong&gt;Examples&lt;/strong&gt; for all exported functions in R Help that run successfully locally.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;functionality&#34; class=&#34;section level4&#34;&gt;
@@ -137,8 +137,24 @@ Mayunk also documented his whole package when I type &lt;code&gt;?ozcocid&lt;/co
 &lt;ul&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Installation:&lt;/strong&gt; Installation succeeds as documented.&lt;/li&gt;
 &lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Functionality:&lt;/strong&gt; Any functional claims of the software been confirmed.&lt;/li&gt;
-&lt;li&gt;&lt;input type=&#34;checkbox&#34; unchecked&gt; &lt;/input&gt; &lt;strong&gt;Automated tests:&lt;/strong&gt; Unit tests cover essential functions of the package and a reasonable range of inputs and conditions. All tests pass on the local machine.&lt;/li&gt;
+&lt;li&gt;&lt;input type=&#34;checkbox&#34; checked&gt; &lt;/input&gt; &lt;strong&gt;Automated tests:&lt;/strong&gt; Unit tests cover essential functions of the package and a reasonable range of inputs and conditions. All tests pass on the local machine.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;One package used in this post is &lt;code&gt;knitr&lt;/code&gt; &lt;span class=&#34;citation&#34;&gt;(Xie 2014)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Thanks for &lt;span class=&#34;citation&#34;&gt;(Bharadwaj 2020)&lt;/span&gt; created the package.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-package_git&#34;&gt;
+&lt;p&gt;Bharadwaj, Mayunk. 2020. “Ozcovid.” &lt;em&gt;GitHub Repository&lt;/em&gt;. &lt;a href=&#34;https://github.com/etc5523-2020/r-package-assessment-mayunk264&#34;&gt;https://github.com/etc5523-2020/r-package-assessment-mayunk264&lt;/a&gt;; GitHub.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-knitr&#34;&gt;
+&lt;p&gt;Xie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research in R.” In &lt;em&gt;Implementing Reproducible Computational Research&lt;/em&gt;, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC. &lt;a href=&#34;http://www.crcpress.com/product/isbn/9781466561595&#34;&gt;http://www.crcpress.com/product/isbn/9781466561595&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
